@@ -1,0 +1,90 @@
+{
+	"title": "Doctor Who Yule Log",
+	"cover": "https://i.ytimg.com/vi/uHoOkDUrQw8/maxresdefault.jpg",
+	"series":[
+		{
+			"title": "",
+			"cover": "https://i.ytimg.com/vi/uHoOkDUrQw8/maxresdefault.jpg",
+			"episodes":[
+				{
+					"smallTitle":"2017",
+					"title":"Doctor Who Yule Log 2017",
+					"description":"BBC America's Doctor Who Yule Log from 2017",
+					"kind":"Single Item",
+					"ar":"16:9",
+					"playlist":[
+						{
+							"title":"Doctor Who Yule Log 2017",
+							"image":"https://i.ytimg.com/vi/uHoOkDUrQw8/maxresdefault.jpg",
+							"images":[
+								{"src":"https://i.ytimg.com/vi/uHoOkDUrQw8/hqdefault.jpg","width":480,"type":"image/jpeg"},
+								{"src":"https://i.ytimg.com/vi/uHoOkDUrQw8/mqdefault.jpg","width":320,"type":"image/jpeg"},
+								{"src":"https://i.ytimg.com/vi/uHoOkDUrQw8/sddefault.jpg","width":640,"type":"image/jpeg"},
+								{"src":"https://i.ytimg.com/vi/uHoOkDUrQw8/default.jpg","width":120,"type":"image/jpeg"},
+								{"src":"https://i.ytimg.com/vi/uHoOkDUrQw8/maxresdefault.jpg","width":1280,"type":"image/jpeg"}
+							],
+							"pubdate":1513900800,
+							"sources":[
+								{"file":"https://archive.org/download/yt-uHoOkDUrQw8/TARDIS%20Yule%20Log%20%7C%20Doctor%20Who%20Christmas%20%7C%20Christmas%20Night%20%40%209/8c%20on%20BBC%20America%20%5BuHoOkDUrQw8%5D.webm","type":"video/mp4","trueType":"video/webm","height":1920,"width":1080,"label":"1080p FHD","default": true},
+								{"file":"https://archive.org/download/yt-uHoOkDUrQw8/TARDIS%20Yule%20Log%20%7C%20Doctor%20Who%20Christmas%20%7C%20Christmas%20Night%20%40%209/8c%20on%20BBC%20America%20%5BuHoOkDUrQw8%5D.mp4","type":"video/mp4","height":480,"width":854,"label":"480p LQ"}
+							],
+							"tracks":[{"file":"","kind":"thumbnails"}]
+						}
+					]
+				},
+				{
+					"smallTitle":"2018",
+					"title":"Doctor Who Yule Log 2018",
+					"description":"BBC America's Doctor Who Yule Log from 2018",
+					"kind":"Single Item",
+					"ar":"16:9",
+					"playlist":[
+						{
+							"title":"Doctor Who Yule Log 2018",
+							"image":"https://i.ytimg.com/vi/UE840lgu4Ew/maxresdefault.jpg",
+							"images":[
+								{"src":"https://i.ytimg.com/vi/UE840lgu4Ew/hqdefault.jpg","width":480,"type":"image/jpeg"},
+								{"src":"https://i.ytimg.com/vi/UE840lgu4Ew/mqdefault.jpg","width":320,"type":"image/jpeg"},
+								{"src":"https://i.ytimg.com/vi/UE840lgu4Ew/sddefault.jpg","width":640,"type":"image/jpeg"},
+								{"src":"https://i.ytimg.com/vi/UE840lgu4Ew/default.jpg","width":120,"type":"image/jpeg"},
+								{"src":"https://i.ytimg.com/vi/UE840lgu4Ew/maxresdefault.jpg","width":1280,"type":"image/jpeg"}
+							],
+							"pubdate":1543878000,
+							"sources":[
+								{"file":"https://archive.org/download/yt-UE840lgu4Ew/Festive%20Thirteenth%20Doctor%20Yule%20Log%20%7C%20Doctor%20Who%20%7C%20BBC%20America%20%5BUE840lgu4Ew%5D.webm","type":"video/mp4","trueType":"video/webm","height":1920,"width":1080,"label":"1080p FHD","default": true},
+								{"file":"https://archive.org/download/yt-UE840lgu4Ew/Festive%20Thirteenth%20Doctor%20Yule%20Log%20%7C%20Doctor%20Who%20%7C%20BBC%20America%20%5BUE840lgu4Ew%5D.mp4","type":"video/mp4","height":480,"width":854,"label":"480p LQ"}
+							],
+							"tracks":[{"file":"","kind":"thumbnails"}]
+						}
+					]
+				},
+				{
+					"smallTitle":"2020",
+					"title":"Doctor Who Yule Log 2020",
+					"description":"BBC America's Doctor Who Yule Log from 2020",
+					"kind":"Single Item",
+					"ar":"16:9",
+					"playlist":[
+						{
+							"title":"Doctor Who Yule Log 2020",
+							"image":"https://i.ytimg.com/vi/kZXNnui21w0/maxresdefault.jpg",
+							"images":[
+								{"src":"https://i.ytimg.com/vi/kZXNnui21w0/hqdefault.jpg","width":480,"type":"image/jpeg"},
+								{"src":"https://i.ytimg.com/vi/kZXNnui21w0/mqdefault.jpg","width":320,"type":"image/jpeg"},
+								{"src":"https://i.ytimg.com/vi/kZXNnui21w0/sddefault.jpg","width":640,"type":"image/jpeg"},
+								{"src":"https://i.ytimg.com/vi/kZXNnui21w0/default.jpg","width":120,"type":"image/jpeg"},
+								{"src":"https://i.ytimg.com/vi/kZXNnui21w0/maxresdefault.jpg","width":1280,"type":"image/jpeg"}
+							],
+							"pubdate":1607295600,
+							"sources":[
+								{"file":"https://archive.org/download/yt-kZXNnui21w0/Doctor%20Who%20Festive%20Holiday%20Yule%20Log%20%F0%9F%94%A5%20Christmas%20on%20the%20TARDIS%20%F0%9F%8E%84%20BBC%20America%20%5BkZXNnui21w0%5D.webm","type":"video/mp4","trueType":"video/webm","height":1920,"width":1080,"label":"1080p FHD","default": true},
+								{"file":"https://archive.org/download/yt-kZXNnui21w0/Doctor%20Who%20Festive%20Holiday%20Yule%20Log%20%F0%9F%94%A5%20Christmas%20on%20the%20TARDIS%20%F0%9F%8E%84%20BBC%20America%20%5BkZXNnui21w0%5D.mp4","type":"video/mp4","height":480,"width":854,"label":"480p LQ"}
+							],
+							"tracks":[{"file":"","kind":"thumbnails"}]
+						}
+					]
+				}
+			]
+		}
+	]
+}

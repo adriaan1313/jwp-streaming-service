@@ -1,0 +1,78 @@
+.episode > p {
+	position: absolute;
+	bottom: 1.5px;
+	left: 1.5px;
+	color: #fff;
+	background: rgba(0,0,0,0.5);
+	font-family: 'Trade Gothic',TradeGothic,Trade-Gothic,'Helvetica Neue',Arial,Arial,sans-serif;
+	padding: 0px 1px 0px 0px;
+	margin: 0px 0px 0px 1.5px;
+}
+.episode {
+	margin-left: 2px;
+	margin-right: 2px;
+	display: inline-block;
+	position: relative;
+	width: 225px;
+	height: 127px;
+	background: #222;
+	border-radius: 10px;
+}
+.episode > img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+.episode::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px; 
+  padding: 1.5px; 
+  background:conic-gradient(red, yellow, lime, aqua, blue, magenta, red); 
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
+}
+
+.series-img {
+	width: 80px;
+	height: 100%;
+	object-fit: contain;
+	background: black;
+}
+.series > h2{
+	font-family: 'Trade Gothic',TradeGothic,Trade-Gothic,'Helvetica Neue',Arial,Arial,sans-serif;
+	margin: 0px;
+}
+.series > .eps{
+	height: 127px; 
+}
+.series > div{
+	display: inline-block;
+}
+
+body {
+	color: #fff;
+	background: #0f0f0f;
+	margin: 0px;
+}
+
+#programme-cover > h1 {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	color: #fff;
+	width: 100%;
+}
+#programme-cover{
+	margin:0px;
+	font-family: 'Trade Gothic',TradeGothic,Trade-Gothic,'Helvetica Neue',Arial,Arial,sans-serif;
+	position: relative;
+	width: 100%;
+	height: 600px;
+	background-size: cover;
+}
