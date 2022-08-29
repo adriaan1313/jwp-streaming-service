@@ -37,7 +37,7 @@ const prHtml = require("./programme.html");
 const erHtml = require("./error");
 const KEY = "x5VJVyr70la0Joby2AIBgBCa9CqNJcD+X1Ad2IOAgvkD9nmOlD0ojw=="; //those who know, know lol (not actual key, just for those thinking i leaked my key)
 let app = express();
-let server = app.listen(process.env.PORT || 80, listening);
+let server = app.listen(process.env.PORT || 3000, listening);
 function listening(){
 	console.log("listening. . .");
 }
