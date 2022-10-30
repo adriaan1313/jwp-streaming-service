@@ -28,13 +28,16 @@
 //vttparser.js
 //not all of these are necessary
 
+
 const express = require("express");
 const fs = require("fs");
 const playHtml = require("./playerExt.html");//require("./player.html"); for self-hosted
 const epHtml = require("./episode.div");
 const srHtml = require("./series.div");
 const prHtml = require("./programme.html");
-const erHtml = require("./error");
+const erHtml = require("./error.html");
+const muHtml = require("./menu.div");
+const escape = require("./escape");
 const KEY = "x5VJVyr70la0Joby2AIBgBCa9CqNJcD+X1Ad2IOAgvkD9nmOlD0ojw=="; //those who know, know lol (not actual key, just for those thinking i leaked my key)
 let app = express();
 let server = app.listen(process.env.PORT || 3000, listening);
@@ -46,27 +49,52 @@ app.use(express.static('public'));
 app.get("/pls/:programme/:series/:episode", (req, res)=>{
 	res.set("Content-Type", "application/json")
 	try{
-		const rjsn = JSON.parse(fs.readFileSync("./data/playlist/"+req.params.programme+".json")).series[req.params.series].episodes[req.params.episode];
-		if(!rjsn) throw("Hey, there are not that many episodes lol");
-		res.send(rjsn);
+		req.params.programme=req.params.programme.replaceAll(/\.\.(\/|\\)/g, "");
+		const rjsn = JSON.parse(fs.readFileSync("./data/playlist/"+req.params.programme+".json"));
+		const ser = rjsn.series[req.params.series];
+		if(!ser) {
+			res.status(404).send(`{"error": "no_series"}`);
+			return;
+		}
+		const ep = ser.episodes[req.params.episode];
+		if(!ep) {
+			res.status(404).send(`{"error": "Hey, there are not that many episodes lol"}`);
+			return;
+		}
+		res.send(ep);
 	}
 	catch(err){
-		res.status(400).send(`{error: "${err}"}`);
+		if(err.toString().indexOf("no such file or directory")!=-1)res.status(404).send(`{"error": "no_programme"}`);
+		else res.status(500).send(`{"error": "${err}"}`);
 	}
 });
 app.get("/:programme/:series/:episode", (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
-		const ep=JSON.parse(fs.readFileSync("./data/playlist/"+req.params.programme+".json")).series[req.params.series].episodes[req.params.episode];
+		req.params.programme=req.params.programme.replaceAll(/\.\.(\/|\\)/g, "");
+		const rjsn = JSON.parse(fs.readFileSync("./data/playlist/"+req.params.programme+".json"));
+		const ser = rjsn.series[req.params.series];
+		if(!ser) {
+			sendErr(res, `no_series`);
+			return;
+		}
+		const ep = ser.episodes[req.params.episode];
+		if(!ep) {
+			sendErr(res, `no_episode`);
+			return;
+		}
 		res.send(playHtml({title:ep.title, KEY, ar:ep.ar, pls: `/pls/${req.params.programme}/${req.params.series}/${req.params.episode}`, parent: `/${req.params.programme}/${req.params.series}`}));
+		console.log(req.ip, "went to the", rjsn.title, `s${req.params.series*1+1}e${req.params.episode*1+1} page`);
 	}
 	catch(err){
-		res.status(400).send(erHtml(err));
+		console.log(err);
+		sendErr(res, err);
 	}
 });
 app.get("/:programme", (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
+		req.params.programme=req.params.programme.replaceAll(/\.\.(\/|\\)/g, "");
 		const prg=JSON.parse(fs.readFileSync("./data/playlist/"+req.params.programme+".json"));
 		let series="";
 		prg.series.forEach((s, i)=>{
@@ -76,10 +104,30 @@ app.get("/:programme", (req, res)=>{
 			});
 			series+=srHtml({series: i, title: s.title, cover: s.cover, episodes: eps});
 		});
-		res.send(prHtml({title: prg.title, image: prg.cover, series}));
+		res.send(prHtml({title: prg.title, image: prg.cover, series, blurb: prg.blurb, menu: muHtml}));
+		console.log(req.ip, "went to the", prg.title, "page");
 	}
 	catch(err){
-		res.status(400).send(erHtml(err));
+		sendErr(res, err);
+	}
+});
+
+function sendErr(res, err) {
+	if (err.toString().indexOf("force:")!=-1) res.status(err.toString().split("force:")[1]*1).send(erHtml("Force error", err.toString().split("force:")[1]*1));
+	else if(err.toString().indexOf("no such file or directory")!=-1) res.status(404).send(erHtml("This programme does not exist.", 404));
+	else if(err.toString().indexOf("no_programme")!=-1) res.status(404).send(erHtml("This programme does not exist.", 404));
+	else if(err.toString().indexOf("no_series")!=-1) res.status(404).send(erHtml("This series does not exist.", 404));
+	else if(err.toString().indexOf("no_episode")!=-1) res.status(404).send(erHtml("Hey, there are not that many episodes lol", 404));
+	else res.status(500).send(erHtml(`${err}`, 500));
+}
+
+
+app.get("/error/:error", (req, res)=>{
+	try {
+		sendErr(res, "force:"+(req.params.error*1));
+	}
+	catch(err) {
+		sendErr(res, err);
 	}
 });
 

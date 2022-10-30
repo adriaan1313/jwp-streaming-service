@@ -1,0 +1,133 @@
+body {
+	background-color:#cccccc;
+	margin:0px;
+}
+
+p {
+	margin:0px;
+}
+
+h1 {
+	margin:0px;
+}
+
+h2 {
+	margin-bottom: 2px;
+}
+
+#menu {
+	padding: 0px;
+	margin: 0px, auto, 0, auto;
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	background: #c7def4;
+}
+
+#container {
+	background:#ffffff00;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:50px;
+	width:75%;
+	overflow:auto;
+	border:2px solid;
+}
+
+#header {
+	background-color:#c7def4;
+}
+
+#content {
+	background-color:#ccccccab;
+	width:83.6734693878%;
+	float: left;
+}
+#links {
+	background:#aaaaff;
+	width:16.3265306122%;
+	float:left;
+}
+
+#menu li {
+	background: #999999;
+	color: #000000;
+	font-family: "Consolas";
+	width: 120px;
+	display: inline-block;
+	text-align: center;
+	line-height: 30px;
+	text-decoration: none;
+	transition: all 0.2s;
+	height:100%;
+}
+
+#menu li:hover {
+	background:#666666;
+	color:#ffffff;
+	width: 150px;
+}
+
+#menu li:active {
+	height:100%;
+	background:#000000;
+}
+
+#menu ul > li > ul {
+	position: fixed;
+	padding:0px;
+	margin:0px;
+	display:none;
+}
+
+#menu ul > li > ul > li {
+	display:block;
+}
+
+#menu ul > li > ul > li:hover > ul {
+	display:inline-block;
+}
+
+#menu ul > li:hover > ul {
+	display:block;
+}
+
+#menu > ul {
+	padding:0px;
+	margin:0px auto 0px;
+	height:100%;
+}
+
+#menu a {
+	text-decoration:none;
+	width:100%;
+	height:100%;
+	display:inline-block;
+	color:#000000;
+	cursor: pointer;
+	line-height:30px;
+}
+
+#menu a:hover {
+	color:#ffffff;
+	transition: all 0.5s;
+}
+
+#menu div {
+	margin-left: auto;
+	margin-right: auto;
+	width: 120px;
+}
+
+#content p {
+	color:#456789;
+}
+
+.code {
+	background:black;
+	border-radius:5px;
+	outline:2px solid #222;
+	outline-offset:-2px;
+	padding:2px;
+	color:#c8dff4;
+}
