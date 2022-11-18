@@ -31,9 +31,12 @@
 
 const express = require("express");
 const fs = require("fs");
+const homeHtml = require("./home.html");
 const playHtml = require("./playerExt.html");//require("./player.html"); for self-hosted
 const epHtml = require("./episode.div");
 const srHtml = require("./series.div");
+const stHtml = require("./section.div");
+const imHtml = require("./item.div");
 const prHtml = require("./programme.html");
 const erHtml = require("./error.html");
 const muHtml = require("./menu.div");
@@ -91,6 +94,33 @@ app.get("/:programme/:series/:episode", (req, res)=>{
 		sendErr(res, err);
 	}
 });
+
+app.get("/", (req, res)=>{
+	res.set("Content-Type", "text/html");
+	try{
+		const DCSLEGENDSOFTOMORROW = fs.readdirSync("./data/playlist/");
+		
+		if(!DCSLEGENDSOFTOMORROW) {
+			sendErr(res, `no_programmes`);
+			return;
+		}
+		let programmes="";
+		DCSLEGENDSOFTOMORROW.forEach((p,i)=>{
+			console.log(p,i)
+			const prog = JSON.parse(fs.readFileSync("./data/playlist/"+p))
+			programmes+=imHtml({link: p.replace(".json", ""), image:prog.cover, title: prog.title});
+		});
+		const list = stHtml({ title: "All programmes", items: programmes});
+		
+		res.send(homeHtml({programmes:list, menu: muHtml, image: "/img/home-cover.jpg"}));
+		console.log(req.ip, "went to the home page");
+	}
+	catch(err){
+		console.log(err);
+		sendErr(res, err);
+	}
+});
+
 app.get("/:programme", (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
