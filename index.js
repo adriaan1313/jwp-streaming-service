@@ -121,6 +121,32 @@ app.get("/", (req, res)=>{
 	}
 });
 
+
+
+app.get("/programmes", (req, res)=>{
+	res.set("Content-Type", "application/json");
+	try{
+		const DCSLEGENDSOFTOMORROW = fs.readdirSync("./data/playlist/");
+		
+		if(!DCSLEGENDSOFTOMORROW) {
+			sendErr(res, `no_programmes`);
+			return;
+		}
+		let programmes=[];
+		DCSLEGENDSOFTOMORROW.forEach((p,i)=>{
+			console.log(p,i)
+			const prog = JSON.parse(fs.readFileSync("./data/playlist/"+p))
+			programmes.push({title: prog.title, url_part: p.replace(".json", "")});
+		});
+		console.log("programmes api call")
+		res.send(JSON.stringify(programmes));
+	}
+	catch(err){
+		console.log(err);
+		sendErr(res, err);
+	}
+});
+
 app.get("/:programme", (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
@@ -141,7 +167,6 @@ app.get("/:programme", (req, res)=>{
 		sendErr(res, err);
 	}
 });
-
 function sendErr(res, err) {
 	if (err.toString().indexOf("force:")!=-1) res.status(err.toString().split("force:")[1]*1).send(erHtml("Force error", err.toString().split("force:")[1]*1));
 	else if(err.toString().indexOf("no such file or directory")!=-1) res.status(404).send(erHtml("This programme does not exist.", 404));
