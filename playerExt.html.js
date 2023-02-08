@@ -20,6 +20,11 @@ module.exports = (vars)=>
 				rtmp: {
 					bufferlength:5
 				},
+				sharing: {
+					heading:"Share",
+					sites: ["facebook", "twitter", "interest", "email", "tumblr", "linkedin", "reddit"]
+				},
+				cast: {},
 				logo: {
 					file: "/img/back.svg",
 					hide: true,
