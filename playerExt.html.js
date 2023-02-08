@@ -22,7 +22,7 @@ module.exports = (vars)=>
 				},
 				sharing: {
 					heading:"Share",
-					sites: ["facebook", "twitter", "interest", "email", "tumblr", "linkedin", "reddit"]
+					sites: ["facebook", "twitter", "interest", "email", "tumblr", "linkedin", "reddit", "linkedin"]
 				},
 				cast: {},
 				logo: {
