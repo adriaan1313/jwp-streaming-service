@@ -10,9 +10,13 @@ module.exports = `<div id="menu">
 			</form>
 		</li>
 		<li style="width: 4em;">
-			<a href="#" id="listButton">All <i class="fa fa-film"></i></a>
+			<a href="#" id="listButtonFilm">All <i class="fa fa-film"></i></a>
+		</li>
+		<li style="width: 4em;">
+			<a href="#" id="listButtonProg">All <i class="fa fa-video-camera"></i></a>
 		</li>
 	</ul>
 </div>
-<script src="https://code.jquery.com/jquery-3.6.3.min.js" type="text/javascript"></script><script src="js/list.js" type="text/javascript"></script>
-<div id="listOverlay"><div id="list"><H3>All Programmes:</H3></div><span class="fa fa-close close-btn"></span></div>`;
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" type="text/javascript"></script><script src="/js/list.js" type="text/javascript"></script>
+<div class="listOverlay" id="listProg"><div class="list" id="progList"><H3>All Programmes:</H3></div><span class="fa fa-close close-btn"></span></div>
+<div class="listOverlay" id="listFilm"><div class="list" id="filmList"><H3>All Programmes:</H3></div><span class="fa fa-close close-btn"></span></div>`;

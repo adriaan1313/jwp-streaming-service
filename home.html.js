@@ -9,8 +9,8 @@ module.exports = (vars)=>`<!DOCTYPE HTML>
 	</body>
 		${vars.menu}
 		<div id="short-cover" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6), rgba(0,0,16,1)), url('${vars.image}')"></div>
-		${vars.programmes}
-		
+		${vars.programmes||""}
+		${vars.films||""}
 	<body>
 </html>
 `

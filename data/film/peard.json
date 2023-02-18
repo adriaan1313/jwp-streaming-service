@@ -1,0 +1,26 @@
+{
+	"title": "Zeeuwse Ridders",
+	"cover": "https://archive.org/download/ZEEUWSE_RIDDERS_DEF/__ia_thumb.jpg",
+	"blurb": "Some documentary about horses or something",
+	
+	"playlist":{
+		"title":"Zeeuwse Ridders",
+		"description":"Some documentary about horses or something",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"Zeeuwse Ridders",
+				"image":"https://archive.org/download/ZEEUWSE_RIDDERS_DEF/__ia_thumb.jpg",
+				"images":[
+					{"src":"https://archive.org/download/ZEEUWSE_RIDDERS_DEF/__ia_thumb.jpg","width":180,"type":"image/jpeg"}
+				],
+				"pubdate":1513900800,
+				"sources":[
+					{"file":"https://archive.org/download/ZEEUWSE_RIDDERS_DEF/ZEEUWSE%20RIDDERS.mp4","type":"video/mp4","height":480,"width":854,"label":"480p LQ"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

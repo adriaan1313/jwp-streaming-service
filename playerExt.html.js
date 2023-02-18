@@ -26,7 +26,7 @@ module.exports = (vars)=>
 				},
 				cast: {},
 				logo: {
-					file: "/img/back.svg",
+					file: "${vars.back_button||"/img/back.svg"}",
 					hide: true,
 					position: "top-left"
 				}
