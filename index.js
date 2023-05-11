@@ -90,7 +90,7 @@ app.get("/film/:film/play", (req, res)=>{
 		req.params.film=req.params.film.replaceAll(/\.\.(\/|\\)/g, "");
 		console.log(req.params)
 		const rjsn = JSON.parse(fs.readFileSync("./data/film/"+req.params.film+".json"));
-		res.send(playHtml({title:rjsn.title, KEY, ar:rjsn.ar, pls: `/pls/film/${req.params.film}`, parent: `/film/${req.params.film}`, back_button: "/img/back_film.svg"}));
+		res.send(playHtml({title:rjsn.title, KEY, ar:rjsn.ar, pls: `/pls/film/${req.params.film}`, parent: `/film/${req.params.film}`, back_button: "/img/back_film.svg", postJS: "post_film.js"}));
 		console.log(req.ip, "went to the", rjsn.title, `watch page`);
 	}
 	catch(err){

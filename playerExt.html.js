@@ -32,7 +32,7 @@ module.exports = (vars)=>
 				}
 			});
 		</script>
-		<script type="text/javascript" src="/js/post.js"></script>
+		<script type="text/javascript" src="/js/${vars.postJS||"post.js"}"></script>
 	</body>
 
 </html>
