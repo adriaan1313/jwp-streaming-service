@@ -1,0 +1,27 @@
+{
+	"title": "NHNieuws Plus",
+	"cover": "https://www.at5.nl/images/nh-tv.jpg",
+	"blurb": "NHNieuws Plus live",
+	
+	"playlist":{
+		"title":"NHNieuws Plus",
+		"description":"NHNieuws Plus live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"NHNieuws Plus",
+				"image":"https://www.at5.nl/images/nh-tv.jpg",
+				"images":[
+					{"src":"https://www.at5.nl/images/nh-tv.jpg","width":1920,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://rrr.sz.xlcdn.com/?account=nhnieuws&file=nhplus&type=live&service=wowza&protocol=https&output=playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+					
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

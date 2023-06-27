@@ -1,0 +1,27 @@
+{
+	"title": "ZO!34 Tv",
+	"cover": "https://www.zo34.nl/img/programmas/posters/zo34_placeholder.png",
+	"blurb": "ZO!34 Tv live",
+	
+	"playlist":{
+		"title":"ZO!34 Tv",
+		"description":"ZO!34 Tv live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"ZO!34 Tv",
+				"image":"https://www.zo34.nl/img/programmas/posters/zo34_placeholder.png",
+				"images":[
+					{"src":"https://www.zo34.nl/img/programmas/posters/zo34_placeholder.png","width":768,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"rtmp://video.uitzending.tv:19350/zo34","type":"application/flash"},
+					{"file":"https://video.uitzending.tv:19360/zo34/zo34.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

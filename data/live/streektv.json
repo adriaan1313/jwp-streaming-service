@@ -1,0 +1,26 @@
+{
+	"title": "DNO StreekTV",
+	"cover": "https://www.wijzijndno.nl/streams/streektv/images/streektv-zwart-1280x720.png",
+	"blurb": "DNO StreekTV live",
+	
+	"playlist":{
+		"title":"StreekTV",
+		"description":"StreekTV live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"StreekTV",
+				"image":"https://www.wijzijndno.nl/streams/streektv/images/streektv-zwart-1280x720.png",
+				"images":[
+					{"src":"https://www.wijzijndno.nl/streams/streektv/images/streektv-zwart-1280x720.png","width":1280,"type":"image/svg"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://61ae39677a1ab.streamlock.net/streektv/streektv/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

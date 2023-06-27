@@ -1,0 +1,28 @@
+{
+	"title": "VRT Nws",
+	"cover": "https://images.vrt.be/w1280hx_j80/2022/08/29/7abe629f-2769-11ed-b07d-02b7b76bf47f.png",
+	"blurb": "VRT Nws live",
+	
+	"playlist":{
+		"title":"VRT Nws",
+		"description":"VRT Nws live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"VRT Nws",
+				"image":"https://images.vrt.be/w1280hx_j80/2022/08/29/7abe629f-2769-11ed-b07d-02b7b76bf47f.png",
+				"images":[
+					{"src":"https://images.vrt.be/w1280hx_j80/2022/08/29/7abe629f-2769-11ed-b07d-02b7b76bf47f.png","width":1600	,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://live.vrtcdn.be/groupa/live/5c84cb7c-c801-487d-bccc-b8d84d5538c1/live.isml/.m3u8","type":"application/vnd.apple.mpegurl"},
+					{"file":"https://live.vrtcdn.be/groupa/live/5c84cb7c-c801-487d-bccc-b8d84d5538c1/live.isml/.mpd","type":"application/dash+xml"},
+					{"file":"https://ssl.live.origin.v2.vrtcdn.be/groupa/live/5c84cb7c-c801-487d-bccc-b8d84d5538c1/live.isml/Manifest","type":"application/vnd.microsoft.smooth"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

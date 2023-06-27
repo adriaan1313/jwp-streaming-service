@@ -62,6 +62,35 @@ app.get("/pls/film/:film/", (req, res)=>{
 		else res.status(500).send(`{"error": "${err}"}`);
 	}
 });
+app.get("/pls/live/:live/", (req, res)=>{
+	res.set("Content-Type", "application/json")
+	try{
+		req.params.live=req.params.live.replaceAll(/\.\.(\/|\\)/g, "");
+		const rjsn = JSON.parse(fs.readFileSync("./data/live/"+req.params.live+".json"));
+		res.send(rjsn.playlist);
+	}
+	catch(err){
+		if(err.toString().indexOf("no such file or directory")!=-1)res.status(404).send(`{"error": "no_programme"}`);
+		else res.status(500).send(`{"error": "${err}"}`);
+	}
+});
+app.get("/pls/live/:series/:channel", (req, res)=>{
+	res.set("Content-Type", "application/json")
+	try{
+		req.params.series=req.params.series.replaceAll(/\.\.(\/|\\)/g, "");
+		const rjsn = JSON.parse(fs.readFileSync("./data/multilive/"+req.params.series+".json"));
+		const ep = rjsn.channels[req.params.channel];
+		if(!ep) {
+			res.status(404).send(`{"error": "Hey, that channel does not exist lol"}`);
+			return;
+		}
+		res.send(ep);
+	}
+	catch(err){
+		if(err.toString().indexOf("no such file or directory")!=-1)res.status(404).send(`{"error": "no_programme"}`);
+		else res.status(500).send(`{"error": "${err}"}`);
+	}
+});
 app.get("/pls/:programme/:series/:episode", (req, res)=>{
 	res.set("Content-Type", "application/json")
 	try{
@@ -98,6 +127,45 @@ app.get("/film/:film/play", (req, res)=>{
 		sendErr(res, err);
 	}
 });
+
+app.get("/live/:live/play", (req, res)=>{
+	res.set("Content-Type", "text/html");
+	try{
+		req.params.live=req.params.live.replaceAll(/\.\.(\/|\\)/g, "");
+		console.log(req.params)
+		const rjsn = JSON.parse(fs.readFileSync("./data/live/"+req.params.live+".json"));
+		res.send(playHtml({title:rjsn.title, KEY, ar:rjsn.ar, pls: `/pls/live/${req.params.live}`, parent: `/live/${req.params.live}`, back_button: "/img/back_film.svg", postJS: "post_film.js"}));
+		console.log(req.ip, "went to the", rjsn.title, `watch page`);
+	}
+	catch(err){
+		console.log(err);
+		sendErr(res, err);
+	}
+});
+
+app.get("/live/:series/:channel", (req, res)=>{
+	res.set("Content-Type", "text/html");
+	try{
+		req.params.series=req.params.series.replaceAll(/\.\.(\/|\\)/g, "");
+		console.log(req.params)
+		const rjsn = JSON.parse(fs.readFileSync("./data/multilive/"+req.params.series+".json"));
+		const ch = rjsn.channels[req.params.channel];
+		if(!ch) {
+			sendErr(res, `no_channel`);
+			return;
+		}
+		res.send(playHtml({title:ch.title, KEY, ar:ch.ar, pls: `/pls/live/${req.params.series}/${req.params.channel}`, parent: `/live/${req.params.series}`, postJS: "post_film.js"}));
+		console.log(req.ip, "went to the", `s${req.params.series}e${req.params.channel} page`);
+	}
+	catch(err){
+		console.log(err);
+		sendErr(res, err);
+	}
+});
+
+
+
+
 app.get("/:programme/:series/:episode", (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
@@ -129,6 +197,8 @@ app.get("/", (req, res)=>{
 	try{
 		const prog_dir = fs.readdirSync("./data/playlist/");
 		const film_dir = fs.readdirSync("./data/film/");
+		const live_dir = fs.readdirSync("./data/live/");
+		const mlive_dir = fs.readdirSync("./data/multilive/");
 		
 		if(!prog_dir&&!film_dir) {
 			sendErr(res, `no_content`);
@@ -150,7 +220,20 @@ app.get("/", (req, res)=>{
 		});
 		const flist = stHtml({ title: "All films", items: films});
 		
-		res.send(homeHtml({programmes:plist, films:flist, menu: muHtml, image: "/img/home-cover.jpg"}));
+		let lives="";
+		live_dir.forEach((p,i)=>{
+			console.log(p,i)
+			const live = JSON.parse(fs.readFileSync("./data/live/"+p))
+			lives+=imHtml({link: "/live/"+p.replace(".json", ""), image:live.cover, title: live.title});
+		});
+		mlive_dir.forEach((p,i)=>{
+			console.log(p,i)
+			const live = JSON.parse(fs.readFileSync("./data/multilive/"+p))
+			lives+=imHtml({link: "/live/"+p.replace(".json", ""), image:live.cover, title: live.title});
+		});
+		const llist = stHtml({ title: "All live", items: lives});
+		
+		res.send(homeHtml({programmes:plist, lives:llist, films:flist, menu: muHtml, image: "/img/home-cover.jpg"}));
 		console.log(req.ip, "went to the home page");
 	}
 	catch(err){
@@ -209,6 +292,36 @@ app.get("/films", (req, res)=>{
 	}
 });
 
+app.get("/lives", (req, res)=>{
+	res.set("Content-Type", "application/json");
+	try{
+		const live_dir = fs.readdirSync("./data/live/");
+		const mlive_dir = fs.readdirSync("./data/multilive/");
+		
+		if(!live_dir&&!mlive_dir) {
+			sendErr(res, `no_programmes`);
+			return;
+		}
+		let lives=[];
+		live_dir.forEach((p,i)=>{
+			console.log(p,i)
+			const live = JSON.parse(fs.readFileSync("./data/live/"+p))
+			lives.push({title: live.title, url_part: "/live/"+p.replace(".json", "")});
+		});
+		mlive_dir.forEach((p,i)=>{
+			console.log(p,i)
+			const live = JSON.parse(fs.readFileSync("./data/multilive/"+p))
+			lives.push({title: live.title, url_part: "/live/"+p.replace(".json", "")});
+		});
+		console.log("lives api call")
+		res.send(JSON.stringify(lives));
+	}
+	catch(err){
+		console.log(err);
+		sendErr(res, err);
+	}
+});
+
 
 app.get("/:programme", (req, res)=>{
 	res.set("Content-Type", "text/html");
@@ -231,6 +344,8 @@ app.get("/:programme", (req, res)=>{
 	}
 });
 
+
+
 app.get("/film/:film", (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
@@ -238,6 +353,32 @@ app.get("/film/:film", (req, res)=>{
 		const film=JSON.parse(fs.readFileSync("./data/film/"+req.params.film+".json"));
 		res.send(flHtml({title: film.title, image: film.cover, blurb: film.blurb, menu: muHtml, player: req.params.film+"/play"}));
 		console.log(req.ip, "went to the", film.title, "page");
+	}
+	catch(err){
+		sendErr(res, err);
+	}
+});
+
+app.get("/live/:live", (req, res)=>{
+	res.set("Content-Type", "text/html");
+	try{
+		req.params.live=req.params.live.replaceAll(/\.\.(\/|\\)/g, "");
+		if(fs.readdirSync("./data/live").indexOf(req.params.live+".json")!=-1){
+			
+			const live=JSON.parse(fs.readFileSync("./data/live/"+req.params.live+".json"));
+			res.send(flHtml({title: live.title, image: live.cover, blurb: live.blurb, menu: muHtml, player: req.params.live+"/play"}));
+			console.log(req.ip, "went to the", live.title, "page");
+		}else {
+			const prg=JSON.parse(fs.readFileSync("./data/multilive/"+req.params.live+".json"));
+			let series="";
+			
+			Object.keys(prg.channels).forEach((c)=>{
+				series+=imHtml({image: prg.channels[c].playlist[0].image, title: prg.channels[c].smallTitle, link: c});
+			});
+	
+			res.send(prHtml({title: prg.title, image: prg.cover, series, blurb: prg.blurb, menu: muHtml}));
+			console.log(req.ip, "went to the", prg.title, "page");
+		}
 	}
 	catch(err){
 		sendErr(res, err);

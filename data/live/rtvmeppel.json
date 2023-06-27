@@ -1,0 +1,26 @@
+{
+	"title": "RTV Meppel televisie",
+	"cover": "https://www.rtvmeppel.nl/wp-content/uploads/2021/04/intro.jpg",
+	"blurb": "RTV Meppel televisie live",
+	
+	"playlist":{
+		"title":"RTV Meppel televisie",
+		"description":"RTV Meppel televisie live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"RTV Meppel televisie",
+				"image":"https://www.rtvmeppel.nl/wp-content/uploads/2021/04/intro.jpg",
+				"images":[
+					{"src":"https://www.rtvmeppel.nl/wp-content/uploads/2021/04/intro.jpg","width":1920,"type":"image/svg"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://d2eanln3bsfb0d.cloudfront.net/nlpo/clr-nlpo/rtvmeppel/index.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

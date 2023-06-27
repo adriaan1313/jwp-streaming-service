@@ -1,0 +1,28 @@
+{
+	"title": "Radio Lelystad TV",
+	"cover": "https://radiolelystad.nl/templates/rl2016/images/blue/background.svg",
+	"blurb": "Radio Lelystad TV live",
+	
+	"playlist":{
+		"title":"Radio Lelystad TV",
+		"description":"Radio Lelystad TV live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"Radio Lelystad TV",
+				"image":"https://radiolelystad.nl/templates/rl2016/images/blue/background.svg",
+				"images":[
+					{"src":"https://radiolelystad.nl/templates/rl2016/images/blue/background.svg","width":2690,"type":"image/svg"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://d32b05uzdn2i03.cloudfront.net/nlpo/clr-nlpo/omroeplelystad/index.mpd","type":"application/dash+xml"},
+					{"file":"https://d32b05uzdn2i03.cloudfront.net/nlpo/clr-nlpo/omroeplelystad/index.m3u8","type":"application/vnd.apple.mpegurl"}
+					
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

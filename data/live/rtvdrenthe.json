@@ -1,0 +1,26 @@
+{
+	"title": "RTV Drenthe televisie",
+	"cover": "https://s.regiogroei.cloud/rtvDrenthe/channelImage/jwplayer-background-default.jpeg",
+	"blurb": "RTV Drenthe televisie live",
+	
+	"playlist":{
+		"title":"RTV Drenthe televisie",
+		"description":"RTV Drenthe televisie live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"RTV Drenthe televisie",
+				"image":"https://s.regiogroei.cloud/rtvDrenthe/channelImage/jwplayer-background-default.jpeg",
+				"images":[
+					{"src":"https://s.regiogroei.cloud/rtvDrenthe/channelImage/jwplayer-background-default.jpeg","width":1920,"type":"image/svg"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://cdn.rtvdrenthe.nl/live/rtvdrenthe/tv/index.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

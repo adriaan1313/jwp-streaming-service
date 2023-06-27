@@ -1,0 +1,26 @@
+{
+	"title": "SALTO 1",
+	"cover": "https://www.salto.nl/wp-content/uploads/sites/4/2019/02/salto1-poster.jpg",
+	"blurb": "SALTO 1 live",
+	
+	"playlist":{
+		"title":"SALTO 1",
+		"description":"SALTO 1 live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"SALTO 1",
+				"image":"https://www.salto.nl/wp-content/uploads/sites/4/2019/02/salto1-poster.jpg",
+				"images":[
+					{"src":"https://www.salto.nl/wp-content/uploads/sites/4/2019/02/salto1-poster.jpg","width":1920,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://d11lnfpmek70tc.cloudfront.net/nlpo/clr-nlpo/2103d417/index.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

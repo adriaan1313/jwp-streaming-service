@@ -1,0 +1,28 @@
+{
+	"title": "1Almere",
+	"cover": "https://www.1almere.nl/wp-content/uploads/2022/02/220223_Floriade_Drone_FEB_DJI_0873_44ADE596E1E8F435C12587F2006C2E73-1-scaled.jpg",
+	"blurb": "1Almere live",
+	
+	"playlist":{
+		"title":"1Almere",
+		"description":"1Almere live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"1Almere",
+				"image":"https://www.1almere.nl/wp-content/uploads/2022/02/220223_Floriade_Drone_FEB_DJI_0873_44ADE596E1E8F435C12587F2006C2E73-1-scaled.jpg",
+				"images":[
+					{"src":"https://www.1almere.nl/wp-content/uploads/2022/02/220223_Floriade_Drone_FEB_DJI_0873_44ADE596E1E8F435C12587F2006C2E73-1-scaled.jpg","width":2560,"type":"image/jpg"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://d3472rjicrodic.cloudfront.net/nlpo/clr-nlpo/709d5260/index.mpd","type":"application/dash+xml"},
+					{"file":"https://d3472rjicrodic.cloudfront.net/nlpo/clr-nlpo/709d5260/index.m3u8","type":"application/vnd.apple.mpegurl"}
+					
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

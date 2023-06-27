@@ -1,0 +1,26 @@
+{
+	"title": "Omroep Hulst televisie",
+	"cover": "https://www.maxx-xs.nl/images/assets/f/3/f38705891f01bda4bd16551f42ff7c0a/ART/art_01.png",
+	"blurb": "Omroep Hulst televisie live",
+	
+	"playlist":{
+		"title":"Omroep Hulst televisie",
+		"description":"Omroep Hulst televisie live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"Omroep Hulst televisie",
+				"image":"https://www.maxx-xs.nl/images/assets/f/3/f38705891f01bda4bd16551f42ff7c0a/ART/art_01.png",
+				"images":[
+					{"src":"https://www.maxx-xs.nl/images/assets/f/3/f38705891f01bda4bd16551f42ff7c0a/ART/art_01.png","width":640,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://ms2.mx-cd.net/tv/280-2963002/Omroep_Hulst_TV.smil/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

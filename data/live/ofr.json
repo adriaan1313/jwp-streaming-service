@@ -1,0 +1,26 @@
+{
+	"title": "Omroep Friesland televisie",
+	"cover": "https://s.regiogroei.cloud/omropFryslan/specialImageDesktop/TVProgrammas-Desktop-1920x660.jpg",
+	"blurb": "Omrop Fryslan televisie live",
+	
+	"playlist":{
+		"title":"Omroep Friesland televisie",
+		"description":"Omrop Fryslân televisie live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"Omroep Fryslân televisie",
+				"image":"https://s.regiogroei.cloud/omropFryslan/specialImageDesktop/TVProgrammas-Desktop-1920x660.jpg",
+				"images":[
+					{"src":"https://s.regiogroei.cloud/omropFryslan/specialImageDesktop/TVProgrammas-Desktop-1920x660.jpg","width":1920,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://d3pvma9xb2775h.cloudfront.net/live/omropfryslan/stream04/index.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

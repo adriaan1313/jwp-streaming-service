@@ -1,0 +1,127 @@
+{
+	"title": "Fashion TV",
+	"cover": "https://cdn.castify.ai/files/video_libraries/lw/196/30/700/rec6DRAs0jSvHfp1u/carousel_thumb_320_180.jpg",
+	"blurb": "Fashion TV live",
+	"channels":{
+		"paris": {
+			"smallTitle":"Paris",
+			"title":"FashionTV Paris L’Original",
+			"description":"FashionTV Paris L’Original Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"FashionTV Paris L’Original",
+					"image":"https://cdn.castify.ai/files/video_libraries/lw/196/30/647/recJDPwaQI08GBTcb/carousel_thumb_320_180.jpg",
+					"images":[
+						{"src":"https://cdn.castify.ai/files/video_libraries/lw/196/30/647/recJDPwaQI08GBTcb/carousel_thumb_320_180.jpg","width":768,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://fashs043.cloudycdn.services/scte/sftv2/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"new_york": {
+			"smallTitle":"New York",
+			"title":"FashionTV New York",
+			"description":"FashionTV New York Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"FashionTV New York",
+					"image":"https://cdn.castify.ai/files/video_libraries/lw/196/30/647/recYWWuAjiG3sTLia/carousel_thumb_320_180.jpg",
+					"images":[
+						{"src":"https://cdn.castify.ai/files/video_libraries/lw/196/30/647/recYWWuAjiG3sTLia/carousel_thumb_320_180.jpg","width":768,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://fash1043.cloudycdn.services/slive/_definst_/ftv_ftv_new_york_9dd_43432_default_1596_hls.smil/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"paris-mumbai": {
+			"smallTitle":"Paris-Mumbai",
+			"title":"FashionTV Paris-Mumbai",
+			"description":"FashionTV Paris-Mumbai Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"FashionTV Paris-Mumbai",
+					"image":"https://cdn.castify.ai/files/video_libraries/lw/196/30/647/recgGEwXvMqlseqH5/carousel_thumb_320_180.jpg",
+					"images":[
+						{"src":"https://cdn.castify.ai/files/video_libraries/lw/196/30/647/recgGEwXvMqlseqH5/carousel_thumb_320_180.jpg","width":1563,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://fash1043.cloudycdn.services/slive/_definst_/ftv_ftv_pg16_asi_i2j_43441_1080p_1611_hls.smil/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"tokyo": {
+			"smallTitle":"Tokyo",
+			"title":"FashionTV Tokyo",
+			"description":"FashionTV Tokyo Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"FashionTV Tokyo",
+					"image":"https://cdn.castify.ai/files/video_libraries/lw/196/30/647/recjolmXUd22GI6xX/carousel_thumb_320_180.jpg",
+					"images":[
+						{"src":"https://cdn.castify.ai/files/video_libraries/lw/196/30/647/recjolmXUd22GI6xX/carousel_thumb_320_180.jpg","width":768,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://fash1043.cloudycdn.services/slive/_definst_/ftv_ftv_pg13_hd_uir_43438_vidio_id_1609_hls.smil/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"singapore": {
+			"smallTitle":"Singapore",
+			"title":"FashionTV Singapore",
+			"description":"FashionTV Singapore Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"FashionTV Singapore",
+					"image":"https://cdn.castify.ai/files/video_libraries/lw/196/30/647/reczas31PcpZEW5aI/carousel_thumb_320_180.jpg",
+					"images":[
+						{"src":"https://cdn.castify.ai/files/video_libraries/lw/196/30/647/reczas31PcpZEW5aI/carousel_thumb_320_180.jpg","width":768,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://fash1043.cloudycdn.services/slive/_definst_/ftv_pg13_hd_gmt__vm6_43433_default_1597_hls.smil/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"johannesburg": {
+			"smallTitle":"Johannesburg",
+			"title":"FashionTV Johannesburg",
+			"description":"FashionTV Johannesburg Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"FashionTV Johannesburg",
+					"image":"https://cdn.castify.ai/files/video_libraries/lw/196/30/647/recfEa1F0QJXhzBsh/carousel_thumb_320_180.jpg",
+					"images":[
+						{"src":"https://cdn.castify.ai/files/video_libraries/lw/196/30/647/recfEa1F0QJXhzBsh/carousel_thumb_320_180.jpg","width":768,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://fashs043.cloudycdn.services/scte/africa/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		}
+	}
+}

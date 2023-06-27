@@ -1,0 +1,26 @@
+{
+	"title": "Omroep Flevoland televisie",
+	"cover": "https://script.omroepflevoland.nl/ftp/logo/OF_STREAM_TV_THUMB.jpg",
+	"blurb": "Omroep Flevoland televisie live",
+	
+	"playlist":{
+		"title":"Omroep Flevoland televisie",
+		"description":"Omroep Flevoland televisie live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"Omroep Flevoland televisie",
+				"image":"https://script.omroepflevoland.nl/ftp/logo/OF_STREAM_TV_THUMB.jpg",
+				"images":[
+					{"src":"https://script.omroepflevoland.nl/ftp/logo/OF_STREAM_TV_THUMB.jpg","width":960,"type":"image/svg"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://d5ms27yy6exnf.cloudfront.net/live/omroepflevoland/tv/index.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

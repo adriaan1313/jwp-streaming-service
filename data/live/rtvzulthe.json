@@ -1,0 +1,26 @@
+{
+	"title": "RTV Zulthe televisie",
+	"cover": "https://www.maxx-xs.nl/images/artwork/altcover/265416_b.png",
+	"blurb": "RTV Zulthe televisie live",
+	
+	"playlist":{
+		"title":"RTV Zulthe televisie",
+		"description":"RTV Zulthe televisie live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"RTV Zulthe televisie",
+				"image":"https://www.maxx-xs.nl/images/artwork/altcover/265416_b.png",
+				"images":[
+					{"src":"https://www.maxx-xs.nl/images/artwork/altcover/265416_b.png","width":733,"type":"image/svg"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"http://ms7.mx-cd.net/tv/212-1299944/RTV-Zulthe.smil/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

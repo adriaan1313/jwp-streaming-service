@@ -1,0 +1,27 @@
+{
+	"title": "Canvas",
+	"cover": "",
+	"blurb": "Canvas live",
+	
+	"playlist":{
+		"title":"Canvas",
+		"description":"Canvas live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"Canvas",
+				"image":"",
+				"images":[
+					{"src":"","width":1280,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://live.vrtcdn.be/groupc/live/905b0602-9719-4d14-ae2a-a9b459630653/live.isml/.mpd","type":"application/dash+xml"},
+					{"file":"https://live.vrtcdn.be/groupc/live/905b0602-9719-4d14-ae2a-a9b459630653/live.isml/.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

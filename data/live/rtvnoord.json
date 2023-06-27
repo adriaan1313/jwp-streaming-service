@@ -1,0 +1,26 @@
+{
+	"title": "RTV Noord televisie",
+	"cover": "https://s.regiogroei.cloud/rtvNoord/channelImage/LIVE-Televisie-Midden.jpg",
+	"blurb": "RTV Noord televisie live",
+	
+	"playlist":{
+		"title":"RTV Noord televisie",
+		"description":"RTV Noord televisie live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"RTV Noord televisie",
+				"image":"https://s.regiogroei.cloud/rtvNoord/channelImage/LIVE-Televisie-Midden.jpg",
+				"images":[
+					{"src":"https://s.regiogroei.cloud/rtvNoord/channelImage/LIVE-Televisie-Midden.jpg","width":1920,"type":"image/svg"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://media.rtvnoord.nl/live/rtvnoord/tv/index.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

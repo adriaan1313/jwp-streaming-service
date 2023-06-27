@@ -1,0 +1,26 @@
+{
+	"title": "RTV Oost televisie",
+	"cover": "https://s.regiogroei.cloud/TV_background.jpg",
+	"blurb": "RTV Oost televisie live",
+	
+	"playlist":{
+		"title":"RTV Oost televisie",
+		"description":"RTV Oost televisie live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"RTV Oost televisie",
+				"image":"https://s.regiogroei.cloud/TV_background.jpg",
+				"images":[
+					{"src":"https://s.regiogroei.cloud/TV_background.jpg","width":770,"type":"image/svg"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://d34cg2bnc08ruf.cloudfront.net/live/rtvoost/tv/index.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

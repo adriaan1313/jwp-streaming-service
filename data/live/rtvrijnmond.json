@@ -1,0 +1,26 @@
+{
+	"title": "RTV Rijnmond televisie",
+	"cover": "https://dcur8bjarl5c2.cloudfront.net/rijnmond/media/2019/09/02/1567431882325295/53d236a744219e30b95a9e7a4308e74a.jpg",
+	"blurb": "RTV Rijnmond televisie live",
+	
+	"playlist":{
+		"title":"RTV Rijnmond televisie",
+		"description":"RTV Rijnmond televisie live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"RTV Rijnmond televisie",
+				"image":"https://dcur8bjarl5c2.cloudfront.net/rijnmond/media/2019/09/02/1567431882325295/53d236a744219e30b95a9e7a4308e74a.jpg",
+				"images":[
+					{"src":"https://dcur8bjarl5c2.cloudfront.net/rijnmond/media/2019/09/02/1567431882325295/53d236a744219e30b95a9e7a4308e74a.jpg","width":1920,"type":"image/svg"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://dcur8bjarl5c2.cloudfront.net/live/rijnmond/tv/index.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"title": "NHNieuws Extra",
+	"cover": "https://i.imgur.com/3ow0Ig7.png",
+	"blurb": "NHNieuws Extra live",
+	
+	"playlist":{
+		"title":"NHNieuws Extra",
+		"description":"NHNieuws Extra live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"NHNieuws Extra",
+				"image":"https://i.imgur.com/3ow0Ig7.png",
+				"images":[
+					{"src":"https://i.imgur.com/3ow0Ig7.png","width":1920,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://rrr.sz.xlcdn.com/?account=nhnieuws&file=nhextra&type=live&service=wowza&protocol=https&output=playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+					
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

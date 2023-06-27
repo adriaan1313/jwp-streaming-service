@@ -1,0 +1,26 @@
+{
+	"title": "RTV Utrecht televisie",
+	"cover": "https://d18rwjdhpr8dcw.cloudfront.net/rtvutrecht/media/2020/05/15/1589536940591062/2a53685771d295ee142037dcf82f7208.jpg",
+	"blurb": "RTV Utrecht televisie live",
+	
+	"playlist":{
+		"title":"RTV Utrecht televisie",
+		"description":"RTV Utrecht televisie live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"RTV Utrecht televisie",
+				"image":"https://d18rwjdhpr8dcw.cloudfront.net/rtvutrecht/media/2020/05/15/1589536940591062/2a53685771d295ee142037dcf82f7208.jpg",
+				"images":[
+					{"src":"https://d18rwjdhpr8dcw.cloudfront.net/rtvutrecht/media/2020/05/15/1589536940591062/2a53685771d295ee142037dcf82f7208.jpg","width":1920,"type":"image/svg"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://d18rwjdhpr8dcw.cloudfront.net/live/rtvutrecht/rtvutrecht/index.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

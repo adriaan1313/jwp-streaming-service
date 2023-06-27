@@ -1,0 +1,26 @@
+{
+	"title": "Omroep Zeeland televisie",
+	"cover": "https://d3isaxd2t6q8zm.cloudfront.net/omroepzeeland/media/2022/03/29/1648538318544265/4453288-c4a39a81ab62bce56f51caaf5719247d.png",
+	"blurb": "Omroep Zeeland televisie live",
+	
+	"playlist":{
+		"title":"Omroep Zeeland televisie",
+		"description":"Omroep Zeeland televisie live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"Omroep Zeeland televisie",
+				"image":"https://d3isaxd2t6q8zm.cloudfront.net/omroepzeeland/media/2022/03/29/1648538318544265/4453288-c4a39a81ab62bce56f51caaf5719247d.png",
+				"images":[
+					{"src":"https://d3isaxd2t6q8zm.cloudfront.net/omroepzeeland/media/2022/03/29/1648538318544265/4453288-c4a39a81ab62bce56f51caaf5719247d.png","width":770,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://d3isaxd2t6q8zm.cloudfront.net/live/omroepzeeland/Vipe/index.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

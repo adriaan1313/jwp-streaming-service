@@ -1,0 +1,27 @@
+{
+	"title": "L1",
+	"cover": "https://d34pj260kw1xmk.cloudfront.net/l1/media/2022/02/09/1644415213994740/bdfbe499ec577917bd1093ac1aa82eef.jpg",
+	"blurb": "L1 live",
+	
+	"playlist":{
+		"title":"L1",
+		"description":"L1 live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"L1",
+				"image":"https://d34pj260kw1xmk.cloudfront.net/l1/media/2022/02/09/1644415213994740/bdfbe499ec577917bd1093ac1aa82eef.jpg",
+				"images":[
+					{"src":"https://d34pj260kw1xmk.cloudfront.net/l1/media/2022/02/09/1644415213994740/bdfbe499ec577917bd1093ac1aa82eef.jpg","width":960,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://d34pj260kw1xmk.cloudfront.net/live/l1/tv/index.m3u8","type":"application/vnd.apple.mpegurl"}
+					
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

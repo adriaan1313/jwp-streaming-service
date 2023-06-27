@@ -1,0 +1,27 @@
+{
+	"title": "At5",
+	"cover": "https://www.at5.nl/images/at5-tv.jpg",
+	"blurb": "At5 live",
+	
+	"playlist":{
+		"title":"At5",
+		"description":"At5 live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"At5",
+				"image":"https://www.at5.nl/images/at5-tv.jpg",
+				"images":[
+					{"src":"https://www.at5.nl/images/at5-tv.jpg","width":1920,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://takeoff.jetstre.am/?account=atvijf&file=live&type=live&service=wowza&protocol=https&output=playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+					
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

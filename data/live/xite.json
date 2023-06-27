@@ -1,0 +1,26 @@
+{
+	"title": "XITE",
+	"cover": "https://www.maxx-xs.nl/images/assets/3/b/3be7d9d4594065abe9d17af7fc7b8383/ART/art_01.jpeg",
+	"blurb": "XITE live",
+	
+	"playlist":{
+		"title":"XITE",
+		"description":"XITE live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"XITE",
+				"image":"https://www.maxx-xs.nl/images/assets/3/b/3be7d9d4594065abe9d17af7fc7b8383/ART/art_01.jpeg",
+				"images":[
+					{"src":"https://www.maxx-xs.nl/images/assets/3/b/3be7d9d4594065abe9d17af7fc7b8383/ART/art_01.jpeg","width":640,"type":"image/jpg"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://ms7.mx-cd.net/tv/226-1855782/XITE_NL.smil/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

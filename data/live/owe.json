@@ -1,0 +1,26 @@
+{
+	"title": "Omroep West televisie",
+	"cover": "https://d3r6frfb0ko02q.cloudfront.net/omroepwest/media/2021/06/23/1624442998954200/b1eb79eb22434969aace9dfa5b053ac6.jpg",
+	"blurb": "Omroep West televisie live",
+	
+	"playlist":{
+		"title":"Omroep West televisie",
+		"description":"Omroep West televisie live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"Omroep West televisie",
+				"image":"https://d3r6frfb0ko02q.cloudfront.net/omroepwest/media/2021/06/23/1624442998954200/b1eb79eb22434969aace9dfa5b053ac6.jpg",
+				"images":[
+					{"src":"https://d3r6frfb0ko02q.cloudfront.net/omroepwest/media/2021/06/23/1624442998954200/b1eb79eb22434969aace9dfa5b053ac6.jpg","width":1920,"type":"image/jpg"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://d1axml5ozykh3g.cloudfront.net/live/omroepwest/tv/index.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

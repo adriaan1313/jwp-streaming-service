@@ -1,0 +1,26 @@
+{
+	"title": "Omroep Brabant televisie",
+	"cover": "https://d1ctz4dshc0ubt.cloudfront.net/omroepbrabant/media/2021/01/07/1610021478052424/48f96524e78018e84be3178102f028d8.jpg",
+	"blurb": "Omroep Brabant televisie live",
+	
+	"playlist":{
+		"title":"Omroep Brabant televisie",
+		"description":"Omroep Brabant televisie live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"Omroep Brabant televisie",
+				"image":"https://d1ctz4dshc0ubt.cloudfront.net/omroepbrabant/media/2021/01/07/1610021478052424/48f96524e78018e84be3178102f028d8.jpg",
+				"images":[
+					{"src":"https://d1ctz4dshc0ubt.cloudfront.net/omroepbrabant/media/2021/01/07/1610021478052424/48f96524e78018e84be3178102f028d8.jpg","width":770,"type":"image/svg"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://d1ctz4dshc0ubt.cloudfront.net/live/omroepbrabant/tv/index.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

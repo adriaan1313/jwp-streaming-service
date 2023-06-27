@@ -1,0 +1,28 @@
+{
+	"title": "Omroep Gelderland kijkradio",
+	"cover": "https://d2od87akyl46nm.cloudfront.net/omroepgelderland/media/2023/01/24/1674568582998182/29a7cf3b300315b7253c39763ac4d3a1.jpeg",
+	"blurb": "Omroep Gelderland kijkradio live",
+	
+	"playlist":{
+		"title":"Omroep Gelderland kijkradio",
+		"description":"Omroep Gelderland kijkradio live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"Omroep Gelderland kijkradio",
+				"image":"https://d2od87akyl46nm.cloudfront.net/omroepgelderland/media/2023/01/24/1674568582998182/29a7cf3b300315b7253c39763ac4d3a1.jpeg",
+				"images":[
+					{"src":"https://d2od87akyl46nm.cloudfront.net/omroepgelderland/media/2023/01/24/1674568582998182/29a7cf3b300315b7253c39763ac4d3a1.jpeg","width":4032,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://d2od87akyl46nm.cloudfront.net/live/omroepgelderland/meekijkradio-hls/index.m3u8","type":"application/vnd.apple.mpegurl"},
+					{"file":"https://d2od87akyl46nm.cloudfront.net/icecast/omroepgelderland/radiogelderland","type":"audio/mpeg"}
+					
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"title": "Omroep Flevoland kijkradio",
+	"cover": "https://www.omroepflevoland.nl/assets/assets/img/stream/1645430738_621347d2ba26b.jpg",
+	"blurb": "Omroep Flevoland kijkradio live",
+	
+	"playlist":{
+		"title":"Omroep Flevoland kijkradio",
+		"description":"Omroep Flevoland kijkradio live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"Omroep Flevoland kijkradio",
+				"image":"https://www.omroepflevoland.nl/assets/assets/img/stream/1645430738_621347d2ba26b.jpg",
+				"images":[
+					{"src":"https://www.omroepflevoland.nl/assets/assets/img/stream/1645430738_621347d2ba26b.jpg","width":1007,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://d5ms27yy6exnf.cloudfront.net/live/omroepflevoland/radio/index.m3u8","type":"application/vnd.apple.mpegurl"},
+					{"file":"https://stream.omroepflevoland.nl/live/omroepflevoland/stream1hls/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

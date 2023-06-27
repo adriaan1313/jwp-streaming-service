@@ -1,0 +1,27 @@
+{
+	"title": "Ketnet Junior",
+	"cover": "https://images.vrt.be/w1600hx_j80/2021/03/24/bb9c683a-8c94-11eb-b07d-02b7b76bf47f.png",
+	"blurb": "Ketnet Junior live",
+	
+	"playlist":{
+		"title":"Ketnet Junior",
+		"description":"Ketnet Junior live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"Ketnet Junior",
+				"image":"https://images.vrt.be/w1600hx_j80/2021/03/24/bb9c683a-8c94-11eb-b07d-02b7b76bf47f.png",
+				"images":[
+					{"src":"https://images.vrt.be/w1600hx_j80/2021/03/24/bb9c683a-8c94-11eb-b07d-02b7b76bf47f.png","width":1600	,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://virtch.vrtcdn.be/v1/channel/KETNET_JUNIOR_PROD_MPEG_DASH/ketnet_junior_prod_mpeg_dash-dash.mpd","type":"application/dash+xml"},
+					{"file":"https://virtch.vrtcdn.be/v1/channel/KETNET_JUNIOR_PROD_HLS/ketnet_junior_prod_hls-hls.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

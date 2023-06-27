@@ -1,0 +1,26 @@
+{
+	"title": "TeleAruba Ch23",
+	"cover": "https://telearuba.aw/static/media/logo_60_anja_channel_id.34a7d9a0.png",
+	"blurb": "TeleAruba Ch23 live",
+	
+	"playlist":{
+		"title":"TeleAruba Ch23",
+		"description":"TeleAruba Ch23 live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"TeleAruba Ch23",
+				"image":"https://telearuba.aw/static/media/logo_60_anja_channel_id.34a7d9a0.png",
+				"images":[
+					{"src":"https://telearuba.aw/static/media/logo_60_anja_channel_id.34a7d9a0.png","width":920,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://cdn01.setar.aw/Canal23/canal23/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}
