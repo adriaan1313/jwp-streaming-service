@@ -3,11 +3,11 @@
 .item > p {
 	position: absolute;
 	bottom: 1.5px;
-	left: 1.5px;
+	left: 0px;
 	color: #fff;
 	background: rgba(0,0,0,0.5);
 	font-family: 'Trade Gothic',TradeGothic,Trade-Gothic,'Helvetica Neue',Arial,Arial,sans-serif;
-	padding: 0px 1px 0px 0px;
+	padding: 0px 1px 0px 1.5px;
 	margin: 0px 0px 0px 1.5px;
 }
 .item {

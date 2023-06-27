@@ -351,7 +351,7 @@ app.get("/film/:film", (req, res)=>{
 	try{
 		req.params.film=req.params.film.replaceAll(/\.\.(\/|\\)/g, "");
 		const film=JSON.parse(fs.readFileSync("./data/film/"+req.params.film+".json"));
-		res.send(flHtml({title: film.title, image: film.cover, blurb: film.blurb, menu: muHtml, player: req.params.film+"/play"}));
+		res.send(flHtml({title: film.title, image: film.cover, blurb: film.blurb, menu: muHtml, player: ("/film/"+req.params.film+"/play").replaceAll("//", "/")}));
 		console.log(req.ip, "went to the", film.title, "page");
 	}
 	catch(err){
@@ -366,7 +366,7 @@ app.get("/live/:live", (req, res)=>{
 		if(fs.readdirSync("./data/live").indexOf(req.params.live+".json")!=-1){
 			
 			const live=JSON.parse(fs.readFileSync("./data/live/"+req.params.live+".json"));
-			res.send(flHtml({title: live.title, image: live.cover, blurb: live.blurb, menu: muHtml, player: req.params.live+"/play"}));
+			res.send(flHtml({title: live.title, image: live.cover, blurb: live.blurb, menu: muHtml, player: ("/live/"+req.params.live+"/play").replaceAll("//", "/")}));
 			console.log(req.ip, "went to the", live.title, "page");
 		}else {
 			const prg=JSON.parse(fs.readFileSync("./data/multilive/"+req.params.live+".json"));
