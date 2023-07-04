@@ -1,0 +1,187 @@
+{
+	"title": "DanceTV",
+	"cover": "https://www.dancetv.net/img/icons/channels/DTlogo.jpg",
+	"blurb": "Dance Television live",
+	"channels":{
+		"channel1": {
+			"smallTitle":"DanceTV",
+			"title":"DanceTV",
+			"description":"Best of DanceTV Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"DanceTV",
+					"image":"https://www.dancetv.net/img/icons/channels/DTlogo.jpg",
+					"images":[
+						{"src":"https://www.dancetv.net/img/channels/poster-dancetelevision.jpg","width":1920,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://m1b2.worldcast.tv/dancetelevisionone/2/dancetelevisionone.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"channel2": {
+			"smallTitle":"Deep House District",
+			"title":"DanceTV Deep House District",
+			"description":"DanceTV Deep House Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"DanceTV Deep House District",
+					"image":"https://www.dancetv.net/img/icons/channels/deep-house-district.jpg",
+					"images":[
+						{"src":"https://www.dancetv.net/img/channels/poster-deep-house-district.jpg","width":1920,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://m1b2.worldcast.tv/dancetelevisiontwo/2/dancetelevisiontwo.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"channel3": {
+			"smallTitle":"Techno Warehouse",
+			"title":"DanceTV Techno Warehouse",
+			"description":"DanceTV Techno Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"DanceTV Techno Warehouse",
+					"image":"https://www.dancetv.net/img/icons/channels/techno-warehouse.jpg",
+					"images":[
+						{"src":"https://www.dancetv.net/img/channels/poster-techno-warehouse.jpg","width":1920,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://m2b2.worldcast.tv:7443/dancetelevisionthree/2/dancetelevisionthree.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"channel4": {
+			"smallTitle":"Algorhythm",
+			"title":"DanceTV Algorhythm",
+			"description":"DanceTV Tech House Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"DanceTV Algorhythm",
+					"image":"https://www.dancetv.net/img/icons/channels/algorhythm.jpg",
+					"images":[
+						{"src":"https://www.dancetv.net/img/channels/poster-algorhythm.jpg","width":1920,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://m2b2.worldcast.tv:7443/dancetelevisionfour/2/dancetelevisionfour.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"channel5": {
+			"smallTitle":"House Floor",
+			"title":"DanceTV House Floor",
+			"description":"DanceTV House Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"DanceTV House Floor",
+					"image":"https://www.dancetv.net/img/icons/channels/house-floor.jpg",
+					"images":[
+						{"src":"https://www.dancetv.net/img/channels/poster-house-floor.jpg","width":1920,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://m2b2.worldcast.tv:7443/dancetelevisionfive/2/dancetelevisionfive.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"channel6": {
+			"smallTitle":"MNML",
+			"title":"DanceTV MNML",
+			"description":"DanceTV Minimal/Deep Tech Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"DanceTV MNML",
+					"image":"https://www.dancetv.net/img/icons/channels/deep-tech-minimal.jpg",
+					"images":[
+						{"src":"https://www.dancetv.net/img/channels/poster-deep-tech-minimal.jpg","width":1920,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://mbit1.worldcast.tv/dancetelevisionsix/multibit.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"channel7": {
+			"smallTitle":"Mainstage",
+			"title":"DanceTV Mainstage",
+			"description":"DanceTV Mainstream (EDM) Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"DanceTV Mainstage",
+					"image":"https://www.dancetv.net/img/icons/channels/edm-mainstage.jpg",
+					"images":[
+						{"src":"https://www.dancetv.net/img/channels/poster-edm-mainstage.jpg","width":1920,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://mbit1.worldcast.tv/dancetelevisionseven/multibit.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"channel8": {
+			"smallTitle":"Chill AF",
+			"title":"DanceTV Chill AF",
+			"description":"DanceTV Downtempo Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"DanceTV Chill AF",
+					"image":"https://www.dancetv.net/img/icons/channels/chill-af.jpg",
+					"images":[
+						{"src":"https://www.dancetv.net/img/channels/poster-chill-af.jpg","width":1920,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://mbit1.worldcast.tv/dancetelevisioneight/multibit.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"channel9": {
+			"smallTitle":"Melodic Tech",
+			"title":"DanceTV Melodic Tech",
+			"description":"DanceTV Melodic Tech Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"DanceTV Melodic Tech",
+					"image":"https://www.dancetv.net/img/icons/channels/melodic-tech.jpg",
+					"images":[
+						{"src":"https://www.dancetv.net/img/channels/poster-melodic-tech.jpg","width":1920,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://mbit1.worldcast.tv/dancetelevisionnine/multibit.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		}
+	}
+}

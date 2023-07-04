@@ -17,7 +17,7 @@
 				],
 				"pubdate":0,
 				"sources":[
-					{"file":"http://ms7.mx-cd.net/tv/212-1299944/RTV-Zulthe.smil/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+					{"file":"https://ms7.mx-cd.net/tv/212-1299944/RTV-Zulthe.smil/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
 				],
 				"tracks":[{"file":"","kind":"thumbnails"}]
 			}
