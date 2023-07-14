@@ -332,7 +332,7 @@ app.get("/:programme", (req, res)=>{
 		prg.series.forEach((s, i)=>{
 			let eps="";
 			s.episodes.forEach((e, j)=>{
-				eps+=epHtml({num: j, image: e.playlist[0].image, title: e.smallTitle, series: i});
+				eps+=epHtml({num: j, image: e.playlist[0].image, title: e.smallTitle, series: i, programme: req.params.programme});
 			});
 			series+=srHtml({series: i, title: s.title, cover: s.cover, episodes: eps});
 		});
@@ -373,7 +373,7 @@ app.get("/live/:live", (req, res)=>{
 			let series="";
 			
 			Object.keys(prg.channels).forEach((c)=>{
-				series+=imHtml({image: prg.channels[c].playlist[0].image, title: prg.channels[c].smallTitle, link: c});
+				series+=imHtml({image: prg.channels[c].playlist[0].image, title: prg.channels[c].smallTitle, link: `/live/${req.params.live}/${c}`});
 			});
 	
 			res.send(prHtml({title: prg.title, image: prg.cover, series, blurb: prg.blurb, menu: muHtml}));

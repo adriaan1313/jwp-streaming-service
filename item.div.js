@@ -1,2 +1,2 @@
-module.exports = (vars)=> `<div class="item" onclick="location.href=(new window.URL('${vars.link}', location.origin+location.pathname+'/')).href.replaceAll('//', '/').replace('/', '//')"><img src="${vars.image}"/><p>${vars.title}</p></div>
+module.exports = (vars)=> `<a class="item" href="${vars.link}"><img src="${vars.image}"/><p>${vars.title}</p></a>
 `;
