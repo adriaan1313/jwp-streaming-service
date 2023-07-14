@@ -1,0 +1,52 @@
+{
+    "name": "JWPSERV - TV",
+    "short_name": "JWPSERV",
+    "icons": [
+        {
+            "src": "/img/inverted_curlies_16-01.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/inverted_curlies_32-01.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/inverted_curlies_64-01.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/inverted_curlies_128-01.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/inverted_curlies_256-01.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/inverted_curlies_512-01.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/inverted_curlies_1024-02.png",
+            "sizes": "1024x1024",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/inverted_curlies_SIMP.svg",
+            "sizes": "320x320",
+            "type": "image/svg+xml"
+        }
+    ],
+    "theme_color": "#00000f",
+    "background_color": "#00000f",
+    "start_url": "/",
+    "id": "/",
+	"display": "standalone",
+	"description": "kijk tv!"
+}

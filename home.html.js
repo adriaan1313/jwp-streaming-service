@@ -5,6 +5,7 @@ module.exports = (vars)=>`<!DOCTYPE HTML>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/regular.min.css">
 		<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
 		<link rel="stylesheet" href="/style/programme.css"/>
+		<link rel="manifest" href="/site.webmanifest">
 	</head>
 	</body>
 		${vars.menu}
