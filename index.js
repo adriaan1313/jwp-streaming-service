@@ -28,7 +28,7 @@
 //vttparser.js
 //not all of these are necessary
 
-
+const storage=new (require("./storage"))("./data/");
 const express = require("express");
 const fs = require("fs");
 const homeHtml = require("./home.html");
@@ -54,7 +54,7 @@ app.get("/pls/film/:film/", (req, res)=>{
 	res.set("Content-Type", "application/json")
 	try{
 		req.params.film=req.params.film.replaceAll(/\.\.(\/|\\)/g, "");
-		const rjsn = JSON.parse(fs.readFileSync("./data/film/"+req.params.film+".json"));
+		const rjsn = storage.find("film/"+req.params.film);
 		res.send(rjsn.playlist);
 	}
 	catch(err){
@@ -66,7 +66,7 @@ app.get("/pls/live/:live/", (req, res)=>{
 	res.set("Content-Type", "application/json")
 	try{
 		req.params.live=req.params.live.replaceAll(/\.\.(\/|\\)/g, "");
-		const rjsn = JSON.parse(fs.readFileSync("./data/live/"+req.params.live+".json"));
+		const rjsn =  storage.find("live/"+req.params.live);
 		res.send(rjsn.playlist);
 	}
 	catch(err){
@@ -78,7 +78,7 @@ app.get("/pls/live/:series/:channel", (req, res)=>{
 	res.set("Content-Type", "application/json")
 	try{
 		req.params.series=req.params.series.replaceAll(/\.\.(\/|\\)/g, "");
-		const rjsn = JSON.parse(fs.readFileSync("./data/multilive/"+req.params.series+".json"));
+		const rjsn = storage.find("multilive/"+req.params.series);
 		const ep = rjsn.channels[req.params.channel];
 		if(!ep) {
 			res.status(404).send(`{"error": "Hey, that channel does not exist lol"}`);
@@ -95,7 +95,7 @@ app.get("/pls/:programme/:series/:episode", (req, res)=>{
 	res.set("Content-Type", "application/json")
 	try{
 		req.params.programme=req.params.programme.replaceAll(/\.\.(\/|\\)/g, "");
-		const rjsn = JSON.parse(fs.readFileSync("./data/playlist/"+req.params.programme+".json"));
+		const rjsn = storage.find("playlist/"+req.params.programme);
 		const ser = rjsn.series[req.params.series];
 		if(!ser) {
 			res.status(404).send(`{"error": "no_series"}`);
@@ -118,7 +118,7 @@ app.get("/film/:film/play", (req, res)=>{
 	try{
 		req.params.film=req.params.film.replaceAll(/\.\.(\/|\\)/g, "");
 		console.log(req.params)
-		const rjsn = JSON.parse(fs.readFileSync("./data/film/"+req.params.film+".json"));
+		const rjsn = storage.find("film/"+req.params.film);
 		res.send(playHtml({title:rjsn.title, KEY, ar:rjsn.ar, pls: `/pls/film/${req.params.film}`, parent: `/film/${req.params.film}`, back_button: "/img/back_film.svg", postJS: "post_film.js"}));
 		console.log(req.ip, "went to the", rjsn.title, `watch page`);
 	}
@@ -133,7 +133,7 @@ app.get("/live/:live/play", (req, res)=>{
 	try{
 		req.params.live=req.params.live.replaceAll(/\.\.(\/|\\)/g, "");
 		console.log(req.params)
-		const rjsn = JSON.parse(fs.readFileSync("./data/live/"+req.params.live+".json"));
+		const rjsn = storage.find("live/"+req.params.live);
 		res.send(playHtml({title:rjsn.title, KEY, ar:rjsn.ar, pls: `/pls/live/${req.params.live}`, parent: `/live/${req.params.live}`, back_button: "/img/back_film.svg", postJS: "post_film.js"}));
 		console.log(req.ip, "went to the", rjsn.title, `watch page`);
 	}
@@ -148,7 +148,7 @@ app.get("/live/:series/:channel", (req, res)=>{
 	try{
 		req.params.series=req.params.series.replaceAll(/\.\.(\/|\\)/g, "");
 		console.log(req.params)
-		const rjsn = JSON.parse(fs.readFileSync("./data/multilive/"+req.params.series+".json"));
+		const rjsn = storage.find("multilive/"+req.params.series);
 		const ch = rjsn.channels[req.params.channel];
 		if(!ch) {
 			sendErr(res, `no_channel`);
@@ -171,7 +171,7 @@ app.get("/:programme/:series/:episode", (req, res)=>{
 	try{
 		req.params.programme=req.params.programme.replaceAll(/\.\.(\/|\\)/g, "");
 		console.log(req.params)
-		const rjsn = JSON.parse(fs.readFileSync("./data/playlist/"+req.params.programme+".json"));
+		const rjsn = storage.find("playlist/"+req.params.programme);
 		const ser = rjsn.series[req.params.series];
 		if(!ser) {
 			sendErr(res, `no_series`);
@@ -205,31 +205,27 @@ app.get("/", (req, res)=>{
 			return;
 		}
 		let programmes="";
-		prog_dir.forEach((p,i)=>{
-			console.log(p,i)
-			const prog = JSON.parse(fs.readFileSync("./data/playlist/"+p))
-			programmes+=imHtml({link: p.replace(".json", ""), image:prog.cover, title: prog.title});
+		prog_dir.forEach(p=>{
+			const prog = storage.find("playlist/"+p.slice(0,-5));
+			programmes+=imHtml({link: p.slice(0,-5), image:prog.cover, title: prog.title});
 		});
 		const plist = stHtml({ title: "All programmes", items: programmes});
 
 		let films="";
-		film_dir.forEach((p,i)=>{
-			console.log(p,i)
-			const film = JSON.parse(fs.readFileSync("./data/film/"+p))
-			films+=imHtml({link: "/film/"+p.replace(".json", ""), image:film.cover, title: film.title});
+		film_dir.forEach(p=>{
+			const film = storage.find("film/"+p.slice(0,-5));
+			films+=imHtml({link: "/film/"+p.slice(0,-5), image:film.cover, title: film.title});
 		});
 		const flist = stHtml({ title: "All films", items: films});
 		
 		let lives="";
-		live_dir.forEach((p,i)=>{
-			console.log(p,i)
-			const live = JSON.parse(fs.readFileSync("./data/live/"+p))
-			lives+=imHtml({link: "/live/"+p.replace(".json", ""), image:live.cover, title: live.title});
+		live_dir.forEach(p=>{
+			const live = storage.find("live/"+p.slice(0,-5));
+			lives+=imHtml({link: "/live/"+p.slice(0,-5), image:live.cover, title: live.title});
 		});
-		mlive_dir.forEach((p,i)=>{
-			console.log(p,i)
-			const live = JSON.parse(fs.readFileSync("./data/multilive/"+p))
-			lives+=imHtml({link: "/live/"+p.replace(".json", ""), image:live.cover, title: live.title});
+		mlive_dir.forEach(p=>{
+			const live = storage.find("multilive/"+p.slice(0,-5));
+			lives+=imHtml({link: "/live/"+p.slice(0,-5), image:live.cover, title: live.title});
 		});
 		const llist = stHtml({ title: "All live", items: lives});
 		
@@ -254,10 +250,9 @@ app.get("/programmes", (req, res)=>{
 			return;
 		}
 		let programmes=[];
-		DCSLEGENDSOFTOMORROW.forEach((p,i)=>{
-			console.log(p,i)
-			const prog = JSON.parse(fs.readFileSync("./data/playlist/"+p))
-			programmes.push({title: prog.title, url_part: "/"+p.replace(".json", "")});
+		DCSLEGENDSOFTOMORROW.forEach(p=>{
+			const prog = storage.find("playlist/"+p.slice(0,-5));
+			programmes.push({title: prog.title, url_part: "/"+p.slice(0,-5)});
 		});
 		console.log("programmes api call")
 		res.send(JSON.stringify(programmes));
@@ -278,10 +273,9 @@ app.get("/films", (req, res)=>{
 			return;
 		}
 		let films=[];
-		film_dir.forEach((p,i)=>{
-			console.log(p,i)
-			const film = JSON.parse(fs.readFileSync("./data/film/"+p))
-			films.push({title: film.title, url_part: "/film/"+p.replace(".json", "")});
+		film_dir.forEach(p=>{
+			const film = storage.find("film/"+p.slice(0,-5));
+			films.push({title: film.title, url_part: "/film/"+p.slice(0,-5)});
 		});
 		console.log("films api call")
 		res.send(JSON.stringify(films));
@@ -303,15 +297,13 @@ app.get("/lives", (req, res)=>{
 			return;
 		}
 		let lives=[];
-		live_dir.forEach((p,i)=>{
-			console.log(p,i)
-			const live = JSON.parse(fs.readFileSync("./data/live/"+p))
-			lives.push({title: live.title, url_part: "/live/"+p.replace(".json", "")});
+		live_dir.forEach(p=>{
+			const live = storage.find("live/"+p.slice(0,-5));
+			lives.push({title: live.title, url_part: "/live/"+p.slice(0,-5)});
 		});
-		mlive_dir.forEach((p,i)=>{
-			console.log(p,i)
-			const live = JSON.parse(fs.readFileSync("./data/multilive/"+p))
-			lives.push({title: live.title, url_part: "/live/"+p.replace(".json", "")});
+		mlive_dir.forEach(p=>{
+			const live = storage.find("multilive/"+p.slice(0,-5));
+			lives.push({title: live.title, url_part: "/live/"+p.slice(0,-5)});
 		});
 		console.log("lives api call")
 		res.send(JSON.stringify(lives));
@@ -327,7 +319,7 @@ app.get("/:programme", (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
 		req.params.programme=req.params.programme.replaceAll(/\.\.(\/|\\)/g, "");
-		const prg=JSON.parse(fs.readFileSync("./data/playlist/"+req.params.programme+".json"));
+		const prg=storage.find("playlist/"+req.params.programme);
 		let series="";
 		prg.series.forEach((s, i)=>{
 			let eps="";
@@ -350,7 +342,7 @@ app.get("/film/:film", (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
 		req.params.film=req.params.film.replaceAll(/\.\.(\/|\\)/g, "");
-		const film=JSON.parse(fs.readFileSync("./data/film/"+req.params.film+".json"));
+		const film=storage.find("film/"+req.params.film);
 		res.send(flHtml({title: film.title, image: film.cover, blurb: film.blurb, menu: muHtml, player: ("/film/"+req.params.film+"/play").replaceAll("//", "/")}));
 		console.log(req.ip, "went to the", film.title, "page");
 	}
@@ -365,11 +357,11 @@ app.get("/live/:live", (req, res)=>{
 		req.params.live=req.params.live.replaceAll(/\.\.(\/|\\)/g, "");
 		if(fs.readdirSync("./data/live").indexOf(req.params.live+".json")!=-1){
 			
-			const live=JSON.parse(fs.readFileSync("./data/live/"+req.params.live+".json"));
+			const live=storage.find("live/"+req.params.live);
 			res.send(flHtml({title: live.title, image: live.cover, blurb: live.blurb, menu: muHtml, player: ("/live/"+req.params.live+"/play").replaceAll("//", "/")}));
 			console.log(req.ip, "went to the", live.title, "page");
 		}else {
-			const prg=JSON.parse(fs.readFileSync("./data/multilive/"+req.params.live+".json"));
+			const prg=storage.find("multilive/"+req.params.live);
 			let series="";
 			
 			Object.keys(prg.channels).forEach((c)=>{
@@ -411,3 +403,5 @@ app.get("/error/:error", (req, res)=>{
 app.use((req, res, next) => {
   res.status(404).sendFile(__dirname +"/public/404.html");
 })
+
+
