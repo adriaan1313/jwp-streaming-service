@@ -1,0 +1,47 @@
+{
+	"title": "W:O:A 2023",
+	"cover": "https://www.magentamusik.de/uploads/images/Festivals/Wacken/2023/mm_wide_teaser_wacken_23_2000x1125_divers_v1.jpg",
+	"blurb": "Wacken 2023 Live at T-Mobile",
+	"channels":{
+		"louder-bullhead": {
+			"smallTitle":"Louder Stage + Bullhead City",
+			"title":"W:O:A 2023 Louder Stage + Bullhead City",
+			"description":"W:O:A 2023 Louder Stage + Bullhead City",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"W:O:A 2023 Louder Stage + Bullhead City",
+					"image":"https://www.magentamusik.de/uploads/images/Festivals/Wacken/2023/mm_wide_teaser_wacken_2000x1125_louder_stage.jpg",
+					"images":[
+						{"src":"https://www.magentamusik.de/uploads/images/Festivals/Wacken/2023/mm_wide_teaser_wacken_2000x1125_louder_stage.jpg","width":2000,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://streaming.magentamusik.de/csm/573871/magentamusik2/index.m3u8?yo.ac=true","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"harder-faster": {
+			"smallTitle":"Harder-Faster Stage",
+			"title":"W:O:A 2023 Harder + Faster Stage",
+			"description":"Ihr könnt euch auf alte Bekannte, neue Highlights und echte Ausnahmemusiker:innen freuen – das Line-Up des W:O:A 2023 hat auch dieses Jahr wieder einiges zu bieten: Zu den Headlinern gehören Iron Maiden, Heaven Shall Burn, Helloween, Doro. Insgesamt treten 180 Bands und Solo-Acts aus 30 Ländern auf.",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"W:O:A 2023 Harder + Faster Stage",
+					"image":"https://www.magentamusik.de/uploads/images/Festivals/Wacken/2023/mm_wide_teaser_wacken_2000x1125_faster_harder_stage_heute.jpg",
+					"images":[
+						{"src":"https://www.magentamusik.de/uploads/images/Festivals/Wacken/2023/mm_wide_teaser_wacken_2000x1125_faster_harder_stage_heute.jpg","width":2000,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		}
+	}
+}
