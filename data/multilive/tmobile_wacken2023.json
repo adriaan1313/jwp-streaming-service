@@ -37,7 +37,7 @@
 						{"src":"https://www.magentamusik.de/uploads/images/Festivals/Wacken/2023/mm_wide_teaser_wacken_2000x1125_faster_harder_stage_heute.jpg","width":2000,"type":"image/jpeg"}
 					],
 					"sources":[
-						{"file":"","type":"application/vnd.apple.mpegurl"}
+						{"file":"https://streaming.magentamusik.de/csm/573870/magentamusik1/index.m3u8?yo.ac=true","type":"application/vnd.apple.mpegurl"}
 					],
 					"tracks":[{"file":"","kind":"thumbnails"}]
 				}
