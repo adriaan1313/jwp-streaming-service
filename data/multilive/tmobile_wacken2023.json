@@ -13,6 +13,7 @@
 				{
 					"title":"W:O:A 2023 Louder Stage + Bullhead City",
 					"image":"https://www.magentamusik.de/uploads/images/Festivals/Wacken/2023/mm_wide_teaser_wacken_2000x1125_louder_stage.jpg",
+					"minDvrWindow": 0,
 					"images":[
 						{"src":"https://www.magentamusik.de/uploads/images/Festivals/Wacken/2023/mm_wide_teaser_wacken_2000x1125_louder_stage.jpg","width":2000,"type":"image/jpeg"}
 					],
@@ -32,7 +33,8 @@
 			"playlist":[
 				{
 					"title":"W:O:A 2023 Harder + Faster Stage",
-					"image":"https://www.magentamusik.de/uploads/images/Festivals/Wacken/2023/mm_wide_teaser_wacken_2000x1125_faster_harder_stage_heute.jpg",
+					"image":"https://www.magentamusik.de/uploads/images/Festivals/Wacken/2023/mm_wide_teaser_wacken_2000x1125_faster_harder_stage.jpg",
+					"minDvrWindow": 0,
 					"images":[
 						{"src":"https://www.magentamusik.de/uploads/images/Festivals/Wacken/2023/mm_wide_teaser_wacken_2000x1125_faster_harder_stage_heute.jpg","width":2000,"type":"image/jpeg"}
 					],
