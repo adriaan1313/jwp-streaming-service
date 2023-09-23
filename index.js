@@ -116,10 +116,10 @@ app.get("/pls/:programme/:series/:episode", (req, res)=>{
 app.get("/film/:film/play", (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
-		req.params.film=req.params.film.replaceAll(/\.\.(\/|\\)/g, "");
+		const rpfilm=req.params.film.replaceAll(/\.\.(\/|\\)/g, "");
 		console.log(req.params)
-		const rjsn = storage.find("film/"+req.params.film);
-		res.send(playHtml({title:rjsn.title, KEY, ar:rjsn.ar, pls: `/pls/film/${req.params.film}`, parent: `/film/${req.params.film}`, back_button: "/img/back_film.svg", postJS: "post_film.js"}));
+		const rjsn = storage.find("film/"+rpfilm);
+		res.send(playHtml({title:rjsn.title, KEY, ar:rjsn.ar, pls: `/pls/film/${rpfilm}`, parent: `/film/${rpfilm}`, back_button: "/img/back_film.svg", postJS: "post_film.js"}));
 		console.log(req.ip, "went to the", rjsn.title, `watch page`);
 	}
 	catch(err){
@@ -131,10 +131,10 @@ app.get("/film/:film/play", (req, res)=>{
 app.get("/live/:live/play", (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
-		req.params.live=req.params.live.replaceAll(/\.\.(\/|\\)/g, "");
+		const rplive=req.params.live.replaceAll(/\.\.(\/|\\)/g, "");
 		console.log(req.params)
-		const rjsn = storage.find("live/"+req.params.live);
-		res.send(playHtml({title:rjsn.title, KEY, ar:rjsn.ar, pls: `/pls/live/${req.params.live}`, parent: `/live/${req.params.live}`, back_button: "/img/back_film.svg", postJS: "post_film.js"}));
+		const rjsn = storage.find("live/"+rplive);
+		res.send(playHtml({title:rjsn.title, KEY, ar:rjsn.ar, pls: `/pls/live/${rplive}`, parent: `/live/${rplive}`, back_button: "/img/back_film.svg", postJS: "post_film.js"}));
 		console.log(req.ip, "went to the", rjsn.title, `watch page`);
 	}
 	catch(err){
@@ -146,16 +146,17 @@ app.get("/live/:live/play", (req, res)=>{
 app.get("/live/:series/:channel", (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
-		req.params.series=req.params.series.replaceAll(/\.\.(\/|\\)/g, "");
+		const rpseries=req.params.series.replaceAll(/\.\.(\/|\\)/g, "");
+		const rpchannel=req.params.channel.replaceAll(/\.\.(\/|\\)/g, "");
 		console.log(req.params)
-		const rjsn = storage.find("multilive/"+req.params.series);
-		const ch = rjsn.channels[req.params.channel];
+		const rjsn = storage.find("multilive/"+rpseries);
+		const ch = rjsn.channels[rpchannel];
 		if(!ch) {
 			sendErr(res, `no_channel`);
 			return;
 		}
-		res.send(playHtml({title:ch.title, KEY, ar:ch.ar, pls: `/pls/live/${req.params.series}/${req.params.channel}`, parent: `/live/${req.params.series}`, postJS: "post_film.js"}));
-		console.log(req.ip, "went to the", `s${req.params.series}e${req.params.channel} page`);
+		res.send(playHtml({title:ch.title, KEY, ar:ch.ar, pls: `/pls/live/${rpseries}/${rpchannel}`, parent: `/live/${rpseries}`, postJS: "post_film.js"}));
+		console.log(req.ip, "went to the", `s${rpseries}e${rpchannel} page`);
 	}
 	catch(err){
 		console.log(err);
@@ -169,21 +170,23 @@ app.get("/live/:series/:channel", (req, res)=>{
 app.get("/:programme/:series/:episode", (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
-		req.params.programme=req.params.programme.replaceAll(/\.\.(\/|\\)/g, "");
+		const rpprogramme=req.params.programme.replaceAll(/\.\.(\/|\\)/g, "");
+		const rpseries=Number(req.params.series);
+		const rpepisode=Number(req.params.episode);
 		console.log(req.params)
-		const rjsn = storage.find("playlist/"+req.params.programme);
-		const ser = rjsn.series[req.params.series];
+		const rjsn = storage.find("playlist/"+rpprogramme);
+		const ser = rjsn.series[rpseries];
 		if(!ser) {
 			sendErr(res, `no_series`);
 			return;
 		}
-		const ep = ser.episodes[req.params.episode];
+		const ep = ser.episodes[rpepisode];
 		if(!ep) {
 			sendErr(res, `no_episode`);
 			return;
 		}
-		res.send(playHtml({title:ep.title, KEY, ar:ep.ar, pls: `/pls/${req.params.programme}/${req.params.series}/${req.params.episode}`, parent: `/${req.params.programme}/${req.params.series}`}));
-		console.log(req.ip, "went to the", rjsn.title, `s${req.params.series*1+1}e${req.params.episode*1+1} page`);
+		res.send(playHtml({title:ep.title, KEY, ar:ep.ar, pls: `/pls/${rpprogramme}/${rpseries}/${rpepisode}`, parent: `/${rpprogramme}/${rpseries}`}));
+		console.log(req.ip, "went to the", rjsn.title, `s${rpseries*1+1}e${rpepisode*1+1} page`);
 	}
 	catch(err){
 		console.log(err);
@@ -318,13 +321,14 @@ app.get("/lives", (req, res)=>{
 app.get("/:programme", (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
-		req.params.programme=req.params.programme.replaceAll(/\.\.(\/|\\)/g, "");
-		const prg=storage.find("playlist/"+req.params.programme);
+		const rpprogramme=req.params.programme.replaceAll(/\.\.(\/|\\)/g, "");
+		
+		const prg=storage.find("playlist/"+rpprogramme);
 		let series="";
 		prg.series.forEach((s, i)=>{
 			let eps="";
 			s.episodes.forEach((e, j)=>{
-				eps+=epHtml({num: j, image: e.playlist[0].image, title: e.smallTitle, series: i, programme: req.params.programme});
+				eps+=epHtml({num: j, image: e.playlist[0].image, title: e.smallTitle, series: i, programme: rpprogramme});
 			});
 			series+=srHtml({series: i, title: s.title, cover: s.cover, episodes: eps});
 		});
