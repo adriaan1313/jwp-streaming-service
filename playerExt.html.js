@@ -6,7 +6,7 @@ module.exports = (vars)=>
 		<link rel="stylesheet" href="/style/player.css"/>
 	</head>
 	<body>
-		<script type="text/javascript" src="${vars.jwVer || "https://ssl.p.jwpcdn.com/player/v/8.27.1/jwplayer.js"}" ></script>
+		<script type="text/javascript" src="${vars.jwVer || "https://ssl.p.jwpcdn.com/player/v/8.29.0/jwplayer.js"}" ></script>
 		<script type="text/javascript" id="jwKey">jwplayer.key = "${vars.KEY}";</script>
 		<div id="player"></div>
 		<script type="text/javascript" id="jwSetup">
