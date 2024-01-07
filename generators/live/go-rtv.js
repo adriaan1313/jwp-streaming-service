@@ -1,18 +1,57 @@
-const got = require("sync-request");
+//const got = require("sync-request");
+//const fetch = require("node:fetch"); oh, is built in i guess
 let prefTs = 0;
 const name = "RTV-GO";
+
+let data = {
+	"title": "GO RTV",
+	"cover": "https://www.go-rtv.nl/template/assets/img/logo.png",
+	"blurb": "GO RTV live",
+	
+	"playlist":{
+		"title":"GO RTV",
+		"description":"GO RTV live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"GO RTV",
+				"image":"https://www.go-rtv.nl/template/assets/img/logo.png",
+				"images":[
+					{"src":"https://www.go-rtv.nl/template/assets/img/logo.png","width":800,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+};
+
+
 function getStreamPartnerUrl(url, callback){
-	const res = got("GET",url);
-	console.log(res);
-	const [a,b,c,d]=JSON.parse("["+res.getBody("utf8" ).split("}(")[1].split("))")[0].replaceAll("'", '"')+"]");
-	const e = wise(a,b,c,d);
-	const [f,g,h,i] = JSON.parse("["+e.split("}(")[1].split("))")[0].replaceAll("'", '"')+"]");
-	const j = wise(f,g,h,i);
-	const [k,l,m,n] = JSON.parse("["+j.split("}(").pop().split("))")[0].replaceAll("'", '"')+"]");
-	const o = wise(k,l,m,n);
-	const p = o.split(`src:"`)[1].split(`"`)[0];
-	console.log(p);
-	return p;
+	//const res = got("GET",url);
+	let notRes = fetch(url).then(res=>{
+		return res.text()
+	});
+
+	notRes.then(res=>{
+		//console.log(res);
+		const [a,b,c,d]=JSON.parse("["+res.split("}(")[1].split("))")[0].replaceAll("'", '"')+"]");
+		const e = wise(a,b,c,d);
+		const [f,g,h,i] = JSON.parse("["+e.split("}(")[1].split("))")[0].replaceAll("'", '"')+"]");
+		const j = wise(f,g,h,i);
+		const [k,l,m,n] = JSON.parse("["+j.split("}(").pop().split("))")[0].replaceAll("'", '"')+"]");
+		const o = wise(k,l,m,n);
+		const p = o.split(`src:"`)[1].split(`"`)[0];
+
+		prefTs = 1*p.split("token_endtime=")[1].split("&")[0];
+		console.log(data.playlist.playlist[0])
+		data.playlist.playlist[0].sources[0].file = p;
+		data.upToDate = true;
+	});
 }
 function wise(w, i, s, e) {
 	var lIll = 0;
@@ -48,39 +87,11 @@ function wise(w, i, s, e) {
 
 function refresh(d){
 	if(d/1000 > prefTs){
-		newUrl= getStreamPartnerUrl("https://ssl.streampartner.nl/player.php?url=c9616ec317ffd9d6d6e1");
-			
-		prefTs = 1*newUrl.split("token_endtime=")[1].split("&")[0];
-
-		return {
-			"title": "GO RTV",
-			"cover": "https://www.go-rtv.nl/template/assets/img/logo.png",
-			"blurb": "GO RTV live",
-			
-			"playlist":{
-				"title":"GO RTV",
-				"description":"GO RTV live",
-				"kind":"Single Item",
-				"ar":"16:9",
-				"playlist":[
-					{
-						"title":"GO RTV",
-						"image":"https://www.go-rtv.nl/template/assets/img/logo.png",
-						"images":[
-							{"src":"https://www.go-rtv.nl/template/assets/img/logo.png","width":1920,"type":"image/png"}
-						],
-						"pubdate":0,
-						"sources":[
-							{"file":newUrl,"type":"application/vnd.apple.mpegurl"}
-							
-						],
-						"tracks":[{"file":"","kind":"thumbnails"}]
-					}
-				]
-			}
-		}
+		data.upToDate = false;
+		getStreamPartnerUrl("https://ssl.streampartner.nl/player.php?url=c9616ec317ffd9d6d6e1");
+		return;
 		
 	}
 	return false;
 }
-module.exports= refresh;
+module.exports= {data, refresh};

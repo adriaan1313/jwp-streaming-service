@@ -46,7 +46,7 @@ const KEY = "x5VJVyr70la0Joby2AIBgBCa9CqNJcD+X1Ad2IOAgvkD9nmOlD0ojw=="; //those 
 let app = express();
 let server = app.listen(process.env.PORT || 3000, listening);
 function listening(){
-	storage.add("live/gortv",undefined,require("./generators/live/go-rtv"))
+	storage.add("live/gortv",require("./generators/live/go-rtv"))
 	console.log("listening. . .");
 }
 

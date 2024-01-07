@@ -31,7 +31,7 @@ class DataBoi {
 		if(this.cache[dataPath]?.type == "generated"){
 			const response = this.cache[dataPath].refresh(Date.now());
 			if(response!==false){
-				this.cache[dataPath].data = response;
+				console.log(`${dataPath} refreshed`);
 			}
 		}else {
 		const fullPath = path.join(this.path, dataPath)+".json";
@@ -46,10 +46,13 @@ class DataBoi {
 		}
 		return this.cache[dataPath].data;
 	}
-	add(dataPath, data, refresh){
-		data||=refresh(1);
-		console.log(data);
-		this.cache[dataPath] = {data, refresh, type: "generated", dataPath};
+	add(dataPath, dataobj){
+		//like dataobj = {data:whateve, refresh:fn(date)}
+		dataobj.data||=dataobj.refresh(1);
+		console.log(dataobj.data);
+		dataobj.type = "generated";
+		dataobj.dataPath = dataPath;
+		this.cache[dataPath] = dataobj;
 	}
 	genList(prefix){
 		return Object.keys(this.cache).filter((key,i,a)=>{
