@@ -1,0 +1,27 @@
+{
+	"title": "RTV Arnhem televisie",
+	"cover": "https://www.rtvconnect.nl/templates/localgrid/omroep/rtvconnect/images/rtvconnect.png",
+	"blurb": "RTV Arnhem televisie live",
+	
+	"playlist":{
+		"title":"RTV Arnhem televisie",
+		"description":"RTV Arnhem televisie live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"RTV Arnhem televisie",
+				"image":"https://www.rtvconnect.nl/templates/localgrid/omroep/rtvconnect/images/rtvconnect.png",
+				"images":[
+					{"src":"https://www.rtvconnect.nl/templates/localgrid/omroep/rtvconnect/images/rtvconnect.png","width":164,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://d2m4j1nnoh1k26.cloudfront.net/nlpo/clr-nlpo/rtvfavoriet/index.m3u8","type":"application/vnd.apple.mpegurl"},
+					{"file":"https://d2m4j1nnoh1k26.cloudfront.net/nlpo/clr-nlpo/rtvfavoriet/index.mpd","type":"application/dash+xml"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

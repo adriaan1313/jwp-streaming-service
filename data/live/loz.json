@@ -1,0 +1,26 @@
+{
+	"title": "LOZ TV",
+	"cover": "https://www.lokaleomroepzeewolde.nl/images/logo/Logo_2019.webp",
+	"blurb": "LOZ TV live",
+	
+	"playlist":{
+		"title":"LOZ TV",
+		"description":"LOZ TV live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"LOZ TV",
+				"image":"https://www.lokaleomroepzeewolde.nl/images/logo/Logo_2019.webp",
+				"images":[
+					{"src":"https://www.lokaleomroepzeewolde.nl/images/logo/Logo_2019.webp","width":298,"type":"image/webp"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://5e2b3e3114872.streamlock.net:1443/lozlive/smil:lozlive/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

@@ -26,20 +26,38 @@ class DataBoi {
 	constructor(dataPath){
 		this.path = dataPath;
 		this.cache = {};
-		
 	}
 	find(dataPath){
+		if(this.cache[dataPath]?.type == "generated"){
+			const response = this.cache[dataPath].refresh(Date.now());
+			if(response!==false){
+				this.cache[dataPath].data = response;
+			}
+		}else {
 		const fullPath = path.join(this.path, dataPath)+".json";
-		if(!(this.cache[dataPath] && this.cache[dataPath].date >= fs.statSync(fullPath).mtimeMs)){
-			delete this.cache[dataPath];
-			this.cache[dataPath]={
-				data: JSON.parse(fs.readFileSync(fullPath)),
-				date: Date.now()
-			};
+			if(!(this.cache[dataPath] && this.cache[dataPath].date >= fs.statSync(fullPath).mtimeMs)){
+				delete this.cache[dataPath];
+				this.cache[dataPath]={
+					data: JSON.parse(fs.readFileSync(fullPath)),
+					date: Date.now(),
+					type: "file"
+				};
+			}
 		}
 		return this.cache[dataPath].data;
 	}
+	add(dataPath, data, refresh){
+		data||=refresh(1);
+		console.log(data);
+		this.cache[dataPath] = {data, refresh, type: "generated", dataPath};
+	}
+	genList(prefix){
+		return Object.keys(this.cache).filter((key,i,a)=>{
+			return this.cache[key].type=="generated" && key.substr(0,prefix.length)==prefix;
+		});
+	}
+	
 }
-
+function gato(){};
 
 module.exports = DataBoi;

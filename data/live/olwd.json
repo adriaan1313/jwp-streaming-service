@@ -1,0 +1,26 @@
+{
+	"title": "Omroep Leeuwarden TV",
+	"cover": "https://www.maxx-xs.nl/images/assets/b/9/b9d4b1ea3e734e52700896b92d2142a4/ART/art_01.jpg",
+	"blurb": "Omroep Leeuwarden TV live",
+	
+	"playlist":{
+		"title":"Omroep Leeuwarden TV",
+		"description":"Omroep Leeuwarden TV live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"Omroep Leeuwarden TV",
+				"image":"https://www.maxx-xs.nl/images/assets/b/9/b9d4b1ea3e734e52700896b92d2142a4/ART/art_01.jpg",
+				"images":[
+					{"src":"https://www.maxx-xs.nl/images/assets/b/9/b9d4b1ea3e734e52700896b92d2142a4/ART/art_01.jpg","width":640,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://ms7.mx-cd.net/tv/238-2061506/Omroep_LEO_TV.smil/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

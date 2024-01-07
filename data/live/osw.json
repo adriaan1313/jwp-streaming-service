@@ -1,0 +1,27 @@
+{
+	"title": "Omroep Súdwest",
+	"cover": "https://i0.wp.com/omroepsudwest.nl/wp-content/uploads/2021/07/cropped-Omroepsudwest-vector-logo-1900x600-transperant-websave.gif",
+	"blurb": "Omroep Súdwest live",
+	
+	"playlist":{
+		"title":"Omroep Súdwest",
+		"description":"Omroep Súdwest live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"Omroep Súdwest",
+				"image":"https://i0.wp.com/omroepsudwest.nl/wp-content/uploads/2021/07/cropped-Omroepsudwest-vector-logo-1900x600-transperant-websave.gif",
+				"images":[
+					{"src":"https://i0.wp.com/omroepsudwest.nl/wp-content/uploads/2021/07/cropped-Omroepsudwest-vector-logo-1900x600-transperant-websave.gif","width":1900,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://d2ecwd3cgy6wo0.cloudfront.net/nlpo/clr-nlpo/omroepsudwest/index.m3u8","type":"application/vnd.apple.mpegurl"},
+					{"file":"https://d2ecwd3cgy6wo0.cloudfront.net/nlpo/clr-nlpo/omroepsudwest/index.mpd","type":"application/dash+xml"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

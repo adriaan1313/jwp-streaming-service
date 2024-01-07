@@ -1,0 +1,27 @@
+{
+	"title": "Radio Centraal",
+	"cover": "https://i0.wp.com/www.radiocentraal.com/cms/wp-content/uploads/2023/11/cropped-Radio-Centraal-Wit-grijs.png?fit=2333%2C623&quality=100&ssl=1",
+	"blurb": "Radio Centraal live",
+	
+	"playlist":{
+		"title":"Radio Centraal",
+		"description":"Radio Centraal live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"Radio Centraal",
+				"image":"https://i0.wp.com/www.radiocentraal.com/cms/wp-content/uploads/2023/11/cropped-Radio-Centraal-Wit-grijs.png?fit=2333%2C623&quality=100&ssl=1",
+				"images":[
+					{"src":"https://i0.wp.com/www.radiocentraal.com/cms/wp-content/uploads/2023/11/cropped-Radio-Centraal-Wit-grijs.png?fit=2333%2C623&quality=100&ssl=1","width":2333,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://d5ag8ytwtc4hw.cloudfront.net/nlpo/clr-nlpo/weststellingwerf/index.m3u8","type":"application/vnd.apple.mpegurl"},
+					{"file":"https://d5ag8ytwtc4hw.cloudfront.net/nlpo/clr-nlpo/weststellingwerf/index.mpd", "type":"application/dash+xml"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

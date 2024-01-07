@@ -1,0 +1,26 @@
+{
+	"title": "RTV NOF - Noardeast-Fryslân / Dantumadiel",
+	"cover": "https://www.rtvnof.nl/img/kabelkrant/tvkanaal_live.jpg",
+	"blurb": "RTV NOF - Noardeast-Fryslân / Dantumadiel live",
+	
+	"playlist":{
+		"title":"RTV NOF - Noardeast-Fryslân / Dantumadiel",
+		"description":"RTV NOF - Noardeast-Fryslân / Dantumadiel live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"RTV NOF - Noardeast-Fryslân / Dantumadiel",
+				"image":"https://www.rtvnof.nl/img/kabelkrant/tvkanaal_live.jpg",
+				"images":[
+					{"src":"https://www.rtvnof.nl/img/kabelkrant/tvkanaal_live.jpg","width":600,"type":"image/jpeg"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://5e6ab219de8f5.streamlock.net/rtvnof/rtvnof/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

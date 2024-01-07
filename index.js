@@ -46,6 +46,7 @@ const KEY = "x5VJVyr70la0Joby2AIBgBCa9CqNJcD+X1Ad2IOAgvkD9nmOlD0ojw=="; //those 
 let app = express();
 let server = app.listen(process.env.PORT || 3000, listening);
 function listening(){
+	//storage.add("live/gortv",undefined,require("./generators/live/go-rtv"))
 	console.log("listening. . .");
 }
 
@@ -212,12 +213,20 @@ app.get("/", (req, res)=>{
 			const prog = storage.find("playlist/"+p.slice(0,-5));
 			programmes+=imHtml({link: p.slice(0,-5), image:prog.cover, title: prog.title});
 		});
+		storage.genList("playlist/").forEach(p=>{
+			lp=storage.find(p);
+			programmes+=imHtml({link: p, image:lp.cover, title: lp.title});
+		});
 		const plist = stHtml({ title: "All programmes", items: programmes});
 
 		let films="";
 		film_dir.forEach(p=>{
 			const film = storage.find("film/"+p.slice(0,-5));
 			films+=imHtml({link: "/film/"+p.slice(0,-5), image:film.cover, title: film.title});
+		});
+		storage.genList("film/").forEach(p=>{
+			lp=storage.find(p);
+			films+=imHtml({link: p, image:lp.cover, title: lp.title});
 		});
 		const flist = stHtml({ title: "All films", items: films});
 		
@@ -226,9 +235,17 @@ app.get("/", (req, res)=>{
 			const live = storage.find("live/"+p.slice(0,-5));
 			lives+=imHtml({link: "/live/"+p.slice(0,-5), image:live.cover, title: live.title});
 		});
+		storage.genList("live/").forEach(p=>{
+			lp=storage.find(p);
+			lives+=imHtml({link: p, image:lp.cover, title: lp.title});
+		});
 		mlive_dir.forEach(p=>{
 			const live = storage.find("multilive/"+p.slice(0,-5));
 			lives+=imHtml({link: "/live/"+p.slice(0,-5), image:live.cover, title: live.title});
+		});
+		storage.genList("multilive/").forEach(p=>{
+			lp=storage.find(p);
+			lives+=imHtml({link: p, image:lp.cover, title: lp.title});
 		});
 		const llist = stHtml({ title: "All live", items: lives});
 		
@@ -359,7 +376,7 @@ app.get("/live/:live", (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
 		req.params.live=req.params.live.replaceAll(/\.\.(\/|\\)/g, "");
-		if(fs.readdirSync("./data/live").indexOf(req.params.live+".json")!=-1){
+		if(fs.readdirSync("./data/live").indexOf(req.params.live+".json")!=-1||Object.keys(storage.cache).includes("live/"+req.params.live)){
 			
 			const live=storage.find("live/"+req.params.live);
 			res.send(flHtml({title: live.title, image: live.cover, blurb: live.blurb, menu: muHtml, player: ("/live/"+req.params.live+"/play").replaceAll("//", "/")}));
