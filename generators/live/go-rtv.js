@@ -54,35 +54,35 @@ function getStreamPartnerUrl(url, callback){
 	});
 }
 function wise(w, i, s, e) {
-	var lIll = 0;
-	var ll1I = 0;
-	var Il1l = 0;
-	var ll1l = [];
-	var l1lI = [];
+	var a = 0;
+	var b = 0;
+	var c = 0;
+	var d = [];
+	var f = [];
 	while (true) {
-		if (lIll < 5) l1lI.push(w.charAt(lIll));
-		else if (lIll < w.length) ll1l.push(w.charAt(lIll));
-		lIll++;
-		if (ll1I < 5) l1lI.push(i.charAt(ll1I));
-		else if (ll1I < i.length) ll1l.push(i.charAt(ll1I));
-		ll1I++;
-		if (Il1l < 5) l1lI.push(s.charAt(Il1l));
-		else if (Il1l < s.length) ll1l.push(s.charAt(Il1l));
-		Il1l++;
-		if (w.length + i.length + s.length + e.length == ll1l.length + l1lI.length + e.length)	break;
+		if (a < 5) f.push(w.charAt(a));
+		else if (a < w.length) d.push(w.charAt(a));
+		a++;
+		if (b < 5) f.push(i.charAt(b));
+		else if (b < i.length) d.push(i.charAt(b));
+		b++;
+		if (c < 5) f.push(s.charAt(c));
+		else if (c < s.length) d.push(s.charAt(c));
+		c++;
+		if (w.length + i.length + s.length + e.length == d.length + f.length + e.length)	break;
 	}
-		var lI1l = ll1l.join("");
-		var I1lI = l1lI.join("");
-		ll1I = 0;
-		var l1ll = [];
-		for (lIll = 0; lIll < ll1l.length; lIll += 2) {
-		var ll11 = -1;
-		if (I1lI.charCodeAt(ll1I) % 2) ll11 = 1;
-		l1ll.push(String.fromCharCode(parseInt(lI1l.substr(lIll, 2), 36) - ll11));
-		ll1I++;
-		if (ll1I >= l1lI.length) ll1I = 0;
+		var g = d.join("");
+		var h = f.join("");
+		b = 0;
+		var j = [];
+		for (a = 0; a < d.length; a += 2) {
+		var k = -1;
+		if (h.charCodeAt(b) % 2) k = 1;
+		j.push(String.fromCharCode(parseInt(g.substr(a, 2), 36) - k));
+		b++;
+		if (b >= f.length) b = 0;
 	}
-	return l1ll.join("");
+	return j.join("");
 }
 
 function refresh(d){
