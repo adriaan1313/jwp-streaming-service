@@ -46,6 +46,28 @@ class DataBoi {
 		}
 		return this.cache[dataPath].data;
 	}
+	findAsync(dataPath, callback){
+		if(this.cache[dataPath]?.type == "generated"){
+			const response = this.cache[dataPath].refresh(Date.now());
+			if(response===false && this.cache[dataPath].data.upToDate){
+				callback(this.cache[dataPath].data);
+			}else {
+				console.log(`${dataPath} started refreshing`);
+				this.cache[dataPath].waitingCallbacks.push(callback);//note: this assumes this isn't run *during* setUpToDate
+			}
+		}else {
+		const fullPath = path.join(this.path, dataPath)+".json";
+			if(!(this.cache[dataPath] && this.cache[dataPath].date >= fs.statSync(fullPath).mtimeMs)){
+				delete this.cache[dataPath];
+				this.cache[dataPath]={
+					data: JSON.parse(fs.readFileSync(fullPath)),
+					date: Date.now(),
+					type: "file"
+				};
+			}
+			callback(this.cache[dataPath].data);
+		}
+	}
 	add(dataPath, dataobj){
 		//like dataobj = {data:whateve, refresh:fn(date)}
 		dataobj.data||=dataobj.refresh(1);

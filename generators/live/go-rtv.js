@@ -2,7 +2,8 @@
 //const fetch = require("node:fetch"); oh, is built in i guess
 let prefTs = 0;
 const name = "RTV-GO";
-
+const waitingCallbacks = [];
+const MARGIN = 2000;
 let data = {
 	"title": "GO RTV",
 	"cover": "https://www.go-rtv.nl/template/assets/img/logo.png",
@@ -50,7 +51,7 @@ function getStreamPartnerUrl(url, callback){
 		prefTs = 1*p.split("token_endtime=")[1].split("&")[0];
 		console.log(data.playlist.playlist[0])
 		data.playlist.playlist[0].sources[0].file = p;
-		data.upToDate = true;
+		setUpToDate();
 	});
 }
 function wise(w, i, s, e) {
@@ -86,7 +87,7 @@ function wise(w, i, s, e) {
 }
 
 function refresh(d){
-	if(d/1000 > prefTs){
+	if(d/1000 > prefTs - MARGIN){
 		data.upToDate = false;
 		getStreamPartnerUrl("https://ssl.streampartner.nl/player.php?url=c9616ec317ffd9d6d6e1");
 		return;
@@ -94,4 +95,11 @@ function refresh(d){
 	}
 	return false;
 }
-module.exports= {data, refresh};
+
+function setUpToDate(){
+	data.upToDate = true;
+	waitingCallbacks.forEach(a=>a(data));
+	waitingCallbacks.length=0;
+}
+
+module.exports= {data, refresh, waitingCallbacks};

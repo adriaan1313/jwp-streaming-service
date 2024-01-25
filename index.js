@@ -67,8 +67,9 @@ app.get("/pls/live/:live/", (req, res)=>{
 	res.set("Content-Type", "application/json")
 	try{
 		req.params.live=req.params.live.replaceAll(/\.\.(\/|\\)/g, "");
-		const rjsn =  storage.find("live/"+req.params.live);
-		res.send(rjsn.playlist);
+		storage.findAsync("live/"+req.params.live, rjsn=>{
+			res.send(rjsn.playlist);
+		});
 	}
 	catch(err){
 		if(err.toString().indexOf("no such file or directory")!=-1)res.status(404).send(`{"error": "no_programme"}`);
