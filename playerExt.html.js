@@ -4,9 +4,15 @@ module.exports = (vars)=>
 	<head>
 		<title>${vars.title}</title>
 		<link rel="stylesheet" href="/style/player.css"/>
+		<meta property="og:title" content="${vars.title}" />
+		<meta property="og:url" content="${vars.canon}" />
+		<meta property="og:type" content="video.${vars.subtype}" />
+		<meta property="og:image" content="${vars.image}" />
+		<meta property="og:video" content="${vars.video.url}" />
+		<meta property="og:video:type" content="${vars.video.type}" />
 	</head>
 	<body>
-		<script type="text/javascript" src="${vars.jwVer || "https://ssl.p.jwpcdn.com/player/v/8.30.1/jwplayer.js"}" ></script>
+		<script type="text/javascript" src="${vars.jwVer || "https://ssl.p.jwpcdn.com/player/v/8.32.0/jwplayer.js"}" ></script>
 		<script type="text/javascript" id="jwKey">jwplayer.key = "${vars.KEY}";</script>
 		<div id="player"></div>
 		<script type="text/javascript" id="jwSetup">

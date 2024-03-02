@@ -4,6 +4,12 @@ module.exports = (vars)=>
 	<head>
 		<title>${vars.title}</title>
 		<link rel="stylesheet" href="/style/player.css"/>
+		<meta property="og:title" content="${vars.title}" />
+		<meta property="og:url" content="${vars.canon}" />
+		<meta property="og:type" content="video.${vars.subtype}" />
+		<meta property="og:image" content="video.${vars.image}" />
+		<meta property="og:video" content="${vars.video.url}" />
+		<meta property="og:video:type" content="${vars.video.type}" />
 	</head>
 	<body>
 		<script type="text/javascript" src="/jwplayer.js" ></script>

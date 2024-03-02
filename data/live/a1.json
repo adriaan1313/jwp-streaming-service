@@ -1,6 +1,6 @@
 {
 	"title": "A1",
-	"cover": "https://www.a1mediagroep.nl/templates/localgrid/omroep/a1mediagroep/images/a1mediagroep.png",
+	"cover": "https://cdn.nieuwsned.nl/98f13708210194c475687be6106a3b84/files/vormgeving/a1mediagroep-logo.png",
 	"blurb": "A1 live",
 	
 	"playlist":{
@@ -11,9 +11,9 @@
 		"playlist":[
 			{
 				"title":"A1",
-				"image":"https://www.a1mediagroep.nl/templates/localgrid/omroep/a1mediagroep/images/a1mediagroep.png",
+				"image":"https://cdn.nieuwsned.nl/98f13708210194c475687be6106a3b84/files/vormgeving/a1mediagroep-logo.png",
 				"images":[
-					{"src":"https://www.a1mediagroep.nl/templates/localgrid/omroep/a1mediagroep/images/a1mediagroep.png","width":164,"type":"image/png"}
+					{"src":"https://cdn.nieuwsned.nl/98f13708210194c475687be6106a3b84/files/vormgeving/a1mediagroep-logo.png","width":164,"type":"image/png"}
 				],
 				"pubdate":0,
 				"sources":[

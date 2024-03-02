@@ -98,7 +98,10 @@ function refresh(d){
 
 function setUpToDate(){
 	data.upToDate = true;
-	waitingCallbacks.forEach(a=>a(data));
+	waitingCallbacks.forEach((a,i)=>{
+		a(data);
+		delete waitingCallbacks[i];//just in case
+	});
 	waitingCallbacks.length=0;
 }
 
