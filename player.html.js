@@ -9,7 +9,7 @@ module.exports = (vars)=>
 		<meta property="og:type" content="video.${vars.subtype}" />
 		<meta property="og:image" content="${vars.image}" />
 		<meta property="og:video" content="${vars.video.url}" />${(()=>{console.log(vars.video.url.substr(0,5));if(vars.video.url.substr(0,5)=="https") return "\n\t\t<meta property=\"og:video:secure\" content=\""+vars.video.url+"\" />"; else return "";})()}
-		<meta property="og:video:type" content="${vars.video.type}" />
+		<meta property="og:video:type" content="${vars.video.type}" />${ifReturn(vars.video.width, "\n\t\t<meta property=\"og:video:width\" content=\""+vars.video.width+"\" />")}${ifReturn(vars.video.height, "\n\t\t<meta property=\"og:video:height\" content=\""+vars.video.height+"\" />")}
 	</head>
 	<body>
 		<script type="text/javascript" src="/jwplayer.js" ></script>
@@ -43,3 +43,7 @@ module.exports = (vars)=>
 
 </html>
 `;
+function ifReturn(a,b){
+	if(a) return b||a;
+	else return "";
+}
