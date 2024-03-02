@@ -1,0 +1,25 @@
+{
+	"title": "Big Buck Bunny (By Blender Foundation)",
+	"cover": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg",
+	"blurb": "Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+	
+	"playlist":{
+		"title":"Big Buck Bunny (By Blender Foundation)",
+		"description":"Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"Big Buck Bunny (By Blender Foundation)",
+				"image":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg",
+				"images":[
+					{"src":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg","width":480,"type":"image/jpeg"}
+				],
+				"sources":[
+					{"file":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4","type":"video/mp4","height":720,"width":1280,"label":"720p"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}
