@@ -160,3 +160,4 @@ public/related.js
 public/vast.js
 public/vttparser.js
 
+*.txt
