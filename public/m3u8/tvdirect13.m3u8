@@ -1,0 +1,13 @@
+#EXTM3U
+# So this is kind of an experiment, originally the urls were https://sincerecloud.stream/loadbalancer/secure/BYTxqO63nNhoXGy9k_8b7w/1709482585/hPtgrdyt.m3u8 and https://edge1.tvdirect13.com/live/playlist.m3u8
+#EXT-X-VERSION:3
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=3600000,RESOLUTION=1920x1080
+https://nl03.edge.sincerecloud.stream/live_v1/hlsts/PI35gRFXkz9aocLw56hPQA/1709482585/CWTVDirect_1080/index.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1800000,RESOLUTION=1280x720
+https://nl03.edge.sincerecloud.stream/live_v1/hlsts/rYLsMYLESD8pp34JU_mw_A/1709482585/CWTVDirect_720/index.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=800000,RESOLUTION=852x480
+https://nl03.edge.sincerecloud.stream/live_v1/hlsts/2q-LN6WYQ96x4hr1L3Oklg/1709482585/CWTVDirect_480/index.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1880000,RESOLUTION=1920x1080
+https://edge1.tvdirect13.com/live/playlist_mid/index.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=252000,RESOLUTION=1920x1080
+https://edge1.tvdirect13.com/live/playlist_low/index.m3u8

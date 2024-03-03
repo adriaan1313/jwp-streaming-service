@@ -122,7 +122,7 @@ app.get("/film/:film/play", (req, res)=>{
 		const rpfilm=req.params.film.replaceAll(/\.\.(\/|\\)/g, "");
 		console.log(req.params)
 		const rjsn = storage.find("film/"+rpfilm);
-		res.send(playHtml({title:rjsn.title, KEY, ar:rjsn.ar, pls: `/pls/film/${rpfilm}`, parent: `/film/${rpfilm}`, back_button: "/img/back_film.svg", postJS: "post_film.js", canon: getCanonUrl(req), subtype: "movie", image: rjsn.cover, video: {url: rjsn.playlist.playlist[0].sources[0].file, type: rjsn.playlist.playlist[0].sources[0].type, width: rjsn.playlist.playlist[0].sources[0].width, height: rjsn.playlist.playlist[0].sources[0].height} }));
+		res.send(playHtml({title:rjsn.title, KEY, ar:rjsn.ar, pls: `/pls/film/${rpfilm}`, parent: `/film/${rpfilm}`, back_button: "/img/back_film.svg", postJS: "post_film.js", canon: getCanonUrl(req), subtype: "movie", image: rjsn.cover, video: {url: rjsn.playlist.playlist[0].sources[0].file, type: rjsn.playlist.playlist[0].sources[0].type, width: rjsn.playlist.playlist[0].sources[0].width, height: rjsn.playlist.playlist[0].sources[0].height}, description: rjsn.blurb }));
 		console.log(req.ip, "went to the", rjsn.title, `watch page`);
 	}
 	catch(err){
@@ -137,7 +137,7 @@ app.get("/live/:live/play", (req, res)=>{
 		const rplive=req.params.live.replaceAll(/\.\.(\/|\\)/g, "");
 		console.log(req.params)
 		const rjsn = storage.find("live/"+rplive);
-		res.send(playHtml({title:rjsn.title, KEY, ar:rjsn.ar, pls: `/pls/live/${rplive}`, parent: `/live/${rplive}`, back_button: "/img/back_film.svg", postJS: "post_film.js", canon: getCanonUrl(req), subtype: "other", image: rjsn.cover, video: {url: rjsn.playlist.playlist[0].sources[0].file, type: rjsn.playlist.playlist[0].sources[0].type, width: rjsn.playlist.playlist[0].sources[0].width, height: rjsn.playlist.playlist[0].sources[0].height} }));
+		res.send(playHtml({title:rjsn.title, KEY, ar:rjsn.ar, pls: `/pls/live/${rplive}`, parent: `/live/${rplive}`, back_button: "/img/back_film.svg", postJS: "post_film.js", canon: getCanonUrl(req), subtype: "other", image: rjsn.cover, video: {url: rjsn.playlist.playlist[0].sources[0].file, type: rjsn.playlist.playlist[0].sources[0].type, width: rjsn.playlist.playlist[0].sources[0].width, height: rjsn.playlist.playlist[0].sources[0].height}, description: rjsn.blurb }));
 		console.log(req.ip, "went to the", rjsn.title, `watch page`);
 	}
 	catch(err){
@@ -158,7 +158,7 @@ app.get("/live/:series/:channel", (req, res)=>{
 			sendErr(res, `no_channel`);
 			return;
 		}
-		res.send(playHtml({title:ch.title, KEY, ar:ch.ar, pls: `/pls/live/${rpseries}/${rpchannel}`, parent: `/live/${rpseries}`, postJS: "post_film.js", canon: getCanonUrl(req), subtype: "other", image: rjsn.cover, video: {url: ch.playlist[0].sources[0].file, type: ch.playlist[0].sources[0].type, width: ch.playlist[0].sources[0].width, height: ch.playlist[0].sources[0].height }}));
+		res.send(playHtml({title:ch.title, KEY, ar:ch.ar, pls: `/pls/live/${rpseries}/${rpchannel}`, parent: `/live/${rpseries}`, postJS: "post_film.js", canon: getCanonUrl(req), subtype: "other", image: rjsn.cover, video: {url: ch.playlist[0].sources[0].file, type: ch.playlist[0].sources[0].type, width: ch.playlist[0].sources[0].width, height: ch.playlist[0].sources[0].height }, description: ch.description}));
 		console.log(req.ip, "went to the", `s${rpseries}e${rpchannel} page`);
 	}
 	catch(err){
@@ -188,7 +188,7 @@ app.get("/:programme/:series/:episode", (req, res)=>{
 			sendErr(res, `no_episode`);
 			return;
 		}
-		res.send(playHtml({title:ep.title, KEY, ar:ep.ar, pls: `/pls/${rpprogramme}/${rpseries}/${rpepisode}`, parent: `/${rpprogramme}/${rpseries}`, canon: getCanonUrl(req), subtype: "episode", image: rjsn.cover, video: {url: ep.playlist[0].sources[0].file, type: ep.playlist[0].sources[0].trueType||ep.playlist[0].sources[0].type, width: ep.playlist[0].sources[0].width, height: ep.playlist[0].sources[0].height}})); // This is getting out of hand, we should probably just hand it all the json at some point
+		res.send(playHtml({title:ep.title, KEY, ar:ep.ar, pls: `/pls/${rpprogramme}/${rpseries}/${rpepisode}`, parent: `/${rpprogramme}/${rpseries}`, canon: getCanonUrl(req), subtype: "episode", image: rjsn.cover, video: {url: ep.playlist[0].sources[0].file, type: ep.playlist[0].sources[0].trueType||ep.playlist[0].sources[0].type, width: ep.playlist[0].sources[0].width, height: ep.playlist[0].sources[0].height}, description: ep.description})); // This is getting out of hand, we should probably just hand it all the json at some point
 		console.log(req.ip, "went to the", rjsn.title, `s${rpseries*1+1}e${rpepisode*1+1} page`);
 	}
 	catch(err){

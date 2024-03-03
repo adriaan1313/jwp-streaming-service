@@ -1,0 +1,21 @@
+{
+	"title":"Television Direct 13",
+	"cover":"https://play-lh.googleusercontent.com/QS_T9E2FyXeBBeq6p1Q4kq7EDvPslTClaBJC7LF2i7yknB3xiAXmJYTRPUNICb0ORFA=s0-fcrop64=1,00004fffffffaf00",
+	"blurb":"TV Direct 13 (Direct Media Curaçao) live",
+	"playlist":{
+		"title":"TV Direct 13",
+		"description":"TV Direct 13 live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[{
+			"title":"TV Direct 13",
+			"image":"https://play-lh.googleusercontent.com/QS_T9E2FyXeBBeq6p1Q4kq7EDvPslTClaBJC7LF2i7yknB3xiAXmJYTRPUNICb0ORFA=s0-fcrop64=1,00004fffffffaf00",
+			"images":[{"src":"https://play-lh.googleusercontent.com/QS_T9E2FyXeBBeq6p1Q4kq7EDvPslTClaBJC7LF2i7yknB3xiAXmJYTRPUNICb0ORFA=s0-fcrop64=1,00004fffffffaf00","width":819,"type":"image/png"}],
+			"pubdate":0,
+			"sources":[
+				{"file":"/m3u8/tvdirect13.m3u8","type":"application/vnd.apple.mpegurl"}
+			],
+			"tracks":[{"file":"", "kind":"thumbnails"}]
+		}]
+	}
+}
