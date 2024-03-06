@@ -52,6 +52,15 @@ function listening(){
 }
 
 app.use(express.static('public'));
+
+storage.find("redirects").forEach(redir=>{
+	app.get(redir.path, (req, res)=>{
+		res.redirect(redir.status||302, redir.dest);
+	});
+});
+
+
+
 app.get("/pls/film/:film/", (req, res)=>{
 	res.set("Content-Type", "application/json")
 	try{

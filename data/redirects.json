@@ -1,0 +1,4 @@
+[
+	{"path": "/live/aje/", "dest": "/live/aljazeera", "type": 303},
+	{"path": "/live/aje/play/", "dest": "/live/aljazeera/aje", "type": 301}
+]

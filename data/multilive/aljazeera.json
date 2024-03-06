@@ -1,0 +1,87 @@
+{
+	"title": "Al Jazeera",
+	"cover": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Aljazeera_eng.svg/1280px-Aljazeera_eng.svg.png",
+	"blurb": "Al Jazeera live",
+	"channels":{
+		"aje": {
+			"smallTitle":"English",
+			"title":"Al Jazeera English",
+			"description":"Al Jazeera English Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"Al Jazeera English",
+					"image":"https://svgshare.com/i/13r5.svg",
+					"images":[
+						{"src":"https://svgshare.com/i/13r5.svg","width":166,"type":"image/svg"}
+					],
+					"sources":[
+						{"file":"https://live-hls-web-aje-fa.getaj.net/AJE/index.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"ajb": {
+			"smallTitle":"Balkans",
+			"title":"Al Jazeera Balkans",
+			"description":"Al Jazeera Balkans Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"Al Jazeera Balkans",
+					"image":"https://svgur.com/i/13t0.svg",
+					"images":[
+						{"src":"https://svgur.com/i/13t0.svg","width":166,"type":"image/svg"}
+					],
+					"sources":[
+						{"file":"https://live-hls-web-ajb.getaj.net/AJB/index.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"aja": {
+			"smallTitle":"Arabic",
+			"title":"Al Jazeera Arabic",
+			"description":"Al Jazeera Arabic Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"Al Arabic",
+					"image":"https://svgur.com/i/13tB.svg",
+					"images":[
+						{"src":"https://svgur.com/i/13tB.svg","width":166,"type":"image/svg"}
+					],
+					"sources":[
+						{"file":"https://live-hls-web-aja-fa.getaj.net/AJA/index.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"ajm": {
+			"smallTitle":"Mubasher",
+			"title":"Al Jazeera Mubasher",
+			"description":"Al Jazeera Mubasher Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"Al Mubasher",
+					"image":"https://svgur.com/i/13qY.svg",
+					"images":[
+						{"src":"https://svgur.com/i/13qY.svg","width":166,"type":"image/svg"}
+					],
+					"sources":[
+						{"file":"https://live-hls-web-ajm.getaj.net/AJM/index.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		}
+	}
+}
