@@ -1,6 +1,6 @@
 {
 	"title": "Omroep Berg en Dal televisie",
-	"cover": "https://www.omroepbergendal.nl/templates/localgrid/omroep/omroepbergendal/images/omroepbergendal.png",
+	"cover": "https://www.omroepbergendal.nl/download/attachments/82968578/Logo_omroep_Berg_en_Dal%20(1).jpg",
 	"blurb": "Omroep Berg en Dal televisie live",
 	
 	"playlist":{
@@ -11,13 +11,13 @@
 		"playlist":[
 			{
 				"title":"Omroep Berg en Dal televisie",
-				"image":"https://www.omroepbergendal.nl/templates/localgrid/omroep/omroepbergendal/images/omroepbergendal.png",
+				"image":"https://www.omroepbergendal.nl/download/attachments/82968578/Logo_omroep_Berg_en_Dal%20(1).jpg",
 				"images":[
-					{"src":"https://www.omroepbergendal.nl/templates/localgrid/omroep/omroepbergendal/images/omroepbergendal.png","width":164,"type":"image/png"}
+					{"src":"https://www.omroepbergendal.nl/download/attachments/82968578/Logo_omroep_Berg_en_Dal%20(1).jpg","width":2478,"type":"image/png"}
 				],
 				"pubdate":0,
 				"sources":[
-					{"file":"https://rtvbergendal.nl:4000/live/rtvbergendallive.m3u8","type":"application/vnd.apple.mpegurl"}
+					{"file":"https://rtvbergendal.nl:3245/live/rtvbergendallive.m3u8","type":"application/vnd.apple.mpegurl"}
 				],
 				"tracks":[{"file":"","kind":"thumbnails"}]
 			}

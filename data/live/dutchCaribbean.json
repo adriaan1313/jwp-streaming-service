@@ -1,0 +1,21 @@
+{
+	"title":"Dutch Caribbean TV",
+	"cover":"https://www.dutchcaribbeantv.com/wp-content/uploads/2019/06/logo_dctv_bes.png",
+	"blurb":"DCTV live",
+	"playlist":{
+		"title":"DCTV",
+		"description":"DCTV live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[{
+			"title":"DCTV",
+			"image":"https://www.dutchcaribbeantv.com/wp-content/uploads/2019/06/logo_dctv_bes.png",
+			"images":[{"src":"https://www.dutchcaribbeantv.com/wp-content/uploads/2019/06/logo_dctv_bes.png","width":150,"type":"image/png"}],
+			"pubdate":0,
+			"sources":[
+				{"file":"https://sincerecloud.stream/loadbalancer/public/actMdyoE.m3u8","type":"application/vnd.apple.mpegurl"}
+			],
+			"tracks":[{"file":"", "kind":"thumbnails"}]
+		}]
+	}
+}

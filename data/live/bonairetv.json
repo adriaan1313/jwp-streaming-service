@@ -1,0 +1,21 @@
+{
+	"title":"Bonaire TV",
+	"cover":"https://bonaire.tv/wp/wp-content/uploads/2019/10/bonaire-tv-logo_596x150.png",
+	"blurb":"Bonaire TV live",
+	"playlist":{
+		"title":"Bonaire TV",
+		"description":"Bonaire TV live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[{
+			"title":"Bonaire TV",
+			"image":"https://bonaire.tv/wp/wp-content/uploads/2019/10/bonaire-tv-logo_596x150.png",
+			"images":[{"src":"https://bonaire.tv/wp/wp-content/uploads/2019/10/bonaire-tv-logo_596x150.png","width":596,"type":"image/png"}],
+			"pubdate":0,
+			"sources":[
+				{"file":"https://media.streambrothers.com:1936/8506/8506/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+			],
+			"tracks":[{"file":"", "kind":"thumbnails"}]
+		}]
+	}
+}

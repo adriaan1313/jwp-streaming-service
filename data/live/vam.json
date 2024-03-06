@@ -1,0 +1,22 @@
+{
+	"title":"Vid&apos;s &amp; More",
+	"cover":"https://i.imgur.com/lNR8xmq.png",
+	"blurb":"VAM live",
+	"playlist":{
+		"title":"VAM",
+		"description":"VAM live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[{
+			"title":"VAM",
+			"image":"https://i.imgur.com/lNR8xmq.png",
+			"images":[{"src":"https://i.imgur.com/lNR8xmq.png","width":600,"type":"image/png"}],
+			"pubdate":0,
+			"sources":[
+				{"file":"https://sincerecloud.stream/loadbalancer/public/J9EmQQGf.m3u8","type":"application/vnd.apple.mpegurl"},
+				{"file":"https://sincerecloud.stream/loadbalancer/public/wEvdVHAM.m3u8","type":"application/vnd.apple.mpegurl"}
+			],
+			"tracks":[{"file":"", "kind":"thumbnails"}]
+		}]
+	}
+}

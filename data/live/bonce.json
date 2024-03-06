@@ -1,0 +1,21 @@
+{
+	"title":"Bonce TV",
+	"cover":"https://bonce.tv/static/images/logo.png",
+	"blurb":"Bonce TV live",
+	"playlist":{
+		"title":"Bonce TV",
+		"description":"Bonce TV live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[{
+			"title":"Bonce TV",
+			"image":"https://bonce.tv/static/images/logo.png",
+			"images":[{"src":"https://bonce.tv/static/images/logo.png","width":639,"type":"image/png"}],
+			"pubdate":0,
+			"sources":[
+				{"file":"https://seswa.bonce.tv/hls/bonceswa.m3u8","type":"application/vnd.apple.mpegurl"}
+			],
+			"tracks":[{"file":"", "kind":"thumbnails"}]
+		}]
+	}
+}
