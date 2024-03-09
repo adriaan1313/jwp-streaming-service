@@ -1,6 +1,6 @@
 {
 	"title": "Samen1",
-	"cover": "",
+	"cover": "https://svgur.com/i/146t.svg",
 	"blurb": "Samen1 live",
 	
 	"playlist":{
@@ -11,9 +11,9 @@
 		"playlist":[
 			{
 				"title":"Samen1",
-				"image":"",
+				"image":"https://svgur.com/i/146t.svg",
 				"images":[
-					{"src":"","width":0,"type":"image/png"}
+					{"src":"https://svgur.com/i/146t.svg","width":460,"type":"image/svg+xml"}
 				],
 				"pubdate":0,
 				"sources":[

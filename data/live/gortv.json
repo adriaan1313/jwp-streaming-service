@@ -1,19 +1,19 @@
 {
-	"title": "GO RTV",
-	"cover": "https://www.go-rtv.nl/template/assets/img/logo.png",
-	"blurb": "GO RTV live",
+	"title": "GO TV",
+	"cover": "https://i.imgur.com/CyZCnvo.png",
+	"blurb": "GO TV live",
 	
 	"playlist":{
-		"title":"GO RTV",
-		"description":"GO RTV live",
+		"title":"GO TV",
+		"description":"GO TV live",
 		"kind":"Single Item",
 		"ar":"16:9",
 		"playlist":[
 			{
-				"title":"GO RTV",
-				"image":"https://www.go-rtv.nl/template/assets/img/logo.png",
+				"title":"GO TV",
+				"image":"https://i.imgur.com/CyZCnvo.png",
 				"images":[
-					{"src":"https://www.go-rtv.nl/template/assets/img/logo.png","width":800,"type":"image/png"}
+					{"src":"https://i.imgur.com/CyZCnvo.png","width":800,"type":"image/png"}
 				],
 				"pubdate":0,
 				"sources":[
