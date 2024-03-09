@@ -1,6 +1,6 @@
 {
 	"title": "Omroep Flevoland televisie",
-	"cover": "https://script.omroepflevoland.nl/ftp/logo/OF_STREAM_TV_THUMB.jpg",
+	"cover": "https://yt3.googleusercontent.com/Zmq8rco7I7Q7CtEjjy66VtrNP9o8xRMe6hJ7jJ8Vs8uF6P7eUtosJO0oqM8SizAU5K1ETg17wT0=w0-h0",
 	"blurb": "Omroep Flevoland televisie live",
 	
 	"playlist":{
@@ -11,9 +11,9 @@
 		"playlist":[
 			{
 				"title":"Omroep Flevoland televisie",
-				"image":"https://script.omroepflevoland.nl/ftp/logo/OF_STREAM_TV_THUMB.jpg",
+				"image":"https://yt3.googleusercontent.com/Zmq8rco7I7Q7CtEjjy66VtrNP9o8xRMe6hJ7jJ8Vs8uF6P7eUtosJO0oqM8SizAU5K1ETg17wT0=w0-h0",
 				"images":[
-					{"src":"https://script.omroepflevoland.nl/ftp/logo/OF_STREAM_TV_THUMB.jpg","width":960,"type":"image/svg"}
+					{"src":"https://yt3.googleusercontent.com/Zmq8rco7I7Q7CtEjjy66VtrNP9o8xRMe6hJ7jJ8Vs8uF6P7eUtosJO0oqM8SizAU5K1ETg17wT0=w0-h0","width":254,"type":"image/jpeg"}
 				],
 				"pubdate":0,
 				"sources":[
