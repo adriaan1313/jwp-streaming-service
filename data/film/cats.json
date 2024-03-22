@@ -1,0 +1,28 @@
+{
+	"title": "Video Catnip",
+	"cover": "https://ia803109.us.archive.org/0/items/VideoCatnipEntertainmentForCatsPetAvisionInc.1989/__ia_thumb.jpg",
+	"blurb": "Entertainment for Cats",
+	
+	"playlist":{
+		"title":"Video Catnip",
+		"description":"Entertainment for Cats",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"Video Catnip",
+				"image":"https://ia803109.us.archive.org/0/items/VideoCatnipEntertainmentForCatsPetAvisionInc.1989/__ia_thumb.jpg",
+				"images":[
+					{"src":"https://ia803109.us.archive.org/0/items/VideoCatnipEntertainmentForCatsPetAvisionInc.1989/__ia_thumb.jpg","width":180,"type":"image/jpeg"}
+				],
+				"pubdate":599612400,
+				"sources":[
+					{"file":"https://archive.org/download/VideoCatnipEntertainmentForCatsPetAvisionInc.1989/Video%20Catnip%20-%20Entertainment%20for%20Cats%20%28Pet%20Avision%2C%20Inc.%29%281989%29.mkv","type":"video/x-matroska","height":480,"width":640,"label":"480p LQ (Matroška)"},
+					{"file":"https://archive.org/download/VideoCatnipEntertainmentForCatsPetAvisionInc.1989/Video%20Catnip%20-%20Entertainment%20for%20Cats%20%28Pet%20Avision%2C%20Inc.%29%281989%29.mp4","type":"video/mp4","height":480,"width":640,"label":"480p LQ (mp4)"},
+					{"file":"https://archive.org/download/VideoCatnipEntertainmentForCatsPetAvisionInc.1989/Video%20Catnip%20-%20Entertainment%20for%20Cats%20%28Pet%20Avision%2C%20Inc.%29%281989%29.ogv","type":"video/ogg","height":480,"width":640,"label":"480p LQ (ogv)"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}
