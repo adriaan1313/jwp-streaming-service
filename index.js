@@ -421,7 +421,8 @@ function sendErr(res, err) {
 
 app.get("/error/:error", (req, res)=>{
 	try {
-		sendErr(res, "force:"+(req.params.error*1));
+		if(req.params.error*1 >= 200 || req.params.error*1 < 100 ) sendErr(res, "force:"+(req.params.error*1));
+		else throw("You cannot do that, please no 1xx errors");
 	}
 	catch(err) {
 		sendErr(res, err);

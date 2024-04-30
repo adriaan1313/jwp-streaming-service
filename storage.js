@@ -1,3 +1,7 @@
+/**
+ * Storage
+ * @module storage
+ */
 const fs = require("node:fs");
 const path = require("node:path");
 
@@ -17,16 +21,18 @@ const path = require("node:path");
 	return filelist;
 }; turns out it wasn't needed anyways*/
 
-
-
-
-
-
 class DataBoi {
+	/**
+	 * @param {string} dataPath - The path of directory with "static" json files.
+	 */
 	constructor(dataPath){
 		this.path = dataPath;
 		this.cache = {};
 	}
+	/**
+	 * @param {string} dataPath - The path of the requested object.
+	 * @return {Object} The requested data, as a js object. If none found, something throws.
+	 */
 	find(dataPath){
 		if(this.cache[dataPath]?.type == "generated"){
 			const response = this.cache[dataPath].refresh(Date.now());
@@ -46,6 +52,10 @@ class DataBoi {
 		}
 		return this.cache[dataPath].data;
 	}
+	/**
+	 * @param {string} dataPath - The path of the requested object.
+	 * @param {function(Object)} callback - Callback, called with object as only argument when found. 
+	 */
 	findAsync(dataPath, callback){
 		if(this.cache[dataPath]?.type == "generated"){
 			const response = this.cache[dataPath].refresh(Date.now());
@@ -68,6 +78,10 @@ class DataBoi {
 			callback(this.cache[dataPath].data);
 		}
 	}
+	/**
+	 * @param {string} dataPath - The path where the object should be added.
+	 * @param {dataobj} dataobj - a data object, which has a .type. 
+	 */
 	add(dataPath, dataobj){
 		//like dataobj = {data:whateve, refresh:fn(date)}
 		dataobj.data||=dataobj.refresh(1);
@@ -76,6 +90,11 @@ class DataBoi {
 		dataobj.dataPath = dataPath;
 		this.cache[dataPath] = dataobj;
 	}
+	
+	/**
+	 * @param {string} prefix
+	 * @returns {Array.<string>} 
+	 */
 	genList(prefix){
 		return Object.keys(this.cache).filter((key,i,a)=>{
 			return this.cache[key].type=="generated" && key.substr(0,prefix.length)==prefix;
@@ -84,5 +103,19 @@ class DataBoi {
 	
 }
 function gato(){};
+
+/**
+ * @typedef {Object} dataobj
+ * @property {Object} [data] - any arbitry data, as js object.
+ * @property {refreshFunction} [refresh] - function to refresh the current data
+ * @property {("generated"|undefined)} [type] - a thing that means that it is either generated or a file.
+ * @dataPath {string} - path of data.
+*/
+
+/**
+ * @typedef {function(int):Object} refreshFunction
+ * @param  {int} date - (current) date/time value. 
+*/
+
 
 module.exports = DataBoi;
