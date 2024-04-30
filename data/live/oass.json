@@ -1,0 +1,26 @@
+{
+	"title": "Omroep Assen televisie",
+	"cover": "https://www.omroepassen.com/wp-content/uploads/Logo-Omroep-Assen.jpeg",
+	"blurb": "Omroep Assen televisie live",
+	
+	"playlist":{
+		"title":"Omroep Assen televisie",
+		"description":"Omroep Assen televisie live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"Omroep Assen televisie",
+				"image":"https://www.omroepassen.com/wp-content/uploads/Logo-Omroep-Assen.jpeg",
+				"images":[
+					{"src":"https://www.omroepassen.com/wp-content/uploads/Logo-Omroep-Assen.jpeg","width":1024,"type":"image/jpeg"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://n1.cdn.jetstre.am/session/2a3ec47210dbe67b67de8c8e4ba7bb61/sz/OmroepAssen/webdav/live/OmroepAssenTV/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}
