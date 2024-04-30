@@ -1,6 +1,7 @@
+const lo = document.getElementById("listOverlay");
+const cb = document.getElementById("close-btn");
 $.getJSON("/programmes").done(data=>{
 	const elt = document.getElementById("progList");
-	const lo = document.getElementById("listProg");
 	data.forEach(show=>{
 		const hr = document.createElement("hr");
 		const a = document.createElement("a");
@@ -9,20 +10,25 @@ $.getJSON("/programmes").done(data=>{
 		elt.appendChild(hr);
 		elt.appendChild(a);
 	});
-	document.getElementsByClassName("close-btn")[0].addEventListener("click", ()=>{
+	cb.addEventListener("click", ()=>{
 		lo.style.display="none";
+		elt.style.display="none";
+		cb.style.display="none";
 	});
 	document.getElementById("listButtonProg").addEventListener("click", ()=>{
 		lo.style.display="block";
+		elt.style.display="block";
+		cb.style.display="block";
 	});
 	lo.addEventListener("click", ()=>{
 		lo.style.display="none";
+		elt.style.display="none";
+		cb.style.display="none";
 	});
 });
 
 $.getJSON("/films").done(data=>{
 	const elt = document.getElementById("filmList");
-	const lo = document.getElementById("listFilm");
 	data.forEach(show=>{
 		const hr = document.createElement("hr");
 		const a = document.createElement("a");
@@ -31,20 +37,25 @@ $.getJSON("/films").done(data=>{
 		elt.appendChild(hr);
 		elt.appendChild(a);
 	});
-	document.getElementsByClassName("close-btn")[0].addEventListener("click", ()=>{
+	cb.addEventListener("click", ()=>{
 		lo.style.display="none";
+		elt.style.display="none";
+		cb.style.display="none";
 	});
 	document.getElementById("listButtonFilm").addEventListener("click", ()=>{
 		lo.style.display="block";
+		elt.style.display="block";
+		cb.style.display="block";
 	});
 	lo.addEventListener("click", ()=>{
 		lo.style.display="none";
+		elt.style.display="none";
+		cb.style.display="none";
 	});
 });
 
 $.getJSON("/lives").done(data=>{
 	const elt = document.getElementById("liveList");
-	const lo = document.getElementById("listLive");
 	data.forEach(show=>{
 		const hr = document.createElement("hr");
 		const a = document.createElement("a");
@@ -53,14 +64,20 @@ $.getJSON("/lives").done(data=>{
 		elt.appendChild(hr);
 		elt.appendChild(a);
 	});
-	document.getElementsByClassName("close-btn")[0].addEventListener("click", ()=>{
+	cb.addEventListener("click", ()=>{
 		lo.style.display="none";
+		elt.style.display="none";
+		cb.style.display="none";
 	});
 	document.getElementById("listButtonLive").addEventListener("click", ()=>{
 		lo.style.display="block";
+		elt.style.display="block";
+		cb.style.display="block";
 	});
 	lo.addEventListener("click", ()=>{
 		lo.style.display="none";
+		elt.style.display="none";
+		cb.style.display="none";
 	});
 });
 

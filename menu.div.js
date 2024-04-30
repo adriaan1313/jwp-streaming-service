@@ -20,7 +20,9 @@ module.exports = `<div id="menu">
 		</li>
 	</ul>
 </div>
-<script src="https://code.jquery.com/jquery-3.6.3.min.js" type="text/javascript"></script><script src="/js/list.js" type="text/javascript"></script>
-<div class="listOverlay" id="listProg"><div class="list" id="progList"><H3>All Programmes:</H3></div><span class="fa fa-close close-btn"></span></div>
-<div class="listOverlay" id="listFilm"><div class="list" id="filmList"><H3>All      Films:</H3></div><span class="fa fa-close close-btn"></span></div>
-<div class="listOverlay" id="listLive"><div class="list" id="liveList"><H3>All       Live:</H3></div><span class="fa fa-close close-btn"></span></div>`;
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" type="text/javascript"></script>
+<div class="list" id="progList"><H3>All Programmes:</H3></div>
+<div class="list" id="filmList"><H3>All Films:</H3></div>
+<div class="list" id="liveList"><H3>All Live:</H3></div><span id="close-btn" class="fa fa-close"></span>
+<div id="listOverlay"></div>
+<script src="/js/list.js" type="text/javascript"></script>`;
