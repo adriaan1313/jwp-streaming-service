@@ -89,6 +89,7 @@ class DataBoi {
 		dataobj.type = "generated";
 		dataobj.dataPath = dataPath;
 		this.cache[dataPath] = dataobj;
+		return dataobj;
 	}
 	
 	/**

@@ -47,7 +47,8 @@ let app = express();
 const PORT = process.env.PORT || 3000;
 let server = app.listen(PORT, listening);
 function listening(){
-	//storage.add("live/gortv",require("./generators/live/go-rtv2"));
+	storage.add("live/gortv",require("./generators/live/go-rtv2")).refresh(Date.now());
+	storage.add("multilive/tweede-kamer",require("./generators/live/tweede-kamer")).refresh(Date.now());
 	console.log("listening. . .");
 }
 
@@ -60,7 +61,7 @@ storage.find("redirects").forEach(redir=>{
 });
 
 
-
+//playlists
 app.get("/pls/film/:film/", (req, res)=>{
 	res.set("Content-Type", "application/json")
 	try{
@@ -125,6 +126,8 @@ app.get("/pls/:programme/:series/:episode", (req, res)=>{
 		else res.status(500).send(`{"error": "${err}"}`);
 	}
 });
+
+//player pages
 app.get("/film/:film/play", (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
@@ -176,9 +179,6 @@ app.get("/live/:series/:channel", (req, res)=>{
 	}
 });
 
-
-
-
 app.get("/:programme/:series/:episode", (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
@@ -206,7 +206,7 @@ app.get("/:programme/:series/:episode", (req, res)=>{
 	}
 });
 
-
+//main page
 app.get("/", (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
@@ -256,7 +256,7 @@ app.get("/", (req, res)=>{
 		});
 		storage.genList("multilive/").forEach(p=>{
 			lp=storage.find(p);
-			lives+=imHtml({link: p, image:lp.cover, title: lp.title});
+			lives+=imHtml({link: "/live/"+p.slice(10), image:lp.cover, title: lp.title});
 		});
 		const llist = stHtml({ title: "All live", items: lives});
 		
@@ -269,8 +269,7 @@ app.get("/", (req, res)=>{
 	}
 });
 
-
-
+//json lists
 app.get("/programmes", (req, res)=>{
 	res.set("Content-Type", "application/json");
 	try{
@@ -345,7 +344,7 @@ app.get("/lives", (req, res)=>{
 	}
 });
 
-
+//overview/info pages
 app.get("/:programme", (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
@@ -367,8 +366,6 @@ app.get("/:programme", (req, res)=>{
 		sendErr(res, err);
 	}
 });
-
-
 
 app.get("/film/:film", (req, res)=>{
 	res.set("Content-Type", "text/html");
