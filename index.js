@@ -44,15 +44,12 @@ const muHtml = require("./menu.div");
 const escape = require("./escape");
 const KEY = "x5VJVyr70la0Joby2AIBgBCa9CqNJcD+X1Ad2IOAgvkD9nmOlD0ojw=="; //those who know, know lol (not actual key, just for those thinking i leaked my key)
 let app = express();
-if(process.env.I_AM_VERCEL == "YES") module.exports = app;
-else {
-	const PORT = process.env.PORT || 3000;
-	let server = app.listen(PORT, listening);
-	function listening(){
-		storage.add("live/gortv",require("./generators/live/go-rtv2")).refresh(Date.now());
-		storage.add("multilive/tweede-kamer",require("./generators/live/tweede-kamer")).refresh(Date.now());
-		console.log("listening. . .");
-	}
+const PORT = process.env.PORT || 3000;
+let server = app.listen(PORT, listening);
+function listening(){
+	storage.add("live/gortv",require("./generators/live/go-rtv2")).refresh(Date.now());
+	storage.add("multilive/tweede-kamer",require("./generators/live/tweede-kamer")).refresh(Date.now());
+	console.log("listening. . .");
 }
 
 app.use(express.static('public'));
