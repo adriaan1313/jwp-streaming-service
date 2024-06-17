@@ -1,4 +1,4 @@
-
+const fetch = require("node-fetch");
 let prevTs = 0;
 const name = "Tweede Kamer";
 const waitingCallbacks = [];
