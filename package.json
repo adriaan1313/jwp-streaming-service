@@ -10,9 +10,10 @@
   "author": "Bunny",
   "license": "UNLICENSED",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "node-fetch": "2.X.X"
   },
   "engines": {
-	  "node": ">=18.0.0"
+  "node": ">=16.0.0"
   }
 }
