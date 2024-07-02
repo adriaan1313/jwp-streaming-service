@@ -1,6 +1,6 @@
 {
 	"title": "NHNieuws televisie",
-	"cover": "https://www.nhnieuws.nl/images/nh-tv-new.png",
+	"cover": "https://www.nhnieuws.nl/nh/tv-new.png",
 	"blurb": "NHNieuws televisie live",
 	
 	"playlist":{
@@ -11,9 +11,9 @@
 		"playlist":[
 			{
 				"title":"NHNieuws televisie",
-				"image":"https://www.nhnieuws.nl/images/nh-tv-new.png",
+				"image":"https://www.nhnieuws.nl/nh/tv-new.png",
 				"images":[
-					{"src":"https://www.nhnieuws.nl/images/nh-tv-new.png","width":1920,"type":"image/png"}
+					{"src":"https://www.nhnieuws.nl/nh/tv-new.png","width":1920,"type":"image/png"}
 				],
 				"pubdate":0,
 				"sources":[

@@ -1,6 +1,6 @@
 {
 	"title": "RTV Meppel televisie",
-	"cover": "https://www.rtvmeppel.nl/wp-content/uploads/2021/04/intro.jpg",
+	"cover": "https://www.rtvmeppel.nl/wp-content/uploads/2021/11/logo-rgb_lettercontouren.png",
 	"blurb": "RTV Meppel televisie live",
 	
 	"playlist":{
@@ -11,9 +11,9 @@
 		"playlist":[
 			{
 				"title":"RTV Meppel televisie",
-				"image":"https://www.rtvmeppel.nl/wp-content/uploads/2021/04/intro.jpg",
+				"image":"https://www.rtvmeppel.nl/wp-content/uploads/2021/11/logo-rgb_lettercontouren.png",
 				"images":[
-					{"src":"https://www.rtvmeppel.nl/wp-content/uploads/2021/04/intro.jpg","width":1920,"type":"image/svg"}
+					{"src":"https://www.rtvmeppel.nl/wp-content/uploads/2021/11/logo-rgb_lettercontouren.png","width":1920,"type":"image/svg"}
 				],
 				"pubdate":0,
 				"sources":[

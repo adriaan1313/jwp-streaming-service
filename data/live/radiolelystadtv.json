@@ -1,6 +1,6 @@
 {
 	"title": "Radio Lelystad TV",
-	"cover": "https://radiolelystad.nl/templates/rl2016/images/blue/background.svg",
+	"cover": "https://radiolelystad.nl/images/stories/background.svg",
 	"blurb": "Radio Lelystad TV live",
 	
 	"playlist":{
@@ -11,9 +11,9 @@
 		"playlist":[
 			{
 				"title":"Radio Lelystad TV",
-				"image":"https://radiolelystad.nl/templates/rl2016/images/blue/background.svg",
+				"image":"https://radiolelystad.nl/images/stories/background.svg",
 				"images":[
-					{"src":"https://radiolelystad.nl/templates/rl2016/images/blue/background.svg","width":2690,"type":"image/svg"}
+					{"src":"https://radiolelystad.nl/images/stories/background.svg","width":2690,"type":"image/svg"}
 				],
 				"pubdate":0,
 				"sources":[

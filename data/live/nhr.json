@@ -1,6 +1,6 @@
 {
 	"title": "NHNieuws kijkradio",
-	"cover": "https://www.nhnieuws.nl/images/nh-radio-new.png",
+	"cover": "https://www.nhnieuws.nl/nh/nh-radio-new.png",
 	"blurb": "NHNieuws kijkradio live",
 	
 	"playlist":{
@@ -11,9 +11,9 @@
 		"playlist":[
 			{
 				"title":"NHNieuws kijkradio",
-				"image":"https://www.nhnieuws.nl/images/nh-radio-new.png",
+				"image":"https://www.nhnieuws.nl/nh/nh-radio-new.png",
 				"images":[
-					{"src":"https://www.nhnieuws.nl/images/nh-radio-new.png","width":1920,"type":"image/png"}
+					{"src":"https://www.nhnieuws.nl/nh/nh-radio-new.png","width":1920,"type":"image/png"}
 				],
 				"pubdate":0,
 				"sources":[
