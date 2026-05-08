@@ -17,7 +17,7 @@
 				],
 				"pubdate":0,
 				"sources":[
-					{"file":"https://rtvbergendal.nl:3245/live/rtvbergendallive.m3u8","type":"application/vnd.apple.mpegurl"}
+					{"file":"https://rtvbergendal.nl:3190/live/rtvbergendallive.m3u8","type":"application/vnd.apple.mpegurl"}
 				],
 				"tracks":[{"file":"","kind":"thumbnails"}]
 			}

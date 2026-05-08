@@ -1,11 +1,11 @@
 {
 	"title": "Omroep Hulst televisie",
 	"cover": "https://www.maxx-xs.nl/images/assets/f/3/f38705891f01bda4bd16551f42ff7c0a/ART/art_01.png",
-	"blurb": "Omroep Hulst televisie live",
+	"blurb": "Omroep Hulst (Omroep ZVL) televisie live",
 	
 	"playlist":{
 		"title":"Omroep Hulst televisie",
-		"description":"Omroep Hulst televisie live",
+		"description":"Omroep Hulst (Omroep ZVL) televisie live",
 		"kind":"Single Item",
 		"ar":"16:9",
 		"playlist":[

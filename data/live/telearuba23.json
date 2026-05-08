@@ -1,11 +1,11 @@
 {
-	"title": "TeleAruba Ch23",
+	"title": "Nos Isla TV",
 	"cover": "https://telearuba.aw/static/media/logo_60_anja_channel_id.34a7d9a0.png",
-	"blurb": "TeleAruba Ch23 live",
+	"blurb": "Nos Isla TV live",
 	
 	"playlist":{
 		"title":"TeleAruba Ch23",
-		"description":"TeleAruba Ch23 live",
+		"description":"TeleAruba Ch23 (Nos Isla TV) live",
 		"kind":"Single Item",
 		"ar":"16:9",
 		"playlist":[

@@ -1,23 +1,23 @@
 {
-	"title": "NosTV Bonaire 1",
+	"title": "NosTV Bonaire 2",
 	"cover": "https://www.nostvbonaire.com/wp-content/uploads/2019/01/cropped-LOGO-NOSTV-WEBSITE-2019-1.png",
-	"blurb": "NosTV Bonaire 1 live",
+	"blurb": "NosTV Bonaire 2 live",
 	
 	"playlist":{
-		"title":"NosTV Bonaire 1 ",
-		"description":"NosTV Bonaire 1 live",
+		"title":"NosTV Bonaire 2 ",
+		"description":"NosTV Bonaire 2 live",
 		"kind":"Single Item",
 		"ar":"16:9",
 		"playlist":[
 			{
-				"title":"NosTV Bonaire 1",
+				"title":"NosTV Bonaire 2",
 				"image":"https://www.nostvbonaire.com/wp-content/uploads/2019/01/cropped-LOGO-NOSTV-WEBSITE-2019-1.png",
 				"images":[
 					{"src":"https://www.nostvbonaire.com/wp-content/uploads/2019/01/cropped-LOGO-NOSTV-WEBSITE-2019-1.png","width":150,"type":"image/png"}
 				],
 				"pubdate":0,
 				"sources":[
-					{"file":"https://stream1.nostvbonaire.com/hls/0/stream.m3u8","type":"application/vnd.apple.mpegurl"}
+					{"file":"https://stream2.nostvbonaire.com/hls/0/stream.m3u8","type":"application/vnd.apple.mpegurl"}
 				],
 				"tracks":[{"file":"","kind":"thumbnails"}]
 			}

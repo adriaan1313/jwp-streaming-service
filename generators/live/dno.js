@@ -1,18 +1,18 @@
 const Streampartner = require("./streampartner.js");
 module.exports = new Streampartner(
 	{
-		"title": "GO TV",
+		"title": "DNO TV",
 		"cover": "https://i.imgur.com/1Ry7uDP.png",
-		"blurb": "GO TV (Omroep ZVL) live",
+		"blurb": "DNO TV live",
 		
 		"playlist":{
-			"title":"GO TV",
-			"description":"GO TV (Omroep ZVL) live",
+			"title":"DNO TV",
+			"description":"DNO TV live",
 			"kind":"Single Item",
 			"ar":"16:9",
 			"playlist":[
 				{
-					"title":"GO RTV",
+					"title":"DNO TV",
 					"image":"https://i.imgur.com/1Ry7uDP.png",
 					"images":[
 						{"src":"https://i.imgur.com/1Ry7uDP.png","width":350,"type":"image/png"}
@@ -26,7 +26,7 @@ module.exports = new Streampartner(
 			]
 		}
 	},
-	"RTV-GO",
+	"DNO",
 	2000,
-	"https://ssl.streampartner.nl/player.php?url=c9616ec317ffd9d6d6e1"
+	"https://ssl.streampartner.nl/player.php?url=3edfgt67ujhgtre4dfr&ref=wijzijndno2"
 );

@@ -1,7 +1,7 @@
 {
-	"title":"Dutch Caribbean TV",
-	"cover":"https://www.dutchcaribbeantv.com/wp-content/uploads/2019/06/logo_dctv_bes.png",
-	"blurb":"DCTV live",
+	"title":"Energia",
+	"cover":"https://i.imgur.com/YxSKEgX.jpeg",
+	"blurb":"Energia TV live",
 	"playlist":{
 		"title":"DCTV",
 		"description":"DCTV live",
@@ -9,8 +9,8 @@
 		"ar":"16:9",
 		"playlist":[{
 			"title":"DCTV",
-			"image":"https://www.dutchcaribbeantv.com/wp-content/uploads/2019/06/logo_dctv_bes.png",
-			"images":[{"src":"https://www.dutchcaribbeantv.com/wp-content/uploads/2019/06/logo_dctv_bes.png","width":150,"type":"image/png"}],
+			"image":"https://i.imgur.com/YxSKEgX.jpeg",
+			"images":[{"src":"https://i.imgur.com/YxSKEgX.jpeg","width":2048,"type":"image/png"}],
 			"pubdate":0,
 			"sources":[
 				{"file":"https://sincerecloud.stream/loadbalancer/public/actMdyoE.m3u8","type":"application/vnd.apple.mpegurl"}

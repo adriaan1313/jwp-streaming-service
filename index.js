@@ -28,7 +28,7 @@
 //vttparser.js
 //not all of these are necessary
 
-const storage=new (require("./storage"))("./data/");
+const storage=new (require("./storage"))(__dirname + "/data/");
 const express = require("express");
 const fs = require("fs");
 const homeHtml = require("./home.html");
@@ -221,6 +221,7 @@ app.get("/", (req, res)=>{
 		}
 		let programmes="";
 		prog_dir.forEach(p=>{
+			if(p[0] == '_') return;
 			const prog = storage.find("playlist/"+p.slice(0,-5));
 			programmes+=imHtml({link: p.slice(0,-5), image:prog.cover, title: prog.title});
 		});
@@ -232,6 +233,7 @@ app.get("/", (req, res)=>{
 
 		let films="";
 		film_dir.forEach(p=>{
+			if(p[0] == '_') return;
 			const film = storage.find("film/"+p.slice(0,-5));
 			films+=imHtml({link: "/film/"+p.slice(0,-5), image:film.cover, title: film.title});
 		});
@@ -243,6 +245,7 @@ app.get("/", (req, res)=>{
 		
 		let lives="";
 		live_dir.forEach(p=>{
+			if(p[0] == '_') return;
 			const live = storage.find("live/"+p.slice(0,-5));
 			lives+=imHtml({link: "/live/"+p.slice(0,-5), image:live.cover, title: live.title});
 		});
@@ -251,6 +254,7 @@ app.get("/", (req, res)=>{
 			lives+=imHtml({link: p, image:lp.cover, title: lp.title});
 		});
 		mlive_dir.forEach(p=>{
+			if(p[0] == '_') return;
 			const live = storage.find("multilive/"+p.slice(0,-5));
 			lives+=imHtml({link: "/live/"+p.slice(0,-5), image:live.cover, title: live.title});
 		});

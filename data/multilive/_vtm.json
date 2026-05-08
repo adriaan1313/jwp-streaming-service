@@ -1,0 +1,51 @@
+{
+	"title": "VTM",
+	"cover": "https://svgshare.com/i/19fs.svg",
+	"blurb": "Zenders van DPG (België) live",
+	"channels":{
+		"qmusic": {
+			"smallTitle":"Qmusic",
+			"title":"Qmusic België",
+			"description":"Qmusic live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"Qmusic",
+					"image":"https://images.ctfassets.net/765y2hpj99ul/5ziCgfoas0IFLwqxQXSH06/0122717091a02fe1e703e5a63a1ae214/Qmusic-image-1.jpg",
+					"minDvrWindow": 0,
+					"images":[
+						{"src":"https://images.ctfassets.net/765y2hpj99ul/5ziCgfoas0IFLwqxQXSH06/0122717091a02fe1e703e5a63a1ae214/Qmusic-image-1.jpg","width":2480,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://live-video.dpgmedia.net/f1d26a28c95485cc/out/v1/5f60a245c110454fba652900ecf30ea2/index.m3u8","type":"application/vnd.apple.mpegurl"},
+						{"file":"https://live-video.dpgmedia.net/f1d26a28c95485cc/out/v1/c3588b2c5f84460e8f0681214f378691/index.mpd","type":"application/dash+xml"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"joe": {
+			"smallTitle":"Joe",
+			"title":"Joe",
+			"description":"Joe live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"Joe",
+					"image":"https://images.ctfassets.net/765y2hpj99ul/2TRPHi7R20fHeO50lyQfes/e915917cd6449c7d97d092232f2b936d/Joe-header.jpg",
+					"minDvrWindow": 0,
+					"images":[
+						{"src":"https://images.ctfassets.net/765y2hpj99ul/2TRPHi7R20fHeO50lyQfes/e915917cd6449c7d97d092232f2b936d/Joe-header.jpg","width":7144,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://live-video.dpgmedia.net/83ac8fe07ddd10cf/out/v1/f3fea0c1708c465bafe01fa6351a984d/index.m3u8","type":"application/vnd.apple.mpegurl"},
+						{"file":"https://live-video.dpgmedia.net/83ac8fe07ddd10cf/out/v1/021fdcd30b674fa29168f2e453281c34/index.mpd","type":"application/dash+xml"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		}
+	}
+}

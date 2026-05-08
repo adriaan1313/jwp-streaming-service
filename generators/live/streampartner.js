@@ -23,7 +23,8 @@ class Streampartner {
 			const [k,l,m,n] = JSON.parse("["+j.split("}(").pop().split("))")[0].replaceAll("'", '"')+"]");
 			const o = wise(k,l,m,n);
 			const p = o.split(`src:"`)[1].split(`"`)[0];
-			this.prefTs = 1*p.split("token_endtime=")[1].split("&")[0];
+			console.log(p);
+			this.prefTs = 1*p.split("token_endtime=")[1]?.split("&")[0];
 			console.log(this.name, this.data.playlist.playlist[0])
 			this.data.playlist.playlist[0].sources[0].file = p;
 			this.setUpToDate();
