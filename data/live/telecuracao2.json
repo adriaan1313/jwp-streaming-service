@@ -5,7 +5,7 @@
 	
 	"playlist":{
 		"title":"TeleCuraçaoFM",
-		"description":"TeleCuraçaoFM live",
+		"description":"TeleCuraçaoFM live\nNote to dev: fix this",
 		"kind":"Single Item",
 		"ar":"16:9",
 		"playlist":[

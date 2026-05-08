@@ -5,7 +5,7 @@
 	
 	"playlist":{
 		"title":"Omroep Assen televisie",
-		"description":"Omroep Assen televisie live",
+		"description":"Omroep Assen televisie live\nNOTE TO DEV: might need generator",
 		"kind":"Single Item",
 		"ar":"16:9",
 		"playlist":[
@@ -17,7 +17,7 @@
 				],
 				"pubdate":0,
 				"sources":[
-					{"file":"https://n1.cdn.jetstre.am/session/2a3ec47210dbe67b67de8c8e4ba7bb61/sz/OmroepAssen/webdav/live/OmroepAssenTV/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+					{"file":"https://n1.cdn.jetstre.am/session/c96cc8c3ef35362ef932d8e28d06e98f/sz/OmroepAssen/webdav/live/OmroepAssenTV/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
 				],
 				"tracks":[{"file":"","kind":"thumbnails"}]
 			}
