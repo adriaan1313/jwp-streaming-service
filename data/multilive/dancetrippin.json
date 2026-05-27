@@ -157,7 +157,7 @@
 						{"src":"https://www.dancetv.net/img/channels/poster-chill-af.jpg","width":1920,"type":"image/jpeg"}
 					],
 					"sources":[
-						{"file":"https://mbit1.worldcast.tv/dancetelevisioneight/multibit.m3u8","type":"application/vnd.apple.mpegurl"}
+						{"file":"https://mbit1.worldcast.tv:9443/dancetelevisioneight/multibit.m3u8","type":"application/vnd.apple.mpegurl"}
 					],
 					"tracks":[{"file":"","kind":"thumbnails"}]
 				}
@@ -177,7 +177,7 @@
 						{"src":"https://www.dancetv.net/img/channels/poster-melodic-tech.jpg","width":1920,"type":"image/jpeg"}
 					],
 					"sources":[
-						{"file":"https://mbit1.worldcast.tv/dancetelevisionnine/multibit.m3u8","type":"application/vnd.apple.mpegurl"}
+						{"file":"https://mbit1.worldcast.tv:9443/dancetelevisionnine/multibit.m3u8","type":"application/vnd.apple.mpegurl"}
 					],
 					"tracks":[{"file":"","kind":"thumbnails"}]
 				}
