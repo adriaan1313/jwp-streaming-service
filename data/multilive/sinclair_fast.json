@@ -1,0 +1,91 @@
+{
+	"title": "Sinclair",
+	"cover": "https://sbgi.net/wp-content/uploads/2022/08/sinclair-logo.png",
+	"blurb": "Sinclair FAST tv channels Live!",
+	"channels":{
+		"comet": {
+			"smallTitle":"Comet",
+			"title":"Comet",
+			"description":"",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"Comet",
+					"image":"https://d17su2xjlj6zyp.cloudfront.net/uploads/2021/04/comet-logo.png",
+					"minDvrWindow": 0,
+					"images":[
+						{"src":"https://d17su2xjlj6zyp.cloudfront.net/uploads/2021/04/comet-logo.png","width":1624,"type":"image/png"}
+					],
+					"sources":[
+						{"file":"https://fast-channels.sinclairstoryline.com/COMET/index.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"charge": {
+			"smallTitle":"Charge!",
+			"title":"Charge!",
+			"description":"",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"Charge!",
+					"image":"https://d12lhx8qhim5rg.cloudfront.net/uploads/2021/07/Charge_Yellow-1.png",
+					"minDvrWindow": 0,
+					"images":[
+						{"src":"https://d12lhx8qhim5rg.cloudfront.net/uploads/2021/07/Charge_Yellow-1.png","width":1301,"type":"image/png"}
+					],
+					"sources":[
+						{"file":"https://fast-channels.sinclairstoryline.com/CHARGE/index.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"nest": {
+			"smallTitle":"The Nest",
+			"title":"The Nest",
+			"description":"",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"The Nest",
+					"image":"https://d3etz0zhgardfq.cloudfront.net/uploads/2023/10/06.The_Nest_Logo_White.png",
+					"minDvrWindow": 0,
+					"images":[
+						{"src":"https://d3etz0zhgardfq.cloudfront.net/uploads/2023/10/06.The_Nest_Logo_White.png","width":2322,"type":"image/png"}
+					],
+					"sources":[
+						{"file":"https://fast-channels.sinclairstoryline.com/THENEST/index.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"rawr": {
+			"smallTitle":"Roar",
+			"title":"Roar",
+			"description":"",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"Roar",
+					"image":"https://dsk4yqs0338lt.cloudfront.net/uploads/2025/04/ROAR_WHITE.png",
+					"minDvrWindow": 0,
+					"images":[
+						{"src":"https://dsk4yqs0338lt.cloudfront.net/uploads/2025/04/ROAR_WHITE.png","width":4600,"type":"image/png"}
+					],
+					"sources":[
+						{"file":"https://fast-channels.sinclairstoryline.com/TBD/index.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		}
+	}
+}

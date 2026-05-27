@@ -1,0 +1,26 @@
+{
+	"title": "FOX Weather",
+	"cover": "https://static.foxnews.com/static/orion/styles/img/fox-weather/s/logos/fox-weather-logo-horizontal-knockout.svg",
+	"blurb": "FOX Weather live",
+	
+	"playlist":{
+		"title":"FOX Weather",
+		"description":"FOX Weather live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"FOX Weather",
+				"image":"https://static.foxnews.com/static/orion/styles/img/fox-weather/s/logos/fox-weather-logo-horizontal-knockout.svg",
+				"images":[
+					{"src":"https://static.foxnews.com/static/orion/styles/img/fox-weather/s/logos/fox-weather-logo-horizontal-knockout.svg","width":233,"type":"image/svg"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://247wlive.foxweather.com/stream/index.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

@@ -49,6 +49,7 @@ let server = app.listen(PORT, listening);
 function listening(){
 	storage.add("live/gortv",require("./generators/live/go-rtv2")).refresh(Date.now());
 	storage.add("multilive/tweede-kamer",require("./generators/live/tweede-kamer")).refresh(Date.now());
+	storage.add("multilive/zee",require("./generators/live/zee")).refresh(Date.now());
 	console.log("listening. . .");
 }
 
@@ -285,6 +286,7 @@ app.get("/programmes", (req, res)=>{
 		}
 		let programmes=[];
 		DCSLEGENDSOFTOMORROW.forEach(p=>{
+			if(p[0] == "_") return;
 			const prog = storage.find("playlist/"+p.slice(0,-5));
 			programmes.push({title: prog.title, url_part: "/"+p.slice(0,-5)});
 		});
@@ -308,6 +310,7 @@ app.get("/films", (req, res)=>{
 		}
 		let films=[];
 		film_dir.forEach(p=>{
+			if(p[0] == "_") return;
 			const film = storage.find("film/"+p.slice(0,-5));
 			films.push({title: film.title, url_part: "/film/"+p.slice(0,-5)});
 		});
@@ -332,10 +335,12 @@ app.get("/lives", (req, res)=>{
 		}
 		let lives=[];
 		live_dir.forEach(p=>{
+			if(p[0] == "_") return;
 			const live = storage.find("live/"+p.slice(0,-5));
 			lives.push({title: live.title, url_part: "/live/"+p.slice(0,-5)});
 		});
 		mlive_dir.forEach(p=>{
+			if(p[0] == "_") return;
 			const live = storage.find("multilive/"+p.slice(0,-5));
 			lives.push({title: live.title, url_part: "/live/"+p.slice(0,-5)});
 		});
@@ -398,7 +403,7 @@ app.get("/live/:live", (req, res)=>{
 			let series="";
 			
 			Object.keys(prg.channels).forEach((c)=>{
-				series+=imHtml({image: prg.channels[c].playlist[0].image, title: prg.channels[c].smallTitle, link: `/live/${req.params.live}/${c}`});
+				if(c.charAt(0) !== '_')	series+=imHtml({image: prg.channels[c].playlist[0].image, title: prg.channels[c].smallTitle, link: `/live/${req.params.live}/${c}`});
 			});
 	
 			res.send(prHtml({title: prg.title, image: prg.cover, series, blurb: prg.blurb, menu: muHtml}));

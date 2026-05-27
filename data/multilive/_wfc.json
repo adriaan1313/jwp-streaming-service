@@ -1,0 +1,45 @@
+{
+	"title": "WFC",
+	"cover": "",
+	"blurb": "WFC live",
+	"channels": {
+		"russian":{
+			"smallTitle":"Russian",
+			"title":"WFC Russian",
+			"description":"WFC Russian",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"WFC Russian",
+					"image":"",
+					"images":[
+					],
+					"sources":[
+						{"file":"https://cdn.wfc.tv/cdn/stream-rus.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"english":{
+			"smallTitle":"English",
+			"title":"WFC English",
+			"description":"WFC English",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"WFC English",
+					"image":"",
+					"images":[
+					],
+					"sources":[
+						{"file":"https://cdn.wfc.tv/cdn/stream-eng.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		}
+	}
+}

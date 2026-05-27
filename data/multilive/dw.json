@@ -1,0 +1,87 @@
+{
+	"title": "Deutsche Welle",
+	"cover": "https://static.dw.com/image/69740836_605.png",
+	"blurb": "Deutsche Welle live",
+	"channels":{
+		"eng": {
+			"smallTitle":"English",
+			"title":"DW English",
+			"description":"DW English Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"DW English",
+					"image":"https://static.dw.com/image/69740836_605.png",
+					"images":[
+						{"src":"https://static.dw.com/image/69740836_605.png","width":674,"type":"image/png"}
+					],
+					"sources":[
+						{"file":"https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/master.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"ara": {
+			"smallTitle":"Arabic",
+			"title":"DW Arabic",
+			"description":"DW Arabic Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"DW Arabic",
+					"image":"https://static.dw.com/image/69740836_605.png",
+					"images":[
+						{"src":"https://static.dw.com/image/69740836_605.png","width":674,"type":"image/png"}
+					],
+					"sources":[
+						{"file":"https://dwamdstream103.akamaized.net/hls/live/2015526/dwstream103/master.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"esp": {
+			"smallTitle":"Spanish",
+			"title":"DW Spanish",
+			"description":"DW Spanish Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"DW Spanish",
+					"image":"https://static.dw.com/image/69740836_605.png",
+					"images":[
+						{"src":"https://static.dw.com/image/69740836_605.png","width":674,"type":"image/png"}
+					],
+					"sources":[
+						{"file":"https://dwamdstream104.akamaized.net/hls/live/2015530/dwstream104/master.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"rus": {
+			"smallTitle":"Russian",
+			"title":"DW Russian",
+			"description":"DW Russian Live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"DW Russian",
+					"image":"https://static.dw.com/image/69740836_605.png",
+					"images":[
+						{"src":"https://static.dw.com/image/69740836_605.png","width":674,"type":"image/png"}
+					],
+					"sources":[
+						{"file":"https://dwamdstream110.akamaized.net/hls/live/2017971/dwstream110/master.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		}
+	}
+}

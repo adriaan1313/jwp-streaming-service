@@ -1,0 +1,72 @@
+{
+	"title": "Sky News",
+	"cover": "https://e3.365dm.com/26/03/1920x1080/skynews-live-watch_7186986.png",
+	"blurb": "Sky News live",
+	"channels":{
+		"gb":{
+			"smallTitle":"International",
+			"title":"Sky News International (GB)",
+			"description":"Sky News International (GB) live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"Sky News International (GB)",
+					"image":"https://e3.365dm.com/26/03/1920x1080/skynews-live-watch_7186986.png",
+					"images":[
+						{"src":"https://e3.365dm.com/26/03/1920x1080/skynews-live-watch_7186986.png","width":1920,"type":"image/png"}
+					],
+					"pubdate":0,
+					"sources":[
+						{"file":"https://linear901-oo-hls0-prd-gtm.delivery.skycdp.com/v1/master/6404a5d732e04991ed59ac7790b61cc065c9aabd/prod-gb-lin-skynews-hls-25-web/master.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"arabia":{
+			"smallTitle":"Arabia",
+			"title":"Sky News Arabia",
+			"description":"Sky News Arabia live",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"Sky News Arabia",
+					"image":"https://www.skynewsarabia.com/asset/1643203811/18.2.1/assets/img/live-stream/live-bg-main.png",
+					"images":[
+						{"src":"https://www.skynewsarabia.com/asset/1643203811/18.2.1/assets/img/live-stream/live-bg-main.png","width":1000,"height":"","type":"image/png"},
+						{"src":"https://www.skynewsarabia.com/asset/1643203811/18.2.1/assets/img/live-stream/live-bg-vertical.png","width":720,"height":"1280","type":"image/png"}
+					],
+					"pubdate":0,
+					"sources":[
+						{"file":"https://live-stream.skynewsarabia.com/c-horizontal-channel/horizontal-stream/index.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"arabia-vertical":{
+			"smallTitle":"Arabia (vertical)",
+			"title":"Sky News Arabia (vertical)",
+			"description":"Sky News Arabia live (vertical)",
+			"kind":"Single Item",
+			"ar":"9:16",
+			"playlist":[
+				{
+					"title":"Sky News Arabia (vertical)",
+					"image":"https://www.skynewsarabia.com/asset/1643203811/18.2.1/assets/img/live-stream/live-bg-main.png",
+					"images":[
+						{"src":"https://www.skynewsarabia.com/asset/1643203811/18.2.1/assets/img/live-stream/live-bg-vertical.png","width":720,"height":"1280","type":"image/png"},
+						{"src":"https://www.skynewsarabia.com/asset/1643203811/18.2.1/assets/img/live-stream/live-bg-main.png","width":1000,"height":"","type":"image/png"}
+					],
+					"pubdate":0,
+					"sources":[
+						{"file":"https://live-stream.skynewsarabia.com/c-vertical-channel/vertical-stream/index.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		}
+	}
+}

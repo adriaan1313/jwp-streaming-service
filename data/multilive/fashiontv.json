@@ -23,7 +23,7 @@
 				}
 			]
 		},
-		"new_york": {
+		"_new_york": {
 			"smallTitle":"New York",
 			"title":"FashionTV New York",
 			"description":"FashionTV New York Live",
@@ -43,7 +43,7 @@
 				}
 			]
 		},
-		"paris-mumbai": {
+		"_paris-mumbai": {
 			"smallTitle":"Paris-Mumbai",
 			"title":"FashionTV Paris-Mumbai",
 			"description":"FashionTV Paris-Mumbai Live",
@@ -63,7 +63,7 @@
 				}
 			]
 		},
-		"tokyo": {
+		"_tokyo": {
 			"smallTitle":"Tokyo",
 			"title":"FashionTV Tokyo",
 			"description":"FashionTV Tokyo Live",
@@ -83,7 +83,7 @@
 				}
 			]
 		},
-		"singapore": {
+		"_singapore": {
 			"smallTitle":"Singapore",
 			"title":"FashionTV Singapore",
 			"description":"FashionTV Singapore Live",
@@ -103,7 +103,7 @@
 				}
 			]
 		},
-		"johannesburg": {
+		"_johannesburg": {
 			"smallTitle":"Johannesburg",
 			"title":"FashionTV Johannesburg",
 			"description":"FashionTV Johannesburg Live",

@@ -14,7 +14,7 @@ module.exports = (vars)=>
 		<meta property="og:video:type" content="${vars.video.type}" />${ifReturn(vars.video.width, "\n\t\t<meta property=\"og:video:width\" content=\""+vars.video.width+"\" />")}${ifReturn(vars.video.height, "\n\t\t<meta property=\"og:video:height\" content=\""+vars.video.height+"\" />")}
 	</head>
 	<body>
-		<script type="text/javascript" src="${vars.jwVer || "https://ssl.p.jwpcdn.com/player/v/8.32.0/jwplayer.js"}" ></script>
+		<script type="text/javascript" src="${vars.jwVer || "https://ssl.p.jwpcdn.com/player/v/8.48.3/jwplayer.js"}" ></script>
 		<script type="text/javascript" id="jwKey">jwplayer.key = "${vars.KEY}";</script>
 		<div id="player"></div>
 		<script type="text/javascript" id="jwSetup">
@@ -30,14 +30,17 @@ module.exports = (vars)=>
 				},
 				sharing: {
 					heading:"Share",
-					sites: ["facebook", "twitter", "interest", "email", "tumblr", "linkedin", "reddit", "pinterest"]
+					sites: ["facebook", "twitter", "interest", "email", "tumblr", "linkedin", "reddit", "pinterest", "bluesky", "whatsapp"]
 				},
 				cast: {},
 				logo: {
 					file: "${vars.back_button||"/img/back.svg"}",
 					hide: true,
 					position: "top-left"
-				}
+				},
+				aboutlink: "javascript://",
+				abouttext: "Powered by JWPlayer",
+				fullscreenOrientationLock: "none"
 			});
 		</script>
 		<script type="text/javascript" src="/js/${vars.postJS||"post.js"}"></script>
