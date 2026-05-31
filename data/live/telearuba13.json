@@ -1,6 +1,6 @@
 {
 	"title": "TeleAruba Ch13",
-	"cover": "https://telearuba.aw/static/media/logo_60_anja_channel_id.34a7d9a0.png",
+	"cover": "https://novus.telearuba.aw/assets/telearuba_logo.svg",
 	"blurb": "TeleAruba Ch13 live",
 	
 	"playlist":{
@@ -11,9 +11,9 @@
 		"playlist":[
 			{
 				"title":"TeleAruba Ch13",
-				"image":"https://telearuba.aw/static/media/logo_60_anja_channel_id.34a7d9a0.png",
+				"image":"https://novus.telearuba.aw/assets/telearuba_logo.svg",
 				"images":[
-					{"src":"https://telearuba.aw/static/media/logo_60_anja_channel_id.34a7d9a0.png","width":920,"type":"image/png"}
+					{"src":"https://novus.telearuba.aw/assets/telearuba_logo.svg","width":518.54,"type":"image/svg+xml"}
 				],
 				"pubdate":0,
 				"sources":[

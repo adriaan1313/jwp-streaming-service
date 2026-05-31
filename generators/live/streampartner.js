@@ -3,16 +3,20 @@ class Streampartner {
 	name;
 	margin;
 	url;
+	headers = {};
 	prefTs = 0;
 	waitingCallbacks = [];
-	constructor(data, name, margin, url) {
+	constructor(data, name, margin, url, ref) {
 		this.data = data;
 		this.name = name;
 		this.margin = margin;
 		this.url = url;
+		if(ref){
+			this.headers.Referer = ref;
+		}
 	}
 	getStreamPartnerUrl(){
-		let notRes = fetch(this.url).then(res=>{
+		let notRes = fetch(this.url, {headers: this.headers}).then(res=>{
 			return res.text()
 		});
 		notRes.then(res=>{

@@ -1,6 +1,6 @@
 {
 	"title": "1Almere",
-	"cover": "https://www.1almere.nl/wp-content/uploads/2022/02/220223_Floriade_Drone_FEB_DJI_0873_44ADE596E1E8F435C12587F2006C2E73-1-scaled.jpg",
+	"cover": "https://1almere.nl/tenants/1almere/logo-light.svg",
 	"blurb": "1Almere live",
 	
 	"playlist":{
@@ -11,9 +11,9 @@
 		"playlist":[
 			{
 				"title":"1Almere",
-				"image":"https://www.1almere.nl/wp-content/uploads/2022/02/220223_Floriade_Drone_FEB_DJI_0873_44ADE596E1E8F435C12587F2006C2E73-1-scaled.jpg",
+				"image":"https://1almere.nl/tenants/1almere/logo-light.svg",
 				"images":[
-					{"src":"https://www.1almere.nl/wp-content/uploads/2022/02/220223_Floriade_Drone_FEB_DJI_0873_44ADE596E1E8F435C12587F2006C2E73-1-scaled.jpg","width":2560,"type":"image/jpg"}
+					{"src":"https://1almere.nl/tenants/1almere/logo-light.svg","width":112,"type":"image/svg"}
 				],
 				"pubdate":0,
 				"sources":[

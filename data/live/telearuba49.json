@@ -1,0 +1,26 @@
+{
+	"title": "TeleAruba Ch49",
+	"cover": "https://aruba.tv/wp-content/uploads/2020/07/Aruba_TV_Symbol.png",
+	"blurb": "TeleAruba Ch49 live",
+	
+	"playlist":{
+		"title":"TeleAruba Ch49",
+		"description":"TeleAruba Ch49 live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"TeleAruba Ch49",
+				"image":"https://aruba.tv/wp-content/uploads/2020/07/Aruba_TV_Symbol.png",
+				"images":[
+					{"src":"https://aruba.tv/wp-content/uploads/2020/07/Aruba_TV_Symbol.png","width":300,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://cdn01.setar.aw/Canal49/canal49/playlist.m3u8","type":"application/vnd.apple.mpegurl"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

@@ -1,6 +1,6 @@
 {
 	"title": "ZO!34 Tv",
-	"cover": "https://www.zo34.nl/img/programmas/posters/zo34_placeholder.png",
+	"cover": "https://www.zo34.nl/img/headers/triple/zo34-logo-menu.png",
 	"blurb": "ZO!34 Tv live",
 	
 	"playlist":{
@@ -11,13 +11,12 @@
 		"playlist":[
 			{
 				"title":"ZO!34 Tv",
-				"image":"https://www.zo34.nl/img/programmas/posters/zo34_placeholder.png",
+				"image":"https://www.zo34.nl/img/headers/triple/zo34-logo-menu.png",
 				"images":[
-					{"src":"https://www.zo34.nl/img/programmas/posters/zo34_placeholder.png","width":768,"type":"image/png"}
+					{"src":"https://www.zo34.nl/img/headers/triple/zo34-logo-menu.png","width":259,"type":"image/png"}
 				],
 				"pubdate":0,
 				"sources":[
-					{"file":"rtmp://video.uitzending.tv:19350/zo34","type":"application/flash"},
 					{"file":"https://video.uitzending.tv:19360/zo34/zo34.m3u8","type":"application/vnd.apple.mpegurl"}
 				],
 				"tracks":[{"file":"","kind":"thumbnails"}]

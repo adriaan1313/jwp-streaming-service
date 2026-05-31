@@ -1,6 +1,6 @@
 {
 	"title": "Samen1",
-	"cover": "https://svgur.com/i/146t.svg",
+	"cover": "https://samen1.nl/bestanden/uploads/samen1-defaultimg-2.jpg",
 	"blurb": "Samen1 live",
 	
 	"playlist":{
@@ -11,9 +11,9 @@
 		"playlist":[
 			{
 				"title":"Samen1",
-				"image":"https://svgur.com/i/146t.svg",
+				"image":"https://samen1.nl/bestanden/uploads/samen1-defaultimg-2.jpg",
 				"images":[
-					{"src":"https://svgur.com/i/146t.svg","width":460,"type":"image/svg+xml"}
+					{"src":"https://samen1.nl/bestanden/uploads/samen1-defaultimg-2.jpg","width":1920,"type":"image/jpg"}
 				],
 				"pubdate":0,
 				"sources":[

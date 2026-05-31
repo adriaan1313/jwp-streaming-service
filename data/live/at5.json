@@ -1,6 +1,6 @@
 {
 	"title": "At5",
-	"cover": "https://www.at5.nl/images/at5-tv.jpg",
+	"cover": "https://www.at5.nl/at5/at5-tv.jpg",
 	"blurb": "At5 live",
 	
 	"playlist":{
@@ -11,9 +11,9 @@
 		"playlist":[
 			{
 				"title":"At5",
-				"image":"https://www.at5.nl/images/at5-tv.jpg",
+				"image":"https://www.at5.nl/at5/at5-tv.jpg",
 				"images":[
-					{"src":"https://www.at5.nl/images/at5-tv.jpg","width":1920,"type":"image/png"}
+					{"src":"https://www.at5.nl/at5/at5-tv.jpg","width":1920,"type":"image/png"}
 				],
 				"pubdate":0,
 				"sources":[
