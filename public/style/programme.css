@@ -9,6 +9,7 @@
 	font-family: 'Trade Gothic',TradeGothic,Trade-Gothic,'Helvetica Neue',Arial,Arial,sans-serif;
 	padding: 0px 1px 0px 1.5px;
 	margin: 0px 0px 0px 1.5px;
+	border-bottom-left-radius: 8.5px; /* this is the 10px .item radius - 1.5px borber */
 }
 .item {
 	margin-left: 2px;
