@@ -2,7 +2,7 @@ let expire = 0;
 const name = "Zee";
 const waitingCallbacks = [];
 const EXPIRE_AFTER = 60*60*12;//elke 12 uur, gewoon een mooi rond getal
-let data = {
+const data = {
 	"title": "Zee",
 	"cover": "https://zeemedia.in/_next/static/media/logo.ea17160f.svg",
 	"blurb": "Zee live",

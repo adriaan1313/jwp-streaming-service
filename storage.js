@@ -40,7 +40,7 @@ class DataBoi {
 				console.log(`${dataPath} refreshed`);
 			}
 		}else {
-		const fullPath = path.join(this.path, dataPath)+".json";
+			const fullPath = path.join(this.path, dataPath)+".json";
 			if(!(this.cache[dataPath] && this.cache[dataPath].date >= fs.statSync(fullPath).mtimeMs)){
 				delete this.cache[dataPath];
 				this.cache[dataPath]={
@@ -54,9 +54,19 @@ class DataBoi {
 	}
 	/**
 	 * @param {string} dataPath - The path of the requested object.
-	 * @param {function(Object)} callback - Callback, called with object as only argument when found. 
+	 * @param {function(Object)} [callback] - Callback, called with object as only argument when found. If no callback is passed, a Promise is returned instead.
+	.* @returns {(Promise<Object>|undefined)} A promise with the object if no callback is passed.
 	 */
 	findAsync(dataPath, callback){
+		if(!callback){
+			return new Promise((res, rej)=>{
+				try{
+					this.findAsync(dataPath, res);
+				} catch(e){
+					rej(e);
+				}
+			})
+		}
 		if(this.cache[dataPath]?.type == "generated"){
 			const response = this.cache[dataPath].refresh(Date.now());
 			if(response===false && this.cache[dataPath].data.upToDate){
@@ -66,7 +76,7 @@ class DataBoi {
 				this.cache[dataPath].waitingCallbacks.push(callback);//note: this assumes this isn't run *during* setUpToDate
 			}
 		}else {
-		const fullPath = path.join(this.path, dataPath)+".json";
+			const fullPath = path.join(this.path, dataPath)+".json";
 			if(!(this.cache[dataPath] && this.cache[dataPath].date >= fs.statSync(fullPath).mtimeMs)){
 				delete this.cache[dataPath];
 				this.cache[dataPath]={

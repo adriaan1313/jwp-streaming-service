@@ -1,5 +1,6 @@
-module.exports = (vars)=>
-`<!DOCTYPE HTML>
+module.exports = (vars)=>{
+	mergeObject(vars, module.exports.defaults);
+	return `<!DOCTYPE HTML>
 <html lang="en-GB">
 	<head prefix="og: http://ogp.me/ns# video: http://ogp.me/ns/video#">
 		<title>${vars.title}</title>
@@ -14,8 +15,8 @@ module.exports = (vars)=>
 		<meta property="og:video:type" content="${vars.video.type}" />${ifReturn(vars.video.width, "\n\t\t<meta property=\"og:video:width\" content=\""+vars.video.width+"\" />")}${ifReturn(vars.video.height, "\n\t\t<meta property=\"og:video:height\" content=\""+vars.video.height+"\" />")}
 	</head>
 	<body>
-		<script type="text/javascript" src="/jwplayer.js" ></script>
-		<script type="text/javascript" id="jwKey">jwplayer.utils.repo=()=>"/jwpcdn/";jwplayer.key = "${vars.KEY}";</script>
+		<script type="text/javascript" src="${vars.jwVer || (vars.local ? "/jwplayer.js" : "https://ssl.p.jwpcdn.com/player/v/8.48.3/jwplayer.js")}" ></script>
+		<script type="text/javascript" id="jwKey">${vars.local ? "jwplayer.utils.repo=()=>\"/jwpcdn/\";" : ""}jwplayer.key = "${vars.KEY}";</script>
 		<div id="player"></div>
 		<script type="text/javascript" id="jwSetup">
 			const plr=jwplayer("player").setup({
@@ -48,7 +49,35 @@ module.exports = (vars)=>
 
 </html>
 `;
+};
 function ifReturn(a,b){
 	if(a) return b||a;
 	else return "";
 }
+
+function mergeObject(destination, source){
+	if(source instanceof Object && source.constructor == destination.constructor){
+		switch(source.constructor){
+			case Object:
+				for (const key of Object.keys(source)){
+					if(destination[key] === undefined){
+						destination[key] = source[key];
+					}
+					if(source[key] instanceof Object && destination[key] instanceof Object) {
+						if(source[key].constructor == destination[key].constructor){
+							mergeObject(destination[key], source[key]);
+						} else console.error("cannot merge objects of different types");
+					}
+				}
+				break;
+			case Array:
+				for (const val of source){
+					destination.push(val);
+				}
+				break;
+			default:
+				console.error("merging non-Object or Array objects is currently not supported");
+		}
+	}
+}
+module.exports.defaults = {};
