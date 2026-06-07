@@ -48,12 +48,12 @@ let app = express();
 const PORT = process.env.PORT || 3000;
 let server = app.listen(PORT, listening);
 function listening(){
-	storage.add("live/wfm96",require("./generators/live/wfm96")).refresh(Date.now());
-	storage.add("live/nospais",require("./generators/live/nos-pais")).refresh(Date.now());
-	storage.add("multilive/tweede-kamer",require("./generators/live/tweede-kamer")).refresh(Date.now());
-	storage.add("multilive/zee",require("./generators/live/zee")).refresh(Date.now());
-	console.log("listening. . .");
+	console.log(`listening on ${PORT}. . .`);
 }
+storage.add("live/wfm96",require("./generators/live/wfm96")).refresh(Date.now());
+storage.add("live/nospais",require("./generators/live/nos-pais")).refresh(Date.now());
+storage.add("multilive/tweede-kamer",require("./generators/live/tweede-kamer")).refresh(Date.now());
+storage.add("multilive/zee",require("./generators/live/zee")).refresh(Date.now());
 
 app.use(express.static('public'));
 
