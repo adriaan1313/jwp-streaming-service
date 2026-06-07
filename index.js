@@ -130,12 +130,12 @@ app.get("/pls/:programme/:series/:episode", async (req, res)=>{
 });
 
 //player pages
-app.get("/film/:film/play", (req, res)=>{
+app.get("/film/:film/play", async (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
 		const rpfilm=req.params.film.replaceAll(/\.\.(\/|\\)/g, "");
 		console.log(req.params)
-		const rjsn = storage.find("film/"+rpfilm);
+		const rjsn = await findInit("film/"+rpfilm);
 		res.send(playHtml({title:rjsn.title, ar:rjsn.ar, pls: `/pls/film/${rpfilm}`, parent: `/film/${rpfilm}`, back_button: "/img/back_film.svg", postJS: "post_film.js", canon: getCanonUrl(req), subtype: "movie", image: rjsn.cover, video: {url: rjsn.playlist.playlist[0].sources[0].file, type: rjsn.playlist.playlist[0].sources[0].type, width: rjsn.playlist.playlist[0].sources[0].width, height: rjsn.playlist.playlist[0].sources[0].height}, description: rjsn.blurb }));
 		console.log(req.ip, "went to the", rjsn.title, `watch page`);
 	}
@@ -145,12 +145,12 @@ app.get("/film/:film/play", (req, res)=>{
 	}
 });
 
-app.get("/live/:live/play", (req, res)=>{
+app.get("/live/:live/play", async (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
 		const rplive=req.params.live.replaceAll(/\.\.(\/|\\)/g, "");
 		console.log(req.params)
-		const rjsn = storage.find("live/"+rplive);
+		const rjsn = await findInit("live/"+rplive);
 		res.send(playHtml({title:rjsn.title, ar:rjsn.ar, pls: `/pls/live/${rplive}`, parent: `/live/${rplive}`, back_button: "/img/back_film.svg", postJS: "post_film.js", canon: getCanonUrl(req), subtype: "other", image: rjsn.cover, video: {url: rjsn.playlist.playlist[0].sources[0].file, type: rjsn.playlist.playlist[0].sources[0].type, width: rjsn.playlist.playlist[0].sources[0].width, height: rjsn.playlist.playlist[0].sources[0].height}, description: rjsn.blurb }));
 		console.log(req.ip, "went to the", rjsn.title, `watch page`);
 	}
@@ -160,13 +160,13 @@ app.get("/live/:live/play", (req, res)=>{
 	}
 });
 
-app.get("/live/:series/:channel", (req, res)=>{
+app.get("/live/:series/:channel", async (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
 		const rpseries=req.params.series.replaceAll(/\.\.(\/|\\)/g, "");
 		const rpchannel=req.params.channel.replaceAll(/\.\.(\/|\\)/g, "");
 		console.log(req.params)
-		const rjsn = storage.find("multilive/"+rpseries);
+		const rjsn = await findInit("multilive/"+rpseries);
 		const ch = rjsn.channels[rpchannel];
 		if(!ch) {
 			sendErr(res, `no_channel`);
@@ -181,14 +181,14 @@ app.get("/live/:series/:channel", (req, res)=>{
 	}
 });
 
-app.get("/:programme/:series/:episode", (req, res)=>{
+app.get("/:programme/:series/:episode", async (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
 		const rpprogramme=req.params.programme.replaceAll(/\.\.(\/|\\)/g, "");
 		const rpseries=Number(req.params.series);
 		const rpepisode=Number(req.params.episode);
 		console.log(req.params)
-		const rjsn = storage.find("playlist/"+rpprogramme);
+		const rjsn = await findInit("playlist/"+rpprogramme);
 		const ser = rjsn.series[rpseries];
 		if(!ser) {
 			sendErr(res, `no_series`);
@@ -355,12 +355,12 @@ app.get("/lives", (req, res)=>{
 });
 
 //overview/info pages
-app.get("/:programme", (req, res)=>{
+app.get("/:programme", async (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
 		const rpprogramme=req.params.programme.replaceAll(/\.\.(\/|\\)/g, "");
 		
-		const prg=storage.find("playlist/"+rpprogramme);
+		const prg=await findInit("playlist/"+rpprogramme);
 		let series="";
 		prg.series.forEach((s, i)=>{
 			let eps="";
@@ -377,11 +377,11 @@ app.get("/:programme", (req, res)=>{
 	}
 });
 
-app.get("/film/:film", (req, res)=>{
+app.get("/film/:film", async (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
 		req.params.film=req.params.film.replaceAll(/\.\.(\/|\\)/g, "");
-		const film=storage.find("film/"+req.params.film);
+		const film=await findInit("film/"+req.params.film);
 		res.send(flHtml({title: film.title, image: film.cover, blurb: film.blurb, menu: muHtml, player: ("/film/"+req.params.film+"/play").replaceAll("//", "/")}));
 		console.log(req.ip, "went to the", film.title, "page");
 	}
@@ -390,17 +390,17 @@ app.get("/film/:film", (req, res)=>{
 	}
 });
 
-app.get("/live/:live", (req, res)=>{
+app.get("/live/:live", async (req, res)=>{
 	res.set("Content-Type", "text/html");
 	try{
 		req.params.live=req.params.live.replaceAll(/\.\.(\/|\\)/g, "");
 		if(fs.readdirSync("./data/live").indexOf(req.params.live+".json")!=-1||Object.keys(storage.cache).includes("live/"+req.params.live)){
 			
-			const live=storage.find("live/"+req.params.live);
+			const live=await findInit("live/"+req.params.live);
 			res.send(flHtml({title: live.title, image: live.cover, blurb: live.blurb, menu: muHtml, player: ("/live/"+req.params.live+"/play").replaceAll("//", "/")}));
 			console.log(req.ip, "went to the", live.title, "page");
 		}else {
-			const prg=storage.find("multilive/"+req.params.live);
+			let prg= await findInit("multilive/"+req.params.live);
 			let series="";
 			
 			Object.keys(prg.channels).forEach((c)=>{
@@ -422,7 +422,7 @@ function sendErr(res, err) {
 	else if(err.toString().indexOf("no_programme")!=-1) res.status(404).send(erHtml("This programme does not exist.", 404));
 	else if(err.toString().indexOf("no_series")!=-1) res.status(404).send(erHtml("This series does not exist.", 404));
 	else if(err.toString().indexOf("no_episode")!=-1) res.status(404).send(erHtml("Hey, there are not that many episodes lol", 404));
-	else res.status(500).send(erHtml(`${err}`, 500));
+	else {res.status(500).send(erHtml(`${err}`, 500)); console.error(err)}
 }
 
 
@@ -449,4 +449,11 @@ function getCanonUrl(req) {
 	return `https://${req.get("host")}${req.baseUrl}${req.path}`;//always https, because we don't want duplicates. the host header, because we're running on like some aws thing or something
 }
 
+async function findInit(path){
+	let prg=storage.find(path);
+	if(prg?.init) {
+		prg = await storage.findAsync(path);
+	}
+	return prg;
+}
 

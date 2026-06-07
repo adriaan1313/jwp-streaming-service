@@ -1,4 +1,5 @@
 let expire = 0;
+let updateRunning = false;
 const name = "Zee";
 const waitingCallbacks = [];
 const EXPIRE_AFTER = 60*60*12;//elke 12 uur, gewoon een mooi rond getal
@@ -6,7 +7,8 @@ const data = {
 	"title": "Zee",
 	"cover": "https://zeemedia.in/_next/static/media/logo.ea17160f.svg",
 	"blurb": "Zee live",
-	"channels":{}
+	"channels":{},
+	"init": true
 }
 
 const CHANNELS = [
@@ -53,10 +55,12 @@ async function init(){
 		};
 		keyUrlMap.set(channel.slug, cData.auth.url);
 	}
+	delete data.init;
 	await update();
 }
 
 async function update(){
+	updateRunning = true;
 	const keyUrls = new Set([...keyUrlMap.values()]);
 	expire = Infinity;
 	for(const url of keyUrls){
@@ -73,7 +77,7 @@ async function update(){
 function refresh(d){
 	if(d/1000 > expire){
 		data.upToDate = false;
-		update();
+		if(!data.init && !updateRunning) update();
 		return;
 		
 	}
@@ -81,12 +85,13 @@ function refresh(d){
 }
 
 function setUpToDate(){
-	data.upToDate = true;
 	waitingCallbacks.forEach((a,i)=>{
 		a(data);
 		delete waitingCallbacks[i];//just in case
 	});
 	waitingCallbacks.length=0;
+	data.upToDate = true;
+	updateRunning = false;
 }
 
 module.exports= {data, refresh, waitingCallbacks};
