@@ -1,0 +1,26 @@
+{
+	"title": "ARTV (Portugees parlement)",
+	"cover": "https://www.canal.parlamento.pt/images/logo.png",
+	"blurb": "ARTV live",
+	
+	"playlist":{
+		"title":"ARTV",
+		"description":"ARTV live",
+		"kind":"Single Item",
+		"ar":"16:9",
+		"playlist":[
+			{
+				"title":"ARTV",
+				"image":"https://www.canal.parlamento.pt/images/logo.png",
+				"images":[
+					{"src":"https://www.canal.parlamento.pt/images/logo.png","width":128,"type":"image/png"}
+				],
+				"pubdate":0,
+				"sources":[
+					{"file":"https://playout172.livextend.cloud/liveiframe/_definst_/liveartvabr/manifest.mpd?prj=bckup+env=web_browser","type":"application/dash+xml"}
+				],
+				"tracks":[{"file":"","kind":"thumbnails"}]
+			}
+		]
+	}
+}

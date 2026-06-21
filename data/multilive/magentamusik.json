@@ -1,0 +1,70 @@
+{
+	"title": "MagentaMusik",
+	"cover": "https://i.imgur.com/SHkZP6p.png",
+	"blurb": "Watch concerts live at MagentaMusik!",
+	"channels":{
+		"1": {
+			"smallTitle":"1",
+			"title":"MagentaMusik 1",
+			"description":"MagentaMusik 1 (Wacken Faster/Harder, Hurricane Forest)",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"MagentaMusik 1",
+					"image":"https://www.magentamusik.de/uploads/images/Festivals/Wacken/2023/mm_wide_teaser_wacken_2000x1125_faster_harder_stage.jpg",
+					"minDvrWindow": 0,
+					"images":[
+						{"src":"https://www.magentamusik.de/uploads/images/Festivals/Wacken/2023/mm_wide_teaser_wacken_2000x1125_faster_harder_stage_heute.jpg","width":2000,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://svc42.main.sl.t-online.de/bpk-tv/mm001_hd/HLS_CMAF/index.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"2": {
+			"smallTitle":"2",
+			"title":"MagentaMusik 2",
+			"description":"MagentaMusik 2 (Wacken Louder/Bullhead, Hurricane River)",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"MagentaMusik 2",
+					"image":"https://www.magentamusik.de/uploads/images/Festivals/Wacken/2023/mm_wide_teaser_wacken_2000x1125_louder_stage.jpg",
+					"minDvrWindow": 0,
+					"images":[
+						{"src":"https://www.magentamusik.de/uploads/images/Festivals/Wacken/2023/mm_wide_teaser_wacken_2000x1125_louder_stage.jpg","width":2000,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://svc42.main.sl.t-online.de/bpk-tv/mm002_hd/HLS_CMAF/index.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"3": {
+			"smallTitle":"3",
+			"title":"MagentaMusik 3",
+			"description":"MagentaMusik 3",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"MagentaMusik 3",
+					"image":"https://i.imgur.com/u4ew17c.jpeg",
+					"minDvrWindow": 0,
+					"images":[
+						{"src":"https://i.imgur.com/u4ew17c.jpeg","width":2000,"type":"image/jpeg"}
+					],
+					"sources":[
+						{"file":"https://svc42.main.sl.t-online.de/bpk-tv/mm003_hd/HLS_CMAF/index.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,87 @@
+{
+	"title": "Palestinian Broadcasting Corporation",
+	"cover": "https://www.pbc.ps/wp-content/uploads/2022/03/PALESTINE_BUMPER_LOGO.mov.00_00_05_28.Still001-e1646755719184.png",
+	"blurb": "Palestinian Broadcasting Corporation TV live",
+	"channels":{
+		"palestine": {
+			"smallTitle":"PBC",
+			"title":"Palestine Television",
+			"description":"Watch Palestine Televisionn",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"PBC",
+					"image":"https://www.pbc.ps/wp-content/uploads/2022/03/PALESTINE_BUMPER_LOGO.mov.00_00_05_28.Still001-e1646755719184.png",
+					"images":[
+						{"src":"https://www.pbc.ps/wp-content/uploads/2022/03/PALESTINE_BUMPER_LOGO.mov.00_00_05_28.Still001-e1646755719184.png","width":480,"type":"image/png"}
+					],
+					"sources":[
+						{"file":"https://pbc.furrera.ps/palestinehd/index.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"musawa": {
+			"smallTitle":"Musawa",
+			"title":"Musawa",
+			"description":"Watch PBC Musawa",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"Musawa",
+					"image":"https://www.pbc.ps/wp-content/uploads/2021/09/%D9%82%D9%86%D8%A7%D8%A9-%D9%85%D8%B3%D8%A7%D9%88%D8%A7%D8%A9-300x300.webp",
+					"images":[
+						{"src":"https://www.pbc.ps/wp-content/uploads/2021/09/%D9%82%D9%86%D8%A7%D8%A9-%D9%85%D8%B3%D8%A7%D9%88%D8%A7%D8%A9-300x300.webp","width":300,"type":"image/webp"}
+					],
+					"sources":[
+						{"file":"https://pbc.furrera.ps/musawahd/index.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"palestinelive": {
+			"smallTitle":"Mubasher",
+			"title":"Mubasher",
+			"description":"Watch PBC Mubasher",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"Mubasher",
+					"image":"https://www.pbc.ps/wp-content/uploads/2021/09/%D9%82%D9%86%D8%A7%D8%A9-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86-%D9%85%D8%A8%D8%A7%D8%B4%D8%B1-300x300.webp",
+					"images":[
+						{"src":"https://www.pbc.ps/wp-content/uploads/2021/09/%D9%82%D9%86%D8%A7%D8%A9-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86-%D9%85%D8%A8%D8%A7%D8%B4%D8%B1-300x300.webp","width":300,"type":"image/webp"}
+					],
+					"sources":[
+						{"file":"https://pbc.furrera.ps/palestinelivehd/index.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		},
+		"vop": {
+			"smallTitle":"VOP",
+			"title":"Voice of Palestine",
+			"description":"Watch VOP radio live!",
+			"kind":"Single Item",
+			"ar":"16:9",
+			"playlist":[
+				{
+					"title":"VOP radio",
+					"image":"https://www.pbc.ps/wp-content/uploads/2021/09/%D8%B5%D9%88%D8%AA-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86.webp",
+					"images":[
+						{"src":"https://www.pbc.ps/wp-content/uploads/2021/09/%D8%B5%D9%88%D8%AA-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86.webp","width":300,"type":"image/webp"}
+					],
+					"sources":[
+						{"file":"https://pbc.furrera.ps/PalLive/VOPTV/index.m3u8","type":"application/vnd.apple.mpegurl"}
+					],
+					"tracks":[{"file":"","kind":"thumbnails"}]
+				}
+			]
+		}
+	}
+}

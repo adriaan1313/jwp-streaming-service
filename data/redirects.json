@@ -1,4 +1,7 @@
 [
 	{"path": "/live/aje/", "dest": "/live/aljazeera", "type": 303},
-	{"path": "/live/aje/play/", "dest": "/live/aljazeera/aje", "type": 301}
+	{"path": "/live/aje/play/", "dest": "/live/aljazeera/aje", "type": 301},
+	{"path": "/live/tmobile_wacken2023/", "dest": "/live/magentamusik/", "type": 303},
+	{"path": "/live/tmobile_wacken2023/louder-bullhead", "dest": "/live/magentamusik/2", "type": 303},
+	{"path": "/live/tmobile_wacken2023/harder-faster", "dest": "/live/magentamusik/1", "type": 303}
 ]
